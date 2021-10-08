@@ -29,7 +29,7 @@ a.btn{
     line-height: 1;
     font-weight: 600;
 }
-a.btn.active{
+a.btn.current{
     background-color: var(--primary);
     color: #fff;
 }
@@ -49,9 +49,18 @@ a.btn.active{
     border: 1px solid var(--primary);
     border-radius: 10px 0 0 10px;
     box-shadow: inset 4px 0 0 var(--primary);
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 10px 0 15px;
     gap: 10px;
+    transition: all 50ms linear;
+}
+.menu-bar .menu-item:hover, .menu-bar .menu-item:focus{
+    box-shadow: inset 4px 0 0 1px var(--primary);
+    outline: none;
+}
+.menu-bar .menu-item:active{
+    box-shadow: inset 15px 0 0 24px var(--primary);
+    color: #fff;
 }
 .menu-bar .menu-item i{
     width: 30px;
@@ -77,6 +86,16 @@ a.btn.active{
     height: 50px;
     padding: 0 10px;
     box-shadow: 0 2px 0 0 var(--primary);
+    transition: all 60ms linear;
+}
+.content .header a.btn:hover, .content .header a.btn:focus{
+    outline: none;
+    background-color: #eee;
+    /* box-shadow: 0 2px 0 1px var(--primary); */
+}
+.content .header a.btn:active{
+    box-shadow: none;
+    transform: translateY(2px);
 }
 .content .header .title{
     flex:1;
@@ -88,9 +107,20 @@ a.btn.active{
     justify-content: center;
     flex:1;
 }
+.content .header .main-btn{
+    gap: 10px;
+}
+.content .header .main-btn .btn-text .sub{
+    font-size: 12px;
+    font-weight: normal;
+    opacity: 0.7;
+}
 .content .header .right{
     flex:1;
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+}
+.content .header .right .account-btn{
+    gap: 10px;
 }
