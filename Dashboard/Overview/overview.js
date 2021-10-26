@@ -1,6 +1,8 @@
 const charts = (xValues, yValues) => {
 
     //Total Clicks
+    Chart.defaults.font.size = 18;
+    Chart.defaults.font.weight = 500;
 
     new Chart("totalClicks", {
         type: "bar",
@@ -15,7 +17,9 @@ const charts = (xValues, yValues) => {
         options: {
             responsive: true,
             plugins: {
-                legend: { display: false },
+                legend: {
+                    display: false,
+                },
                 tooltip: {
                     titleFont: {
                         size: 0
@@ -25,11 +29,21 @@ const charts = (xValues, yValues) => {
             },
             scales: {
                 x: {
+                    ticks: {
+                        font: {
+                            size: 9
+                        }
+                    },
                     grid: {
                         display: false
                     }
                 },
                 y: {
+                    ticks: {
+                        font: {
+                            size: 10
+                        }
+                    },
                     grid: {
                         display: true,
                         drawBorder: true,

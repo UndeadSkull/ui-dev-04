@@ -1,53 +1,53 @@
-.content .overview-wrap {
+.container .content {
     margin: 8px -20px -6px -6px;
     padding: 8px;
     height: 83.7%;
     overflow-y: scroll;
 }
 
-.content .overview-wrap::-webkit-scrollbar {
+.container .content::-webkit-scrollbar {
     width: 20px;
 }
 
-.content .overview-wrap::-webkit-scrollbar-track {
+.container .content::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
-.content .overview-wrap::-webkit-scrollbar-thumb {
+.container .content::-webkit-scrollbar-thumb {
     background-color: #d6dee1;
     border-radius: 20px;
     border: 6px solid transparent;
     background-clip: content-box;
 }
 
-.content .overview-wrap::-webkit-scrollbar-thumb:hover {
+.container .content::-webkit-scrollbar-thumb:hover {
     background-color: #a8bbbf;
 }
 
-.content .overview-wrap .overview-row {
+.container .content .overview-row {
     margin-bottom: 20px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.content .overview-wrap .overview-card.overall {
+.container .content .overview-card.overall {
     flex: 4;
 }
 
-.content .overview-wrap .overview-card.device {
+.container .content .overview-card.device {
     flex: 3;
 }
 
-.content .overview-wrap .overview-card.referrer {
+.container .content .overview-card.referrer {
     flex: 3;
 }
 
-.content .overview-wrap .overview-card.location {
+.container .content .overview-card.location {
     flex: 4;
 }
 
-.content .overview-wrap .overview-card {
+.container .content .overview-card {
     background-color: #fff;
     /* box-shadow: 0px 0px 6px -1px var(--primary); */
     box-shadow: 0 0 12px 0 #00000022;
@@ -58,18 +58,18 @@
     z-index: 1;
 }
 
-.content .overview-wrap .overview-card .card-heading {
+.container .content .overview-card .card-heading {
     margin: 0 15px;
     font-size: 18px;
     font-weight: 500;
 }
 
-.content .overview-wrap .overview-card .sub {
+.container .content .overview-card .sub {
     font-size: 15px;
     font-weight: normal;
 }
 
-.content .overview-wrap .overview-card .divider {
+.container .content .overview-card .divider {
     background-color: var(--primary);
     border-top: 1px solid var(--primary);
     /* box-shadow: 0px 0px 6px var(--primary); */
@@ -78,7 +78,7 @@
     margin-top: 10px;
 }
 
-.content .overview-wrap .overview-card .card-body {
+.container .content .overview-card .card-body {
     height: 79%;
     display: grid;
     /* margin: 25px 0; */
@@ -86,34 +86,34 @@
     position: relative;
 }
 
-.content .overview-wrap .overview-card:not(.overall) .card-body canvas {
+.container .content .overview-card:not(.overall) .card-body canvas {
     max-height: 300px;
 }
 
-.content .overview-wrap .overview-card .card-body canvas {
+.container .content .overview-card .card-body canvas {
     /* width: min(50vw, 400px); */
     padding: 20px;
 }
 
-.content .overview-wrap .overview-card.referrer .card-body {
+.container .content .overview-card.referrer .card-body {
     display: block;
     margin: 25px;
 }
 
-.content .overview-wrap .overview-card.referrer .card-body .refer-card {
+.container .content .overview-card.referrer .card-body .refer-card {
     position: relative;
 }
 
-.content .overview-wrap .overview-card.referrer .card-body .refer-card:nth-child(odd) {
+.container .content .overview-card.referrer .card-body .refer-card:nth-child(odd) {
     background-color: #eee;
 }
 
-.content .overview-wrap .overview-card.referrer .card-body .refer-card .refer-name {
+.container .content .overview-card.referrer .card-body .refer-card .refer-name {
     color: #000;
     padding: 8px 5px;
 }
 
-.content .overview-wrap .overview-card.referrer .card-body .refer-card .refer-count {
+.container .content .overview-card.referrer .card-body .refer-card .refer-count {
     position: absolute;
     background-color: var(--primary);
     right: 6px;
