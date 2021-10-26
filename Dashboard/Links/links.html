@@ -6,19 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="../common/dashboard.css">
+    <link rel="stylesheet" href="links.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"
+        integrity="sha256-bC3LCZCwKeehY6T4fFi9VfOU0gztUa+S4cnkIhVPZ5E=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="menu-bar">
-        <a href="#" class="btn menu-item current">
+    <div class="menu-bar" id="menu-bar" style="width: 0px;">
+        <a href="../Overview/overview.html" class="btn menu-item">
             <i class="fa-regular fa-chart-bar fa-lg"></i>
             <span>Overview</span>
         </a>
-        <a href="#" class="btn menu-item">
+        <a href="../Links/links.html" class="btn menu-item current">
             <i class="fa fa-link fa-lg"></i>
             <span>Links</span>
         </a>
@@ -51,10 +57,13 @@
             <div>Upgrade Account</div>
         </a>
     </div>
-    <div class="content">
+    <div class="content" id="content">
+        <button id="menu-toggle" onclick="menuToggle()">
+            <i class="fa fa-bars fa-2x" id="menu-icon"></i>
+        </button>
         <div class="header">
             <div class="header-top">
-                <div class="title">Overview</div>
+                <div class="title">Links</div>
                 <div class="center">
                     <a href="#" class="btn main-btn">
                         <div class="btn-text">
@@ -66,7 +75,7 @@
                 </div>
                 <div class="right">
                     <a href="#" class="btn">
-                        <i class="fa fa-bell fa-xl pri"></i>
+                        <i class="fa fa-bell fa-xl"></i>
                     </a>
                     <a href="#" class="btn account-btn">
                         <i class="fa-solid fa-circle-user fa-2x"></i>
@@ -74,15 +83,40 @@
                     </a>
                 </div>
             </div>
-            <div class="header-bottom">
-                <a href="#" class="btn current">Hourly</a>
-                <a href="#" class="btn">Weekly</a>
-                <a href="#" class="btn">Monthly</a>
-                <a href="#" class="btn">Yearly</a>
-                <a href="#" class="btn">Custom</a>
+        </div>
+        <div class="overview-wrap">
+            <div class="footer">
+                <div class="footer-top">
+                    <div class="footer-links">
+                        <a href="#" class="link">Developers</a>
+                        <a href="#" class="link">Privacy Policy</a>
+                        <a href="#" class="link">Terms of Service</a>
+                        <a href="#" class="link">Contact Us</a>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" class="social">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    Copyright © 2021, All Rights Reserved
+                </div>
             </div>
         </div>
+        <div class="fader"></div>
     </div>
 </body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="../common/dashboard.js"></script>
 
 </html>
