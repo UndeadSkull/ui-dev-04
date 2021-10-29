@@ -7,7 +7,7 @@
     --secondary: #707070;
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -200,6 +200,7 @@ a.btn.current {
     gap: 8px;
     overflow-x: auto;
 }
+
 .container .header .header-bottom::-webkit-scrollbar {
     display: none;
 }
@@ -222,25 +223,6 @@ a.btn.current {
     overflow-y: scroll;
 }
 
-.container .content::-webkit-scrollbar {
-    width: 20px;
-}
-
-.container .content::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-.container .content::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
-}
-
-.container .content::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf;
-}
-
 .container .footer {
     box-shadow: 0 -3px 0 -1px var(--primary);
     padding: 20px 0 0 0;
@@ -249,7 +231,7 @@ a.btn.current {
 
 .container .footer .footer-top {
     display: flex;
-    padding: 20px 0 ;
+    padding: 20px 0;
     gap: 35px 250px;
     align-items: center;
     flex-wrap: wrap;
@@ -282,12 +264,15 @@ a.btn.current {
     text-decoration: none;
     color: var(--secondary);
 }
-.container .footer .footer-top .footer-socials .social i{
+
+.container .footer .footer-top .footer-socials .social i {
     font-size: 26px;
 }
-.container .footer .footer-bottom{
+
+.container .footer .footer-bottom {
     padding: 20px 0;
 }
+
 .fader {
     height: 40px;
     width: 100%;
@@ -296,6 +281,27 @@ a.btn.current {
     z-index: 10;
     position: absolute;
     bottom: 0;
+}
+
+/*---------------------------------- Scrollbar ------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
 }
 
 /*------------------------------------- Table -------------------------------------*/
@@ -315,7 +321,7 @@ a.btn.current {
     width: 100%;
     text-align: left;
     border-spacing: 0;
-    color: #555;
+    color: #333;
 }
 
 .table-container table thead {
@@ -348,7 +354,7 @@ a.btn.current {
     border-radius: 10px;
 }
 
-.table-container table thead th:nth-child(2){
+.table-container table thead th:nth-child(2) {
     min-width: 154px;
 }
 
@@ -448,6 +454,7 @@ a.btn.current {
 .checkbox-wrap .checkbox:checked~.checkmark {
     background-color: var(--primary);
 }
+
 
 /*--------------------------------- Media Query ----------------------------------*/
 

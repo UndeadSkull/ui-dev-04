@@ -87,7 +87,8 @@
         <div class="content">
             <div class="link-header">
                 <div class="link-search">
-                    <input type="text" name="search" id="search" placeholder="Type to search for links" autocomplete="off">
+                    <input type="text" name="search" id="search" placeholder="Type to search for links"
+                        autocomplete="off">
                     <a href="#" class="filter-btn pri">
                         <i class="fa fa-filter"></i>Filter
                     </a>
@@ -95,7 +96,7 @@
                 <a href="#" class="btn action-btn pri">
                     More Action <i class="fa-solid fa-circle-chevron-down fa-lg pri"></i>
                 </a>
-                <a href="#" class="btn shorten-btn">
+                <a href="javascript:void(0)" class="btn shorten-btn" onclick="toggleModal(true)">
                     Shorten Link
                     <i class="fa-solid fa-circle-plus fa-lg"></i>
                 </a>
@@ -114,7 +115,7 @@
                             <a href="#" id="delete-btn">Delete</a>
                             <span class="table-title">Summary</span>
                         </th>
-                        <th>Clicks 
+                        <th>Clicks
                             <i class="fa fa-arrow-down fa-xs"></i>
                         </th>
                         <th>Type
@@ -243,7 +244,8 @@
                             </div>
                         </td>
                         <td>
-                            <i class="fa fa-circle-left fa-lg pri"></i> 1-3 of 3 <i class="fa fa-circle-right fa-lg pri"></i>
+                            <i class="fa fa-circle-left fa-lg pri"></i> 1-3 of 3 <i
+                                class="fa fa-circle-right fa-lg pri"></i>
                         </td>
                     </tfoot>
                 </table>
@@ -278,9 +280,193 @@
         </div>
         <!-- <div class="fader"></div> -->
     </div>
+    <div id="modal-container">
+        <div class="modal">
+            <div class="modal-header">New Link</div>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <input type="text" placeholder="Enter long URL">
+                    <a href="#" class="modal-btn">
+                        Direct <i class="fa-solid fa-circle-chevron-down"></i></a>
+                </div>
+                <div class="modal-row">
+                    <a href="#modal-advanced" id="advanced-btn"><i class="fa fa-gear"></i> Advanced Options</a>
+                </div>
+                <div id="modal-advanced">
+                    <div class="modal-section">
+                        <div class="modal-row">
+                            <label>Custom Link ID
+                                <input type="text">
+                            </label>
+                            <label>Status
+                                <a href="#modal-advanced" class="icon-btn">
+                                    Activate <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                </a>
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label>
+                                Password
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <a href="#modal-advanced" class="icon-btn">UTM Builder</a>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Schedule Link</div>
+                        <div class="modal-section-desc">
+                            Enter a date when link should be active. Both start and end dates are optional.
+                        </div>
+                        <div class="modal-row datetime-row">
+                            <label>Start Date
+                                <input type="date">
+                            </label>
+                            <label>
+                                <a href="#modal-advanced" class="clear-btn">Clear</a>
+                                <input type="time">
+                            </label>
+                        </div>
+                        <div class="modal-row datetime-row">
+                            <label>End Date
+                                <input type="date">
+                            </label>
+                            <label>
+                                <a href="#modal-advanced" class="clear-btn">Clear</a>
+                                <input type="time">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Link Groups</div>
+                        <a href="#modal-advanced" class="icon-btn">Select Group <i
+                                class="fa-solid fa-circle-chevron-down fa-xl pri"></i></a>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Details</div>
+                        <div class="modal-section-desc">
+                            Add title, description and upload an image to personalise the link.
+                        </div>
+                        <div class="modal-row">
+                            <a href="#modal-advanced" class="btn image-btn">
+                                <i class="fa fa-images fa-2x"></i>
+                            </a>
+                            <label>
+                                Title
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label>
+                                Tags
+                                <input type="text" placeholder="New tags">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label>
+                                Description
+                                <textarea rows="3"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Tracking Pixel</div>
+                        <div class="modal-section-desc">Select tracking pixels that should be use for this link.</div>
+                        <a href="#modal-advanced" class="icon-btn">
+                            None
+                            <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                        </a>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Expiration Clicks</div>
+                        <div class="modal-section-desc">After biolink is visited specified amound of times, it will no
+                            longer be accessible. Optionally, after click amount is reached biolink can redirect to
+                            specified url instead.</div>
+                        <div class="modal-row">
+                            <label>Max Clicks<input type="text"></label>
+                            <label>Redirect URL<input type="text" placeholder="(optional)"></label>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Location Targeting</div>
+                        <div class="modal-section-desc">Redirect users to different url based on their location.</div>
+                        <div class="modal-row">
+                            <label>
+                                Country
+                                <a href="#modal-advanced" class="icon-btn">
+                                    United States
+                                    <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                </a>
+                            </label>
+                            <label>
+                                URL
+                                <input type="text">
+                            </label>
+                            <a href="#modal-advanced">
+                                <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                            </a>
+                        </div>
+                        <a href="#modal-advanced" class="modal-btn">Add</a>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Device Targeting</div>
+                        <div class="modal-section-desc">Redirect users to different url based on their device.</div>
+                        <div class="modal-row">
+                            <label>
+                                Device
+                                <a href="#modal-advanced" class="icon-btn">
+                                    Mobile
+                                    <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                </a>
+                            </label>
+                            <label>
+                                URL
+                                <input type="text">
+                            </label>
+                            <a href="#modal-advanced">
+                                <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                            </a>
+                        </div>
+                        <a href="#modal-advanced" class="modal-btn">Add</a>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Platform Targeting</div>
+                        <div class="modal-section-desc">Redirect users to different url based on their platform.</div>
+                        <div class="modal-row">
+                            <label>
+                                Platform
+                                <a href="#modal-advanced" class="icon-btn">
+                                    Windows
+                                    <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                </a>
+                            </label>
+                            <label>
+                                URL
+                                <input type="text">
+                            </label>
+                            <a href="#modal-advanced">
+                                <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                            </a>
+                        </div>
+                        <a href="#modal-advanced" class="modal-btn">Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Confirm</a>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="../common/dashboard.js"></script>
 <script type="text/javascript" src="../common/table.js"></script>
+<script>
+    function toggleModal(flag) {
+        document.getElementById('modal-container').style.display = flag ? 'grid' : 'none'
+    }
+</script>
 
 </html>
