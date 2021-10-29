@@ -17,33 +17,19 @@ const charts = (xValues, yValues) => {
         options: {
             responsive: true,
             plugins: {
-                legend: {
-                    display: false,
-                },
+                legend: { display: false },
                 tooltip: {
-                    titleFont: {
-                        size: 0
-                    },
+                    titleFont: { size: 0 },
                     displayColors: false
                 }
             },
             scales: {
                 x: {
-                    ticks: {
-                        font: {
-                            size: 9
-                        }
-                    },
-                    grid: {
-                        display: false
-                    }
+                    ticks: { font: { size: 9 } },
+                    grid: { display: false }
                 },
                 y: {
-                    ticks: {
-                        font: {
-                            size: 10
-                        }
-                    },
+                    ticks: { font: { size: 10 } },
                     grid: {
                         display: true,
                         drawBorder: true,
@@ -51,7 +37,6 @@ const charts = (xValues, yValues) => {
                         drawTicks: true,
                     },
                 },
-
             }
         }
     });
@@ -84,9 +69,7 @@ const charts = (xValues, yValues) => {
             plugins: {
                 legend: {
                     position: 'right',
-                    labels: {
-                        usePointStyle: true,
-                    },
+                    labels: { usePointStyle: true },
                 }
             }
         }
@@ -94,9 +77,7 @@ const charts = (xValues, yValues) => {
 
     //Top Locations
 
-    google.charts.load('current', {
-        'packages': ['geochart'],
-    });
+    google.charts.load('current', { 'packages': ['geochart'] });
     google.charts.setOnLoadCallback(drawRegionsMap);
 
     function drawRegionsMap() {
@@ -113,11 +94,8 @@ const charts = (xValues, yValues) => {
             ['Qatar', 40],
             ['China', 25]
         ]);
-
         var options = {};
-
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
         chart.draw(data, options);
     }
 
@@ -148,9 +126,7 @@ const charts = (xValues, yValues) => {
             plugins: {
                 legend: {
                     position: 'right',
-                    labels: {
-                        usePointStyle: true,
-                    },
+                    labels: { usePointStyle: true },
                 }
             }
         }
@@ -185,9 +161,7 @@ const charts = (xValues, yValues) => {
                 legendItem: { borderRadius: 5 },
                 legend: {
                     position: 'left',
-                    labels: {
-                        usePointStyle: true,
-                    },
+                    labels: { usePointStyle: true },
                 }
             }
         }

@@ -217,7 +217,8 @@ a.btn.current {
 .container .content {
     margin: 8px -20px -6px -6px;
     padding: 8px;
-    height: 83.7%;
+    /* height: 83.7%; */
+    height: 90%;
     overflow-y: scroll;
 }
 
@@ -241,15 +242,15 @@ a.btn.current {
 }
 
 .container .footer {
-    box-shadow: 0 -2px 0 0 var(--primary);
-    padding: 30px 0;
+    box-shadow: 0 -3px 0 -1px var(--primary);
+    padding: 20px 0 0 0;
     margin-top: 50px;
 }
 
 .container .footer .footer-top {
     display: flex;
-    padding: 20px 0;
-    gap: 50px;
+    padding: 20px 0 ;
+    gap: 35px 250px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -270,7 +271,7 @@ a.btn.current {
 }
 
 .container .footer .footer-top .footer-socials {
-    flex: 3;
+    flex: 2;
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
@@ -282,7 +283,7 @@ a.btn.current {
     color: var(--secondary);
 }
 .container .footer .footer-top .footer-socials .social i{
-    font-size: 46px;
+    font-size: 26px;
 }
 .container .footer .footer-bottom{
     padding: 20px 0;

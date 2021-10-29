@@ -1,17 +1,17 @@
-.content .link-header {
+.content .biolink-header {
     display: flex;
     justify-content: space-between;
     gap: 10px 50px;
     flex-wrap: wrap;
 }
 
-.content .link-header .link-search {
+.content .biolink-header .biolink-search {
     position: relative;
     flex: 3;
     min-width: min(325px, 100%);
 }
 
-.content .link-header .link-search input {
+.content .biolink-header .biolink-search input {
     padding: 15px;
     width: 100%;
     border: 2px solid #ddd;
@@ -20,11 +20,11 @@
     outline: none;
 }
 
-.content .link-header .link-search input::placeholder {
+.content .biolink-header .biolink-search input::placeholder {
     opacity: 0.5;
 }
 
-.content .link-header .link-search a {
+.content .biolink-header .biolink-search a {
     position: absolute;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@
     font-weight: 500;
 }
 
-.content .link-header .btn {
+.content .biolink-header .add-link-btn {
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -47,20 +47,13 @@
     gap: 5px;
     height: 52.4px;
     outline: none;
-}
-
-.content .link-header .action-btn {
-    flex: 1;
-    color: var(--primary);
-}
-
-.content .link-header .shorten-btn {
+    max-width: 250px;
     flex: 1;
     background-color: var(--primary);
     color: #fff;
 }
 
-.content .link-header .link-search input:focus, .content .link-header .btn:focus {
+.content .biolink-header .biolink-search input:focus, .content .biolink-header .btn:focus {
     border-color: #aaa;
 }
 
@@ -71,7 +64,7 @@
     min-height: 365px;
 }
 
-.content table.link-table {
+.content table.biolink-table {
     margin-top: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -82,23 +75,23 @@
     color: #555;
 }
 
-.content table.link-table thead {
+.content table.biolink-table thead {
     height: 70px;
     box-shadow: 0 1px 0 0 var(--primary);
 }
 
-.content table.link-table thead th {
+.content table.biolink-table thead th {
     font-weight: 400;
     padding: 0 10px;
     white-space: nowrap;
 }
 
-.content table.link-table thead th .checkbox-wrap {
+.content table.biolink-table thead th .checkbox-wrap {
     position: relative;
     z-index: 10;
 }
 
-.content table.link-table thead th #delete-btn {
+.content table.biolink-table thead th #delete-btn {
     position: relative;
     margin-left: -85px;
     margin-right: 10px;
@@ -112,50 +105,47 @@
     border-radius: 10px;
 }
 
-.content table.link-table tbody tr:nth-child(odd) {
+.content table.biolink-table tbody tr:nth-child(odd) {
     background-color: #eeeeee77;
 }
 
-.content table.link-table tbody tr {
+.content table.biolink-table tbody tr {
     height: 60px;
     font-weight: 500;
 }
 
-.content table.link-table tbody tr td {
+.content table.biolink-table tbody tr td {
     padding: 0 10px;
 }
-.content table.link-table tbody tr td .long-link{
-    font-size: 12px;
-}
 
-.content table.link-table tbody tr .btn-wrap {
+.content table.biolink-table tbody tr .btn-wrap {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 60px;
 }
 
-.content table.link-table tbody tr .btn-wrap .btn {
+.content table.biolink-table tbody tr .btn-wrap .btn {
     color: var(--primary);
     box-shadow: 0 0 5px 0 #00000022;
     width: 40px;
     height: 40px;
 }
 
-.content table.link-table tbody tr .btn-wrap .btn i {
+.content table.biolink-table tbody tr .btn-wrap .btn i {
     margin: auto;
 }
 
-.content table.link-table tfoot {
+.content table.biolink-table tfoot {
     height: 60px;
     box-shadow: 0 -1px 0 0 var(--primary);
 }
 
-.content table.link-table tfoot td {
+.content table.biolink-table tfoot td {
     text-align: center;
 }
 
-.content table.link-table tfoot .items-per-page div {
+.content table.biolink-table tfoot .items-per-page div {
     display: inline-block;
     border: 1px solid var(--primary);
     border-radius: 8px;
