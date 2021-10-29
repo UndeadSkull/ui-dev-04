@@ -298,6 +298,159 @@ a.btn.current {
     bottom: 0;
 }
 
+/*------------------------------------- Table -------------------------------------*/
+
+.content .table-container {
+    overflow-x: auto;
+    margin: -5px;
+    padding: 5px;
+    min-height: 365px;
+}
+
+.table-container table {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 #00000022;
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+    color: #555;
+}
+
+.table-container table thead {
+    height: 70px;
+    box-shadow: 0 1px 0 0 var(--primary);
+}
+
+.table-container table thead th {
+    font-weight: 400;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.table-container table thead th .checkbox-wrap {
+    position: relative;
+    z-index: 10;
+}
+
+.table-container table thead th #delete-btn {
+    position: relative;
+    margin-left: -85px;
+    margin-right: 10px;
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: 5;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.table-container table thead th:nth-child(2){
+    min-width: 154px;
+}
+
+.table-container table tbody tr:nth-child(odd) {
+    background-color: #eeeeee77;
+}
+
+.table-container table tbody tr {
+    height: 60px;
+    font-weight: 500;
+}
+
+.table-container table tbody tr td {
+    padding: 0 10px;
+}
+
+.table-container table tbody tr td .long-link {
+    font-size: 12px;
+}
+
+.table-container table tbody tr .btn-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+}
+
+.table-container table tbody tr .btn-wrap .btn {
+    color: var(--primary);
+    box-shadow: 0 0 5px 0 #00000022;
+    width: 40px;
+    height: 40px;
+}
+
+.table-container table tbody tr .btn-wrap .btn i {
+    margin: auto;
+}
+
+.table-container table tfoot {
+    height: 60px;
+    box-shadow: 0 -1px 0 0 var(--primary);
+}
+
+.table-container table tfoot td {
+    text-align: center;
+}
+
+.table-container table tfoot .items-per-page div {
+    display: inline-block;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.table-container table tbody tr td:not(:nth-child(-n + 2)), .table-container table thead th:not(:nth-child(-n + 2)) {
+    text-align: center;
+}
+
+/*------------------------------ Checkbox ----------------------------------*/
+
+.checkbox-wrap {
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 6px;
+}
+
+.checkbox-wrap .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-wrap .checkmark {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.checkbox-wrap .checkbox:focus~.checkmark {
+    background-color: #eee;
+}
+
+.checkbox-wrap .checkbox:checked~.checkmark {
+    background-color: var(--primary);
+}
+
+/*--------------------------------- Media Query ----------------------------------*/
+
 @media only screen and (min-width: 700px) {
     #menu-bar {
         width: 315px !important;
