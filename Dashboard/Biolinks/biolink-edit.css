@@ -1,0 +1,119 @@
+.biolink-edit {
+    display: flex;
+    height: 100%;
+}
+
+.biolink-options {
+    flex: 4;
+    /* background-color: yellow; */
+}
+
+.biolink-preview {
+    flex: 2;
+    display: grid;
+    place-items: center;
+    perspective: 800px;
+}
+
+.viewport {
+    position: relative;
+    width: 250px;
+    height: 450px;
+    background-color: #fff;
+    border: 5px solid #ddd;
+    border-radius: 40px;
+    transform: rotateY(-33deg);
+    border-left-width: 1px;
+    border-right-width: 15px;
+    /* box-shadow: 7px 0 0 -2px #ccc; */
+    box-shadow: 7px 0 0 -2px #ccc, inset 0px -6px 12px -10px #aaa;
+    transition: transform 200ms, border-width 250ms;
+}
+
+.viewport:hover {
+    transform: rotateY(0deg);
+    border-width: 5px;
+}
+
+.viewport::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.viewport::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(253deg, rgba(255, 255, 255, 0) 56%, rgba(255, 255, 255, 0.45171572046787467) 57%);
+    transition: width 0.2s;
+}
+
+.viewport:hover::after {
+    width: 0;
+}
+
+.preview-page {
+    margin: 0 15px;
+    padding: 30px 0;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.preview-page::-webkit-scrollbar {
+    width: 0;
+}
+
+.page-item {
+    display: grid;
+    place-items: center;
+    margin: 10px 0;
+}
+
+.page-item a {
+    text-decoration: none;
+}
+
+.page-item .image img {
+    border-radius: 50%;
+}
+
+.page-item .link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--primary-light);
+    padding: 8px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 20px;
+}
+
+.page-item .link .link-thumbnail {
+    height: 40px;
+}
+
+.page-item .link .link-thumbnail img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.page-item .youtube img {
+    border-radius: 10px;
+    height: 100px;
+    width: 180px;
+    object-fit: cover;
+}

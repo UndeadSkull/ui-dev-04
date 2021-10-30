@@ -193,6 +193,10 @@ a.btn.current {
     gap: 10px;
 }
 
+.container .header .right .account-btn img {
+    border-radius: 50%;
+}
+
 .container .header .header-bottom {
     display: flex;
     margin: 5px 0;
@@ -454,7 +458,6 @@ a.btn.current {
 .checkbox-wrap .checkbox:checked~.checkmark {
     background-color: var(--primary);
 }
-
 
 /*--------------------------------- Media Query ----------------------------------*/
 
