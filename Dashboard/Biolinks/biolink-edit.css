@@ -5,7 +5,6 @@
 
 .biolink-options {
     flex: 4;
-    /* background-color: yellow; */
 }
 
 .biolink-preview {
@@ -25,7 +24,6 @@
     transform: rotateY(-33deg);
     border-left-width: 1px;
     border-right-width: 15px;
-    /* box-shadow: 7px 0 0 -2px #ccc; */
     box-shadow: 7px 0 0 -2px #ccc, inset 0px -6px 12px -10px #aaa;
     transition: transform 200ms, border-width 250ms;
 }
