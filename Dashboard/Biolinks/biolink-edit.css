@@ -5,10 +5,10 @@
 }
 
 .biolink-options {
-    flex: 4;
+    flex: 3;
 }
 
-.biolink-options input[name=tab] {
+.biolink-options input[name="tab"] {
     display: none;
 }
 
@@ -72,17 +72,11 @@
     border-radius: 50%;
 }
 
-@media only screen and (max-width: 500px) {
-    .biolink-options .tabs label i {
-        display: none;
-    }
-}
-
 .biolink-options section .options {
     display: none;
     position: relative;
     margin-top: 5px;
-    padding: 20px 50px;
+    padding: 20px 50px 5px 50px;
     border: 2px solid var(--primary-light);
     border-radius: 20px;
     background-color: #fff;
@@ -100,6 +94,7 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     display: flex;
     gap: 15px;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .biolink-options section .options .content-header a.btn {
@@ -129,6 +124,132 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     border-radius: 50%;
 }
 
+.biolink-options section .options .content-body {
+    max-height: 450px;
+    overflow-x: auto;
+    margin: 0 -30px 0 -10px;
+}
+
+.biolink-options section .options .content-body .all-items {
+    margin: 10px;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap {
+    display: flex;
+    background-color: var(--content-bg);
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px 0 #ccc;
+    min-height: 130px;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-handle {
+    width: 80px;
+    display: grid;
+    place-items: center;
+    border-right: 2px solid var(--primary-light);
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-left {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-left .sub-title {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-center {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-center img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right label {
+    /* display: block; */
+    width: 62px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid var(--primary-light);
+    border-radius: 11px;
+    position: relative;
+    cursor: pointer;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right input {
+    display: none;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right label .checkmark {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px 0 var(--secondary);
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right input:checked~label {
+    background-color: var(--primary);
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right input:checked~label .checkmark {
+    left: 61%;
+    background-color: #fff;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right .item-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right .item-btns a.btn {
+    padding: 5px;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+}
+
+.sortable-placeholder {
+    background-color: #eeeeee55;
+    border-radius: 15px;
+}
+
 .biolink-preview {
     flex: 2;
     display: grid;
@@ -143,10 +264,10 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     background-color: #fff;
     border: 5px solid #ddd;
     border-radius: 40px;
-    transform: rotateY(-33deg);
-    border-left-width: 1px;
-    border-right-width: 15px;
-    box-shadow: 7px 0 0 -2px #ccc, inset 0px -6px 12px -10px #aaa;
+    transform: rotateY(-20deg);
+    border-left-width: 2px;
+    border-right-width: 12px;
+    box-shadow: 5px 0 0 -2px #ccc, inset 0px -6px 12px -10px #aaa;
     transition: transform 200ms, border-width 250ms;
 }
 
@@ -236,4 +357,13 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     height: 100px;
     width: 180px;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 500px) {
+    .biolink-options .tabs label i {
+        display: none;
+    }
+    .biolink-options section .options-3 {
+        border-top-right-radius: 0;
+    }
 }
