@@ -1,10 +1,132 @@
 .biolink-edit {
     display: flex;
     height: 100%;
+    flex-wrap: wrap;
 }
 
 .biolink-options {
     flex: 4;
+}
+
+.biolink-options input[name=tab] {
+    display: none;
+}
+
+.biolink-options .tabs {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: relative;
+    margin: 0 10px;
+    gap: min(20px, 2vw);
+}
+
+.biolink-options .tabs .slider {
+    position: absolute;
+    height: 65px;
+    /* width: 220px; */
+    width: clamp(105px, 35%, 220px);
+    background-color: var(--primary-light);
+    top: -8px;
+    left: -10px;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s;
+}
+
+.biolink-options input#content:checked~.tabs .tab-content, .biolink-options input#appearance:checked~.tabs .tab-appearance, .biolink-options input#settings:checked~.tabs .tab-settings {
+    color: #000;
+}
+
+.biolink-options input#appearance:checked~.tabs .slider {
+    transform: translateX(100%);
+}
+
+.biolink-options input#settings:checked~.tabs .slider {
+    transform: translateX(200%);
+}
+
+.biolink-options .tabs label {
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 10;
+    background-color: #fff;
+    width: clamp(103px, 40%, 200px);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-light);
+    cursor: pointer;
+}
+
+.biolink-options .tabs label i {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+    .biolink-options .tabs label i {
+        display: none;
+    }
+}
+
+.biolink-options section .options {
+    display: none;
+    position: relative;
+    margin-top: 5px;
+    padding: 20px 50px;
+    border: 2px solid var(--primary-light);
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.biolink-options section .options-1 {
+    border-top-left-radius: 0;
+}
+
+input#content:checked~section .options-1, input#appearance:checked~section .options-2, input#settings:checked~section .options-3 {
+    display: block;
+}
+
+.biolink-options section .options .content-header {
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.biolink-options section .options .content-header a.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px;
+    background-color: var(--primary);
+    color: #fff;
+    font-weight: 500;
+    height: 50px;
+}
+
+.biolink-options section .options .content-header .add-link {
+    flex: 4;
+}
+
+.biolink-options section .options .content-header .add-widget {
+    flex: 2;
+}
+
+.biolink-options section .options .content-header .add-widget i {
+    background-color: #fff;
+    color: var(--primary);
+    padding: 5px;
+    border-radius: 50%;
 }
 
 .biolink-preview {
