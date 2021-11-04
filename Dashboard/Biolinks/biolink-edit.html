@@ -116,7 +116,7 @@
                             </a>
                         </div>
                         <div class="content-body">
-                            <div class='all-items'>
+                            <div id='all-items'>
                                 <div class='item-wrap image'>
                                     <div class="item-handle">
                                         <i class="fa-solid fa-grip-vertical fa-2x"></i>
@@ -258,10 +258,215 @@
                         </div>
                     </div>
                     <div class="options options-2">
-                        Appearance is Key
+                        <div class="appearance-header">
+                            <div>
+                                <div class="title">Custom Appearance</div>
+                                <div class="desc">
+                                    Fully customize your Biolink. Change background color or select gradients and
+                                    images. Choose button style, text color, typeface and more.
+                                </div>
+                            </div>
+                            <div>
+                                <a href="#" class="btn save-btn">Save Changes</a>
+                            </div>
+                        </div>
+                        <div class="appearance-body">
+                            <input type="radio" name="appearance-tab" id="background" checked>
+                            <input type="radio" name="appearance-tab" id="fonts">
+                            <input type="radio" name="appearance-tab" id="buttons">
+                            <div class="sub-tabs">
+                                <label for="background" class="tab-background">Background</label>
+                                <label for="fonts" class="tab-fonts">Fonts</label>
+                                <label for="buttons" class="tab-buttons">Buttons</label>
+                            </div>
+                            <section>
+                                <div class="app-options app-options-1">
+                                    Insert background options here
+                                </div>
+                                <div class="app-options app-options-2">
+                                    Insert fonts options here
+                                </div>
+                                <div class="app-options app-options-3">
+                                    Insert buttons options here
+                                </div>
+                            </section>
+                        </div>
                     </div>
                     <div class="options options-3">
-                        Settings kollam
+
+                        <div class="settings-section no-border">
+                            <div class="settings-section-title">Name</div>
+                            <input type="text">
+                        </div>
+                        <div class="link-row">
+                            <i class="fa fa-link"></i>
+                            <a class="domain" href=" https://www.recuttly.com/QvS8P">
+                                https://www.recuttly.com/<span id="link-text">QvS8P</span>
+                            </a>
+                            <input id="link-input" type="text" value="QvS8P">
+                            <a href="#" id="link-edit-btn">Edit</a>
+                        </div>
+                        <div class="settings-section no-border">
+                            <div class="settings-section-title">Description</div>
+                            <textarea rows="4"></textarea>
+                        </div>
+
+                        <div class="settings-section">
+                            <div class="settings-section-title">Status</div>
+                            <a href="#" class="icon-btn">
+                                Activate <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                            </a>
+                        </div>
+                        <div class="settings-section no-border locked">
+                            <div class="settings-section-title">Password</div>
+                            <input type="text">
+                            <div class="settings-row">
+                                <a href="#" class="icon-btn">UTM Builder</a>
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">Schedule Link</div>
+                            <div class="settings-section-desc">
+                                Enter a date when link should be active. Both start and end dates are optional.
+                            </div>
+                            <div class="settings-row datetime-row">
+                                <label>Start Date
+                                    <input type="date">
+                                </label>
+                                <label>
+                                    <a href="#" class="clear-btn">Clear</a>
+                                    <input type="time">
+                                </label>
+                            </div>
+                            <div class="settings-row datetime-row">
+                                <label>End Date
+                                    <input type="date">
+                                </label>
+                                <label>
+                                    <a href="#" class="clear-btn">Clear</a>
+                                    <input type="time">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">Link Groups</div>
+                            <a href="#" class="icon-btn">Select Group <i
+                                    class="fa-solid fa-circle-chevron-down fa-xl pri"></i></a>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">Details</div>
+                            <div class="settings-section-desc">
+                                Add title, description and upload an image to personalise the link.
+                            </div>
+                            <div class="settings-row">
+                                <a href="#" class="btn image-btn">
+                                    <i class="fa fa-images fa-2x"></i>
+                                </a>
+                                <label>
+                                    Title
+                                    <input type="text">
+                                </label>
+                            </div>
+                            <div class="settings-row">
+                                <label>
+                                    Tags
+                                    <input type="text" placeholder="New tags">
+                                </label>
+                            </div>
+                            <div class="settings-row">
+                                <label>
+                                    Description
+                                    <textarea rows="3"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">Tracking Pixel</div>
+                            <div class="settings-section-desc">Select tracking pixels that should be use for this link.
+                            </div>
+                            <a href="#" class="icon-btn">
+                                None
+                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                            </a>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">Expiration Clicks</div>
+                            <div class="settings-section-desc">After biolink is visited specified amound of times, it
+                                will
+                                no
+                                longer be accessible. Optionally, after click amount is reached biolink can redirect to
+                                specified url instead.</div>
+                            <div class="settings-row">
+                                <label>Max Clicks<input type="text"></label>
+                                <label>Redirect URL<input type="text" placeholder="(optional)"></label>
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">Location Targeting</div>
+                            <div class="settings-section-desc">Redirect users to different url based on their location.
+                            </div>
+                            <div class="settings-row">
+                                <label>
+                                    Country
+                                    <a href="#" class="icon-btn">
+                                        United States
+                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                    </a>
+                                </label>
+                                <label>
+                                    URL
+                                    <input type="text">
+                                </label>
+                                <a href="#">
+                                    <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-btn">Add</a>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">Device Targeting</div>
+                            <div class="settings-section-desc">Redirect users to different url based on their device.
+                            </div>
+                            <div class="settings-row">
+                                <label>
+                                    Device
+                                    <a href="#" class="icon-btn">
+                                        Mobile
+                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                    </a>
+                                </label>
+                                <label>
+                                    URL
+                                    <input type="text">
+                                </label>
+                                <a href="#">
+                                    <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-btn">Add</a>
+                        </div>
+                        <div class="settings-section">
+                            <div class="settings-section-title">Platform Targeting</div>
+                            <div class="settings-section-desc">Redirect users to different url based on their platform.
+                            </div>
+                            <div class="settings-row">
+                                <label>
+                                    Platform
+                                    <a href="#" class="icon-btn">
+                                        Windows
+                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                    </a>
+                                </label>
+                                <label>
+                                    URL
+                                    <input type="text">
+                                </label>
+                                <a href="#">
+                                    <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                                </a>
+                            </div>
+                            <a href="#" class="settings-btn">Add</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -320,7 +525,7 @@
     integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    $(".all-items").sortable({
+    $("#all-items").sortable({
         axis: "y",
         revert: true,
         scroll: false,
@@ -330,6 +535,19 @@
         forcePlaceholderSize: 1,
         handle: ".item-handle"
     });
+    $("#all-items").disableSelection();
+    $("#link-edit-btn").click(function () {
+        if ($("#link-edit-btn").text() == 'Edit') {
+            $("#link-edit-btn").text('Save');
+            $("#link-text").css('display', 'none');
+            $("#link-input").css('display', 'inline-block');
+        }
+        else {
+            $("#link-edit-btn").text('Edit');
+            $("#link-text").css('display', 'inline-block');
+            $("#link-input").css('display', 'none');
+        }
+    })
 </script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="../common/dashboard.js"></script>

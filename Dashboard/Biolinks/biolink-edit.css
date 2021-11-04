@@ -12,6 +12,18 @@
     display: none;
 }
 
+.biolink-options input#content:checked~.tabs .tab-content, .biolink-options input#appearance:checked~.tabs .tab-appearance, .biolink-options input#settings:checked~.tabs .tab-settings {
+    color: #000;
+}
+
+.biolink-options input#appearance:checked~.tabs .slider {
+    transform: translateX(100%);
+}
+
+.biolink-options input#settings:checked~.tabs .slider {
+    transform: translateX(200%);
+}
+
 .biolink-options .tabs {
     display: flex;
     /* justify-content: space-between; */
@@ -33,19 +45,7 @@
     transition: transform 0.3s;
 }
 
-.biolink-options input#content:checked~.tabs .tab-content, .biolink-options input#appearance:checked~.tabs .tab-appearance, .biolink-options input#settings:checked~.tabs .tab-settings {
-    color: #000;
-}
-
-.biolink-options input#appearance:checked~.tabs .slider {
-    transform: translateX(100%);
-}
-
-.biolink-options input#settings:checked~.tabs .slider {
-    transform: translateX(200%);
-}
-
-.biolink-options .tabs label {
+.biolink-options .tabs>label {
     font-size: 16px;
     font-weight: 500;
     z-index: 10;
@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 
-.biolink-options .tabs label i {
+.biolink-options .tabs>label i {
     width: 30px;
     height: 30px;
     display: grid;
@@ -72,7 +72,7 @@
     border-radius: 50%;
 }
 
-.biolink-options section .options {
+.options {
     display: none;
     position: relative;
     margin-top: 5px;
@@ -90,14 +90,14 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     display: block;
 }
 
-.biolink-options section .options .content-header {
+.options-1 .content-header {
     display: flex;
     gap: 15px;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.biolink-options section .options .content-header a.btn {
+.content-header a.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,32 +109,32 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     height: 50px;
 }
 
-.biolink-options section .options .content-header .add-link {
+.content-header .add-link {
     flex: 4;
 }
 
-.biolink-options section .options .content-header .add-widget {
+.content-header .add-widget {
     flex: 2;
 }
 
-.biolink-options section .options .content-header .add-widget i {
+.content-header .add-widget i {
     background-color: #fff;
     color: var(--primary);
     padding: 5px;
     border-radius: 50%;
 }
 
-.biolink-options section .options .content-body {
+.content-body {
     max-height: 450px;
     overflow-x: auto;
     margin: 0 -30px 0 -10px;
 }
 
-.biolink-options section .options .content-body .all-items {
+.content-body #all-items {
     margin: 10px;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap {
+#all-items .item-wrap {
     display: flex;
     background-color: var(--content-bg);
     border-radius: 15px;
@@ -143,21 +143,22 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     min-height: 130px;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-handle {
+#all-items .item-wrap .item-handle {
     width: 80px;
     display: grid;
     place-items: center;
     border-right: 2px solid var(--primary-light);
+    cursor: move;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body {
+#all-items .item-wrap .item-body {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-left {
+#all-items .item-wrap .item-body .item-left {
     flex: 1;
     font-size: 18px;
     font-weight: 500;
@@ -166,12 +167,12 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     gap: 20px;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-left .sub-title {
+#all-items .item-wrap .item-body .item-left .sub-title {
     font-size: 12px;
     font-weight: 300;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-center {
+#all-items .item-wrap .item-body .item-center {
     flex: 3;
     display: flex;
     justify-content: center;
@@ -180,14 +181,14 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     gap: 10px;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-center img {
+#all-items .item-wrap .item-body .item-center img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right {
+#all-items .item-wrap .item-body .item-right {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -196,7 +197,7 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     gap: 20px;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right label {
+#all-items .item-wrap .item-body .item-right label {
     /* display: block; */
     width: 62px;
     height: 22px;
@@ -207,11 +208,11 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     cursor: pointer;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right input {
+#all-items .item-wrap .item-body .item-right input {
     display: none;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right label .checkmark {
+#all-items .item-wrap .item-body .item-right label .checkmark {
     height: 24px;
     width: 24px;
     position: absolute;
@@ -224,21 +225,21 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     transition: all 0.2s;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right input:checked~label {
+#all-items .item-wrap .item-body .item-right input:checked~label {
     background-color: var(--primary);
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right input:checked~label .checkmark {
+#all-items .item-wrap .item-body .item-right input:checked~label .checkmark {
     left: 61%;
     background-color: #fff;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right .item-btns {
+#all-items .item-wrap .item-body .item-right .item-btns {
     display: flex;
     gap: 10px;
 }
 
-.biolink-options section .options .content-body .all-items .item-wrap .item-body .item-right .item-btns a.btn {
+#all-items .item-wrap .item-body .item-right .item-btns a.btn {
     padding: 5px;
     background-color: var(--primary);
     color: #fff;
@@ -250,6 +251,239 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     border-radius: 15px;
 }
 
+.options-2 .appearance-header {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.options-2 .appearance-header .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.options-2 .appearance-header .desc {
+    font-size: 14px;
+}
+
+.options-2 .appearance-header .save-btn {
+    padding: 8px 12px;
+    color: #fff;
+    background-color: var(--primary);
+    display: inline-block;
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: 300;
+    min-width: max-content;
+}
+
+.options-2 .appearance-body input[name='appearance-tab'] {
+    display: none;
+}
+
+.options-2 .appearance-body .sub-tabs {
+    margin: 10px 0;
+}
+
+.options-2 .appearance-body .sub-tabs label {
+    font-weight: 500;
+    color: var(--primary);
+    background-color: #fff;
+    border: 2px solid var(--primary-light);
+    border-radius: 8px;
+    padding: 4px 8px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.options-2 .appearance-body input#background:checked~.sub-tabs .tab-background, .options-2 .appearance-body input#fonts:checked~.sub-tabs .tab-fonts, .options-2 .appearance-body input#buttons:checked~.sub-tabs .tab-buttons {
+    color: #fff;
+    background-color: var(--primary);
+}
+
+.options-2 .appearance-body section .app-options {
+    display: none;
+    max-height: 376px;
+    overflow-y: auto;
+}
+
+.options-2 .appearance-body input#background:checked~section .app-options-1, .options-2 .appearance-body input#fonts:checked~section .app-options-2, .options-2 .appearance-body input#buttons:checked~section .app-options-3 {
+    display: block;
+}
+
+.options-3 {
+    /* padding: 20px 20px 0 20px; */
+    font-weight: 400;
+    max-height: 540px;
+    overflow-y: auto;
+}
+
+.options-3 .link-row .domain {
+    text-decoration: none;
+}
+
+.options-3 .link-row #link-input {
+    display: none;
+    min-width: 80px;
+    width: 80px;
+    padding: 3px 5px;
+}
+
+.options-3 .link-row #link-edit-btn {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 8px;
+}
+
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px 15px;
+    margin: 20px 0;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.options-3 .settings-btn {
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 10px;
+    max-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.options-3 input, .options-3 textarea {
+    flex: 1;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.options-3 input[type='text'] {
+    min-width: 240px;
+}
+
+.options-3 input::placeholder, .options-3 textarea::placeholder {
+    font-size: 14px;
+}
+
+.options-3 .settings-section {
+    margin: 20px 0;
+    padding: 20px 0 10px 0;
+    border-top: 2px dashed var(--primary-light);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.options-3 .settings-section.locked::before {
+    content: url('data:image/svg+xml,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M384 223.1L368 224V144c0-79.41-64.59-144-144-144S80 64.59 80 144V224L64 223.1c-35.35 0-64 28.65-64 64v160c0 35.34 28.65 64 64 64h320c35.35 0 64-28.66 64-64v-160C448 252.7 419.3 223.1 384 223.1zM144 144C144 99.88 179.9 64 224 64s80 35.88 80 80V224h-160V144z"></path></svg>');
+    position: absolute;
+    left:0;
+    top: 0;
+}
+
+.options-3 .settings-section.no-border {
+    padding-top: 0;
+    border-top: none;
+}
+
+.options-3 .settings-section .settings-section-title {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.options-3 .settings-section .settings-section-desc {
+    font-size: 11px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.options-3 label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.settings-section:not(:first-child) .settings-row {
+    margin: 5px 0;
+}
+
+.settings-section:not(:first-child) .settings-row label {
+    font-size: 12px;
+}
+
+.settings-section:not(:first-child) .settings-row .clear-btn {
+    text-align: right;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.options-3 .icon-btn {
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--secondary);
+    gap: 8px;
+    min-width: max-content;
+}
+
+.options-3 .image-btn {
+    background-color: var(--primary-light);
+    color: #000;
+    padding: 10px;
+    position: relative;
+}
+
+.options-3 .image-btn::before {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    content: '+';
+    color: white;
+    font-size: 20px;
+    background-color: var(--primary);
+    padding: 0 3px;
+    border-radius: 50%;
+}
+
+.settings-footer {
+    padding: 20px;
+    border-top: 2px solid var(--primary-light);
+    border-radius: 25px 25px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.settings-footer .cancel-btn {
+    background-color: var(--primary-light);
+    color: #000;
+    padding: 10px 15px;
+}
+
+.settings-footer .confirm-btn {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 15px;
+}
+
 .biolink-preview {
     flex: 2;
     display: grid;
@@ -259,8 +493,8 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
 
 .viewport {
     position: relative;
-    width: 250px;
-    height: 450px;
+    width: 280px;
+    height: 520px;
     background-color: #fff;
     border: 5px solid #ddd;
     border-radius: 40px;
@@ -316,21 +550,22 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     width: 0;
 }
 
-.page-item {
+.preview-page .page-item {
     display: grid;
     place-items: center;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
-.page-item a {
+.preview-page .page-item a {
     text-decoration: none;
 }
 
-.page-item .image img {
+.preview-page .page-item .image img {
     border-radius: 50%;
+    border: 1px solid var(--primary-light);
 }
 
-.page-item .link {
+.preview-page .page-item .link {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -341,18 +576,18 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     font-size: 20px;
 }
 
-.page-item .link .link-thumbnail {
+.preview-page .page-item .link .link-thumbnail {
     height: 40px;
 }
 
-.page-item .link .link-thumbnail img {
+.preview-page .page-item .link .link-thumbnail img {
     width: 40px;
     height: 40px;
     border-radius: 10px;
     object-fit: cover;
 }
 
-.page-item .youtube img {
+.preview-page .page-item .youtube img {
     border-radius: 10px;
     height: 100px;
     width: 180px;
@@ -365,5 +600,23 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     }
     .biolink-options section .options-3 {
         border-top-right-radius: 0;
+    }
+    .biolink-options .options .item-wrap .item-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .biolink-options .options {
+        margin: 0;
+        padding: 10px;
+    }
+    .biolink-options .content-body {
+        max-height: unset !important;
+        margin: -5px;
+    }
+    .biolink-preview .viewport {
+        margin: 20px 0 100px 0;
+        transform: rotateX(0);
+        border-width: 4px;
+        box-shadow: none;
     }
 }
