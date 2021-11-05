@@ -246,6 +246,132 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     border-radius: 50%;
 }
 
+#all-items .item-wrap.link-item .item-body {
+    display: block;
+}
+
+#all-items .item-wrap.link-item .item-body .item-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+.item-wrap.link-item .item-body .item-bottom .link-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.item-wrap.link-item .item-body .item-bottom .link-buttons .btn {
+    background: transparent;
+    cursor: pointer;
+}
+
+.item-wrap.link-item .item-body .item-bottom .link-buttons .btn.active {
+    color: var(--primary);
+}
+
+.item-wrap.link-item .item-body .item-bottom input[name='link-radio'] {
+    display: none;
+}
+
+.item-wrap.link-item .item-body .item-bottom .link-options-wrap {
+    width: 100%;
+}
+
+.item-wrap.link-item .item-body .item-bottom .link-options-wrap .link-options {
+    display: none;
+    width: 100%;
+    box-shadow: 0 0 0 1px var(--primary-light);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.item-wrap.link-item .item-body .item-bottom input#link-thumbnail:checked~.link-options-wrap .link-options-1, .item-wrap.link-item .item-body .item-bottom input#link-statistics:checked~.link-options-wrap .link-options-2, .item-wrap.link-item .item-body .item-bottom input#link-animation:checked~.link-options-wrap .link-options-3, .item-wrap.link-item .item-body .item-bottom input#link-leaplink:checked~.link-options-wrap .link-options-4, .item-wrap.link-item .item-body .item-bottom input#link-schedule:checked~.link-options-wrap .link-options-5 {
+    display: block;
+}
+
+.item-wrap.link-item .item-body .item-bottom .link-options-wrap .link-options .link-options-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.link-options .link-options-header .link-options-close {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.link-options .link-options-desc {
+    font-size: 12px;
+    text-align: center;
+}
+
+.link-options .link-options-body {
+    margin: 10px 0;
+}
+
+.link-options .link-options-body .btn-wrap {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.link-options .link-options-body .btn {
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.link-options .link-options-body .btn:focus, .link-options .link-options-body .wide-btn {
+    color: #fff;
+    background-color: var(--primary);
+}
+
+.link-options input {
+    flex: 1;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.link-options input[type='text'] {
+    min-width: 240px;
+}
+
+.link-options input::placeholder {
+    font-size: 14px;
+}
+
+.link-options .datetime-row {
+    display: flex;
+    gap: 5px 10px;
+    flex-wrap: wrap;
+}
+
+.link-options .datetime-row label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.link-options .datetime-row .clear-btn {
+    text-align: right;
+    text-decoration: none;
+    color: var(--primary);
+}
+
 .sortable-placeholder {
     background-color: #eeeeee55;
     border-radius: 15px;
@@ -326,7 +452,7 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     display: none;
     min-width: 80px;
     width: 80px;
-    padding: 3px 5px;
+    padding: 1px 5px;
 }
 
 .options-3 .link-row #link-edit-btn {
@@ -337,7 +463,7 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     border-radius: 8px;
 }
 
-.settings-row {
+.options-3 .settings-row {
     display: flex;
     justify-content: space-between;
     gap: 5px 15px;
@@ -386,14 +512,41 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
 }
 
 .options-3 .settings-section.locked::before {
-    content: url('data:image/svg+xml,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M384 223.1L368 224V144c0-79.41-64.59-144-144-144S80 64.59 80 144V224L64 223.1c-35.35 0-64 28.65-64 64v160c0 35.34 28.65 64 64 64h320c35.35 0 64-28.66 64-64v-160C448 252.7 419.3 223.1 384 223.1zM144 144C144 99.88 179.9 64 224 64s80 35.88 80 80V224h-160V144z"></path></svg>');
+    content: '';
     position: absolute;
-    left:0;
-    top: 0;
+    right: 0;
+    top: 10px;
+    height: 20px;
+    width: 17px;
+    -webkit-mask: url('data:image/svg+xml,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock pri" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M384 223.1L368 224V144c0-79.41-64.59-144-144-144S80 64.59 80 144V224L64 223.1c-35.35 0-64 28.65-64 64v160c0 35.34 28.65 64 64 64h320c35.35 0 64-28.66 64-64v-160C448 252.7 419.3 223.1 384 223.1zM144 144C144 99.88 179.9 64 224 64s80 35.88 80 80V224h-160V144z"></path></svg>') no-repeat 50% 50%;
+    mask: url('data:image/svg+xml,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock pri" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M384 223.1L368 224V144c0-79.41-64.59-144-144-144S80 64.59 80 144V224L64 223.1c-35.35 0-64 28.65-64 64v160c0 35.34 28.65 64 64 64h320c35.35 0 64-28.66 64-64v-160C448 252.7 419.3 223.1 384 223.1zM144 144C144 99.88 179.9 64 224 64s80 35.88 80 80V224h-160V144z"></path></svg>') no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: var(--primary);
+    transition: all 0.3s;
+    overflow: hidden;
+    text-align: center;
+}
+
+.options-3 .settings-section.locked:hover::before {
+    content: "Upgrade to unlock this feature";
+    width: 210px;
+    font-size: 12px;
+    mask: none;
+    -webkit-mask: none;
+    background: #fff;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+.options-3 .settings-section.locked a {
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .options-3 .settings-section.no-border {
-    padding-top: 0;
+    /* padding-top: 0; */
+    margin: 0;
     border-top: none;
 }
 

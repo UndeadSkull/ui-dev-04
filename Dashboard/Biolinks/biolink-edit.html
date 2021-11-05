@@ -171,16 +171,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='item-wrap'>
+                                <div class='item-wrap link-item'>
                                     <div class="item-handle">
                                         <i class="fa-solid fa-grip-vertical fa-2x"></i>
                                     </div>
                                     <div class="item-body">
-                                        <div class="item-left">
+                                        <div class="item-top">
+                                        <div class="item-left ">
                                             Facebook Link
                                             <div class="sub-title">
                                                 www.youtube.co/jancjh
                                             </div>
+                                            
                                         </div>
                                         <div class="item-right">
                                             <input type="checkbox" id='check-3'>
@@ -194,6 +196,131 @@
                                                 <a href="#" class="btn delete-btn">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <input type="radio" name="link-radio" id="link-none" >
+                                            <input type="radio" name="link-radio" id="link-thumbnail" >
+                                            <input type="radio" name="link-radio" id="link-statistics">
+                                            <input type="radio" name="link-radio" id="link-animation">
+                                            <input type="radio" name="link-radio" id="link-leaplink">
+                                            <input type="radio" name="link-radio" id="link-schedule">
+                                            <div class="link-buttons">
+                                                <label for="link-thumbnail" class="btn active">
+                                                    <i class="fa fa-image"></i>
+                                                </label>
+                                                <label for="link-statistics" class="btn">
+                                                    <i class="fa-regular fa-chart-bar"></i>
+                                                </label>
+                                                <label for="link-animation" class="btn active">
+                                                    <i class="fa-solid fa-meteor"></i>
+                                                </label>
+                                                <label for="link-leaplink" class="btn">
+                                                    <i class="fa-solid fa-turn-down fa-rotate-270"></i>
+                                                </label>
+                                                <label for="link-schedule" class="btn">
+                                                    <i class="fa-solid fa-clock-rotate-left fa-flip-horizontal"></i>
+                                                </label>
+                                            </div>
+                                            <div class="link-options-wrap">
+                                                <div class="link-options link-options-1">
+                                                    <div class="link-options-header">
+                                                        <div class="link-options-title">Thumbnail</div>
+                                                        <label for="link-none" class="link-options-close">
+                                                            <i class="fa fa-times"></i>
+                                                        </label>
+                                                    </div>
+                                                    <div class="link-options-body">
+                                                        <a href="#" class="btn wide-btn">Upload Thumbnail</a>
+                                                    </div>
+                                                </div>
+                                                <div class="link-options link-options-2">
+                                                    <div class="link-options-header">
+                                                        <div class="link-options-title">Statistics</div>
+                                                        <label for="link-none" class="link-options-close">
+                                                            <i class="fa fa-times"></i>
+                                                        </label>
+                                                    </div>
+                                                    <div class="link-options-desc"></div>
+                                                    <div class="link-options-body">
+                                                    </div>
+                                                </div>
+                                                <div class="link-options link-options-3">
+                                                    <div class="link-options-header">
+                                                        <div class="link-options-title">Animations</div>
+                                                        <label for="link-none" class="link-options-close">
+                                                            <i class="fa fa-times"></i>
+                                                        </label>
+                                                    </div>
+                                                    <div class="link-options-desc">
+                                                        <p>Add an animation to draw attention to this link.</p>
+                                                        <p>Selected animation will repeat five times by default.</p>
+                                                    </div>
+                                                    <div class="link-options-body">
+                                                        <div class="btn-wrap">
+                                                            <a href="#" class="btn">NONE</a>
+                                                            <a href="#" class="btn">BOUNCE</a>
+                                                            <a href="#" class="btn">FLASH</a>
+                                                            <a href="#" class="btn">PULSE</a>
+                                                            <a href="#" class="btn">RUBBERBAND</a>
+                                                            <a href="#" class="btn">SHAKEX</a>
+                                                            <a href="#" class="btn">SHAKEY</a>
+                                                            <a href="#" class="btn">HEADSHAKE</a>
+                                                            <a href="#" class="btn">SWING</a>
+                                                            <a href="#" class="btn">TADA</a>
+                                                            <a href="#" class="btn">WOBBLE</a>
+                                                            <a href="#" class="btn">JELLO</a>
+                                                            <a href="#" class="btn">HEARTBEAT</a>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="link-options link-options-4">
+                                                    <div class="link-options-header">
+                                                        <div class="link-options-title">Leap Link</div>
+                                                        <label for="link-none" class="link-options-close">
+                                                            <i class="fa fa-times"></i>
+                                                        </label>
+                                                    </div>
+                                                    <div class="link-options-desc">
+                                                        <p>Temporarily send all visitors directly to this link.</p>
+                                                        <p>You can only have one active Leap Link at a time.</p>
+                                                    </div>
+                                                    <div class="link-options-body">
+                                                        <a href="#" class="btn wide-btn">Enable Leap Link</a>
+                                                    </div>
+                                                </div>
+                                                <div class="link-options link-options-5">
+                                                    <div class="link-options-header">
+                                                        <div class="link-options-title">Schedule</div>
+                                                        <label for="link-none" class="link-options-close">
+                                                            <i class="fa fa-times"></i>
+                                                        </label>
+                                                    </div>
+                                                    <div class="link-options-desc">
+                                                        <p>Enter a date when link should be active. Both start and end dates are optional</p>
+                                                    </div>
+                                                    <div class="link-options-body">
+                                                        <div class="datetime-row">
+                                                            <label>Start Date
+                                                                <input type="date">
+                                                            </label>
+                                                            <label>
+                                                                <a href="#" class="clear-btn">Clear</a>
+                                                                <input type="time">
+                                                            </label>
+                                                        </div>
+                                                        <div class="datetime-row">
+                                                            <label>End Date
+                                                                <input type="date">
+                                                            </label>
+                                                            <label>
+                                                                <a href="#" class="clear-btn">Clear</a>
+                                                                <input type="time">
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -324,7 +451,7 @@
                                 <a href="#" class="icon-btn">UTM Builder</a>
                             </div>
                         </div>
-                        <div class="settings-section">
+                        <div class="settings-section locked">
                             <div class="settings-section-title">Schedule Link</div>
                             <div class="settings-section-desc">
                                 Enter a date when link should be active. Both start and end dates are optional.
@@ -349,38 +476,6 @@
                             </div>
                         </div>
                         <div class="settings-section">
-                            <div class="settings-section-title">Link Groups</div>
-                            <a href="#" class="icon-btn">Select Group <i
-                                    class="fa-solid fa-circle-chevron-down fa-xl pri"></i></a>
-                        </div>
-                        <div class="settings-section">
-                            <div class="settings-section-title">Details</div>
-                            <div class="settings-section-desc">
-                                Add title, description and upload an image to personalise the link.
-                            </div>
-                            <div class="settings-row">
-                                <a href="#" class="btn image-btn">
-                                    <i class="fa fa-images fa-2x"></i>
-                                </a>
-                                <label>
-                                    Title
-                                    <input type="text">
-                                </label>
-                            </div>
-                            <div class="settings-row">
-                                <label>
-                                    Tags
-                                    <input type="text" placeholder="New tags">
-                                </label>
-                            </div>
-                            <div class="settings-row">
-                                <label>
-                                    Description
-                                    <textarea rows="3"></textarea>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="settings-section">
                             <div class="settings-section-title">Tracking Pixel</div>
                             <div class="settings-section-desc">Select tracking pixels that should be use for this link.
                             </div>
@@ -389,7 +484,7 @@
                                 <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
                             </a>
                         </div>
-                        <div class="settings-section">
+                        <div class="settings-section locked">
                             <div class="settings-section-title">Expiration Clicks</div>
                             <div class="settings-section-desc">After biolink is visited specified amound of times, it
                                 will
@@ -401,7 +496,7 @@
                                 <label>Redirect URL<input type="text" placeholder="(optional)"></label>
                             </div>
                         </div>
-                        <div class="settings-section">
+                        <div class="settings-section locked">
                             <div class="settings-section-title">Location Targeting</div>
                             <div class="settings-section-desc">Redirect users to different url based on their location.
                             </div>
@@ -423,7 +518,7 @@
                             </div>
                             <a href="#" class="settings-btn">Add</a>
                         </div>
-                        <div class="settings-section">
+                        <div class="settings-section locked">
                             <div class="settings-section-title">Device Targeting</div>
                             <div class="settings-section-desc">Redirect users to different url based on their device.
                             </div>
@@ -445,7 +540,7 @@
                             </div>
                             <a href="#" class="settings-btn">Add</a>
                         </div>
-                        <div class="settings-section">
+                        <div class="settings-section locked">
                             <div class="settings-section-title">Platform Targeting</div>
                             <div class="settings-section-desc">Redirect users to different url based on their platform.
                             </div>
@@ -548,6 +643,8 @@
             $("#link-input").css('display', 'none');
         }
     })
+    $(".settings-section.locked").find("input").prop('disabled', true);
+
 </script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="../common/dashboard.js"></script>
