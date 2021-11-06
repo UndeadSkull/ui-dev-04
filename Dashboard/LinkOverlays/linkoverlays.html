@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Recuttly</title>
     <link rel="stylesheet" href="../common/dashboard.css">
-    <link rel="stylesheet" href="linkgroups.css">
+    <link rel="stylesheet" href="linkoverlays.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
             <i class="fa-brands fa-instagram fa-xl"></i>
             <span>Biolinks</span>
         </a>
-        <a href="../LinkGroups/linkgroups.html" class="btn menu-item current">
+        <a href="../LinkGroups/linkgroups.html" class="btn menu-item">
             <i class="fa fa-network-wired"></i>
             <span>Link Groups</span>
         </a>
@@ -40,7 +40,7 @@
             <i class="fa fa-globe fa-lg"></i>
             <span>Custom Domains</span>
         </a>
-        <a href="../LinkOverlays/linkoverlays.html" class="btn menu-item">
+        <a href="../LinkOverlays/linkoverlays.html" class="btn menu-item current">
             <i class="fa-regular fa-window-maximize fa-lg"></i>
             <span>Link Overlays</span>
         </a>
@@ -63,7 +63,7 @@
         </button>
         <div class="header">
             <div class="header-top">
-                <div class="title">Link Groups</div>
+                <div class="title">Link Overlays</div>
                 <div class="center">
                     <a href="#" class="btn main-btn">
                         <div class="btn-text">
@@ -85,21 +85,21 @@
             </div>
         </div>
         <div class="content">
-            <div class="linkgroup-header">
-                <div class="linkgroup-search">
-                    <input type="text" name="search" id="search" placeholder="Type to search for groups"
+            <div class="linkoverlay-header">
+                <div class="linkoverlay-search">
+                    <input type="text" name="search" id="search" placeholder="Type to search for link overlays"
                         autocomplete="off">
                     <a href="#" class="filter-btn pri">
                         <i class="fa fa-filter"></i>Filter
                     </a>
                 </div>
-                <a href="javascript:void(0)" class="btn add-link-btn" onclick="toggleModal(true)">
-                    Add New Group
+                <a href="#" class="btn add-link-btn">
+                    Add New Overlay
                     <i class="fa-solid fa-circle-plus fa-lg"></i>
                 </a>
             </div>
             <div class="table-container">
-                <table class="linkgroup-table">
+                <table class="linkoverlay-table">
                     <thead>
                         <th>
                             <label class="checkbox-wrap">
@@ -112,19 +112,12 @@
                             <a href="#" id="delete-btn">Delete</a>
                             <span class="table-title">Name</span>
                         </th>
-                        <th>
-                            Links
+                        <th>Message
                             <i class="fa fa-arrow-down fa-xs"></i>
                         </th>
-                        <th>Public
-                            <i class="fa fa-arrow-down fa-xs"></i>
-                        </th>
-                        <th>Rotator
-                            <i class="fa fa-arrow-down fa-xs"></i>
-                        </th>
-                        <th>Last Update
-                            <i class="fa fa-arrow-down fa-xs"></i>
-                        </th>
+                        <th>Action</th>
+                        <th>Color</th>
+                        <th>Last Update</th>
                         <th></th>
                     </thead>
 
@@ -137,29 +130,20 @@
                                 </label>
                             </td>
                             <td>
-                                <div class="linkgroup-name">
-                                    Instagram
+                                <div class="linkoverlay-name">
+                                    Overlay 1
                                 </div>
                             </td>
-                            <td>9</td>
+                            <td>Your overlay message here</td>
                             <td>
-                                <i class="fa fa-check pri fa-2x"></i>
+                                Button Text
                             </td>
                             <td>
-                                <i class="fa fa-check pri fa-2x"></i>
+                                <div class="color-wrap" style="background-color: #00d500;"></div>
                             </td>
                             <td>01-10-2021</td>
                             <td class="btn-wrap">
-                                <a href="linkgroup-list.html" class="btn">
-                                    <i class="fa fa-list"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-chart-bar"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a href="#" class="btn">
+                                <a href="linkoverlay-edit.html" class="btn">
                                     <i class="fa fa-pen"></i>
                                 </a>
                             </td>
@@ -172,29 +156,20 @@
                                 </label>
                             </td>
                             <td>
-                                <div class="linkgroup-name">
-                                    Website
+                                <div class="linkoverlay-name">
+                                    Overlay 2
                                 </div>
                             </td>
-                            <td>5</td>
+                            <td>Your overlay message here</td>
                             <td>
-                                <i class="fa fa-check pri fa-2x"></i>
+                                Button Text
                             </td>
                             <td>
-                                <i class="fa fa-times sec fa-2x"></i>
+                                <div class="color-wrap" style="background-color: #00d;"></div>
                             </td>
                             <td>01-10-2021</td>
                             <td class="btn-wrap">
-                                <a href="#" class="btn">
-                                    <i class="fa fa-list"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-chart-bar"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a href="#" class="btn">
+                                <a href="linkoverlay-edit.html" class="btn">
                                     <i class="fa fa-pen"></i>
                                 </a>
                             </td>
@@ -207,64 +182,20 @@
                                 </label>
                             </td>
                             <td>
-                                <div class="linkgroup-name">
-                                    linkgroup Name
+                                <div class="linkoverlay-name">
+                                    Overlay 3
                                 </div>
                             </td>
-                            <td>3</td>
+                            <td>Your overlay message here</td>
                             <td>
-                                <i class="fa fa-times sec fa-2x"></i>
+                                Button Text
                             </td>
                             <td>
-                                <i class="fa fa-times sec fa-2x"></i>
+                                <div class="color-wrap" style="background-color: #500;"></div>
                             </td>
                             <td>01-10-2021</td>
                             <td class="btn-wrap">
-                                <a href="#" class="btn">
-                                    <i class="fa fa-list"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-chart-bar"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-pen"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="checkbox-wrap">
-                                    <input type="checkbox" name="select-row" class="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </td>
-                            <td>
-                                <div class="linkgroup-name">
-                                    linkgroup Name
-                                </div>
-                            </td>
-                            <td>1</td>
-                            <td>
-                                <i class="fa fa-check fa-2x pri"></i>
-                            </td>
-                            <td>
-                                <i class="fa fa-times sec fa-2x"></i>
-                            </td>                            
-                            <td>01-10-2021</td>
-                            <td class="btn-wrap">
-                                <a href="#" class="btn">
-                                    <i class="fa fa-list"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-chart-bar"></i>
-                                </a>
-                                <a href="#" class="btn">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a href="#" class="btn">
+                                <a href="linkoverlay-edit.html" class="btn">
                                     <i class="fa fa-pen"></i>
                                 </a>
                             </td>
@@ -317,90 +248,9 @@
             </div>
         </div>
     </div>
-    <div id="modal-container">
-        <div class="modal">
-            <div class="modal-header">Create Link Group</div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <div class="modal-section-title">Name</div>
-                    <input type="text">
-                    <div class="link-row">
-                        <i class="fa fa-link"></i>
-                        <a class="domain" href=" https://www.recuttly.com/QvS8P">
-                            https://www.recuttly.com/<span id="link-text">QvS8P</span>
-                        </a>
-                        <input id="link-input" type="text" value="QvS8P">
-                        <a href="#" id="link-edit-btn">Edit</a>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-title">Domain</div>
-                    <a href="#" class="icon-btn">
-                        All my domains (including default) <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
-                    </a>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-title">Description</div>
-                    <textarea rows="4"></textarea>
-                </div>
-                <div class="modal-section">
-                    <div class="checkbox-row">
-                        <input type="checkbox" id="check-1">
-                        <label for="check-1">
-                            <div class="checkmark"></div>
-                        </label>
-                        <div class="checkbox-label">
-                            Active
-                        </div>
-                    </div>
-                    <div class="modal-section-desc">Whether this link group is viewable publicly.</div>
-                </div>
-                <div class="modal-section">
-                    <div class="checkbox-row">
-                        <input type="checkbox" id="check-2">
-                        <label for="check-2">
-                            <div class="checkmark"></div>
-                        </label>
-                        <div class="checkbox-label">
-                            Rotator
-                        </div>
-                    </div>
-                    <div class="modal-section-desc">When checked, url above will redirect to random links from the
-                        group, instead of showing all the
-                        links in the group.</div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
-                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Create</a>
-            </div>
-        </div>
-    </div>
 </body>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="../common/dashboard.js"></script>
 <script type="text/javascript" src="../common/table.js"></script>
-<script>
-    const toggleModal = (flag) =>
-        document.getElementById('modal-container').style.display = flag ? 'grid' : 'none';
-
-    var editBtn = document.querySelector("#link-edit-btn")
-    var editTxt = document.querySelector("#link-text")
-    var editInput = document.querySelector("#link-input")
-    editBtn.addEventListener('click', () => {
-        if (editBtn.innerText == 'Edit') {
-            editBtn.innerText = 'Save'
-            editTxt.style.display = 'none'
-            editInput.style.display = 'inline-block'
-        }
-        else {
-            editBtn.innerText = 'Save'
-            editTxt.style.display = 'inline-block'
-            editInput.style.display = 'none'
-        }
-    })
-
-</script>
 
 </html>

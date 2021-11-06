@@ -369,6 +369,14 @@ a.btn.current {
     font-weight: 500;
 }
 
+.table-container table tbody tr .color-wrap {
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px -1px var(--secondary);
+}
+
 .table-container table tbody tr td {
     padding: 0 10px;
 }

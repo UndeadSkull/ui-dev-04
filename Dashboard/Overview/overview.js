@@ -11,7 +11,8 @@ const charts = (xValues, yValues) => {
             datasets: [{
                 backgroundColor: '#FFB200',
                 data: yValues,
-                borderRadius: 15,
+                borderRadius: 50,
+                barThickness: 15
             }],
         },
         options: {
