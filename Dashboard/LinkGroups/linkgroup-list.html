@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Recuttly</title>
     <link rel="stylesheet" href="../common/dashboard.css">
-    <link rel="stylesheet" href="links.css">
+    <link rel="stylesheet" href="linkgroup-list.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
             <i class="fa-regular fa-chart-bar fa-lg"></i>
             <span>Overview</span>
         </a>
-        <a href="../Links/links.html" class="btn menu-item current">
+        <a href="../Links/links.html" class="btn menu-item">
             <i class="fa fa-link fa-lg"></i>
             <span>Links</span>
         </a>
@@ -32,7 +32,7 @@
             <i class="fa-brands fa-instagram fa-xl"></i>
             <span>Biolinks</span>
         </a>
-        <a href="../LinkGroups/linkgroups.html" class="btn menu-item">
+        <a href="../LinkGroups/linkgroups.html" class="btn menu-item current">
             <i class="fa fa-network-wired"></i>
             <span>Link Groups</span>
         </a>
@@ -63,7 +63,7 @@
         </button>
         <div class="header">
             <div class="header-top">
-                <div class="title">Links</div>
+                <div class="title">Link Groups</div>
                 <div class="center">
                     <a href="#" class="btn main-btn">
                         <div class="btn-text">
@@ -83,6 +83,14 @@
                     </a>
                 </div>
             </div>
+            <div class="header-bottom">
+                <a href="linkgroups.html">
+                    <i class="fa-solid fa-circle-arrow-left fa-xl pri"></i>
+                </a>
+                <div class="linkgroup-name">
+                    Link Groups > Instagram
+                </div>
+            </div>
         </div>
         <div class="content">
             <div class="link-header">
@@ -96,8 +104,8 @@
                 <a href="#" class="btn action-btn pri">
                     More Action <i class="fa-solid fa-circle-chevron-down fa-lg pri"></i>
                 </a>
-                <a href="javascript:void(0)" class="btn shorten-btn" onclick="toggleModal(true)">
-                    Shorten Link
+                <a href="javascript:void(0)" class="btn addlink-btn" onclick="toggleModal(true)">
+                    Add Link
                     <i class="fa-solid fa-circle-plus fa-lg"></i>
                 </a>
             </div>
