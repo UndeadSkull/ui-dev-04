@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Recuttly</title>
     <link rel="stylesheet" href="../common/dashboard.css">
-    <!-- <link rel="stylesheet" href="overview.css"> -->
+    <link rel="stylesheet" href="linkoverlay-edit.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 
 <body>
     <div class="menu-bar" id="menu-bar" style="width: 0px;">
-        <a href="#" class="btn menu-item">
+        <a href="../Overview/overview.html" class="btn menu-item">
             <i class="fa-regular fa-chart-bar fa-lg"></i>
             <span>Overview</span>
         </a>
@@ -38,7 +38,7 @@
             <i class="fa fa-globe fa-lg"></i>
             <span>Custom Domains</span>
         </a>
-        <a href="../LinkOverlays/linkoverlays.html" class="btn menu-item">
+        <a href="../LinkOverlays/linkoverlays.html" class="btn menu-item current">
             <i class="fa-regular fa-window-maximize fa-lg"></i>
             <span>Link Overlays</span>
         </a>
@@ -61,7 +61,7 @@
         </button>
         <div class="header">
             <div class="header-top">
-                <div class="title">Dashboard</div>
+                <div class="title">Link Overlays</div>
                 <div class="center">
                     <a href="#" class="btn main-btn">
                         <div class="btn-text">
@@ -81,39 +81,58 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="content">
-            <div class="footer">
-                <div class="footer-top">
-                    <div class="footer-links">
-                        <a href="#" class="link">Developers</a>
-                        <a href="#" class="link">Privacy Policy</a>
-                        <a href="#" class="link">Terms of Service</a>
-                        <a href="#" class="link">Contact Us</a>
-                    </div>
-                    <div class="footer-socials">
-                        <a href="#" class="social">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="social">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    Copyright © 2021, All Rights Reserved
+            <div class="header-bottom">
+                <a href="linkoverlays.html">
+                    <i class="fa-solid fa-circle-arrow-left fa-xl pri"></i>
+                </a>
+                <div class="linkoverlay-name">
+                    Link Overlays > Overlay 1
                 </div>
             </div>
         </div>
-        <div class="fader"></div>
+        <div class="content linkoverlay-edit">
+            <div class="linkoverlay-options">
+                <input type="radio" name="tab" id="general" checked>
+                <input type="radio" name="tab" id="design">
+                <div class="tabs">
+                    <div class="slider"></div>
+                    <label for="general" class="tab-general">General<i class="fa-regular fa-pen-to-square"></i></label>
+                    <label for="design" class="tab-design">Design<i class="fa fa-palette"></i></label>
+                </div>
+                <section>
+                    <div class="options options-1">
+                        <label>Name<input type="text"></label>
+                        <label>
+                            Position
+                            <a href="#" class="icon-btn">
+                                Windows
+                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                            </a>
+                        </label>
+                        <label>
+                            Theme
+                            <a href="#" class="icon-btn">
+                                Default
+                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                            </a>
+                        </label>
+                        <label>Message <textarea rows="2"></textarea></label>
+                        <label>Label<input type="text"></label>
+                        <label>Button Link<input type="text"></label>
+                        <label>Button Text<input type="text"></label>
+                    </div>
+                    <div class="options options-2">
+
+                    </div>
+                </section>
+            </div>
+            <div class="linkoverlay-preview">
+
+            </div>
+        </div>
     </div>
 </body>
+
 <script type="text/javascript" src="../common/dashboard.js"></script>
 
 </html>

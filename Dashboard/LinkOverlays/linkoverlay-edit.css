@@ -1,0 +1,146 @@
+.content.linkoverlay-edit {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    margin-left:-35px;
+    overflow: hidden;
+}
+
+.linkoverlay-options {
+    flex: 4;
+}
+
+.linkoverlay-options input[name="tab"] {
+    display: none;
+}
+
+.linkoverlay-options input#general:checked~.tabs .tab-general, .linkoverlay-options input#design:checked~.tabs .tab-design {
+    color: #000;
+}
+
+.linkoverlay-options input#design:checked~.tabs .slider {
+    transform: translateX(100%);
+}
+
+.linkoverlay-options .tabs {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: relative;
+    margin: 0 10px;
+    gap: min(20px, 2vw);
+}
+
+.linkoverlay-options .tabs .slider {
+    position: absolute;
+    height: 65px;
+    /* width: 220px; */
+    width: clamp(105px, 44%, 220px);
+    background-color: var(--primary-light);
+    top: -8px;
+    left: -10px;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s;
+}
+
+.linkoverlay-options .tabs>label {
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 10;
+    background-color: #fff;
+    width: clamp(103px, 40%, 200px);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-light);
+    cursor: pointer;
+}
+
+.linkoverlay-options .tabs>label i {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+.linkoverlay-options section {
+    height: 76%;
+}
+
+.options {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    margin-top: 5px;
+    padding: 20px 20px 0px 20px;
+    border: 2px solid var(--primary-light);
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    height: 100%;
+    gap: 20px;
+    overflow: scroll;
+}
+
+input#general:checked~section .options-1, input#design:checked~section .options-2 {
+    display: flex;
+}
+.options-1 label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.options-1 input[type='text'], .options-1 textarea {
+    flex: 1;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    min-width: 240px;
+}
+
+.options-1 input::placeholder, .options-1 textarea::placeholder {
+    font-size: 14px;
+}
+.options-1 .icon-btn {
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--secondary);
+    gap: 8px;
+    min-width: max-content;
+}
+
+.linkoverlay-preview {
+    flex: 7;
+    display: grid;
+    place-items: center;
+    perspective: 800px;
+}
+
+@media only screen and (max-width: 500px) {
+    .linkoverlay-options .tabs label i {
+        display: none;
+    }
+    .linkoverlay-options section .options-2 {
+        border-top-right-radius: 0;
+    }
+    .linkoverlay-options .options .item-wrap .item-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .linkoverlay-options .options {
+        margin: 0;
+        padding: 10px;
+    }
+}
