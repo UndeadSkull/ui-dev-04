@@ -1,0 +1,56 @@
+<svg data-name="Component 21 – 1" xmlns="http://www.w3.org/2000/svg" width="873" height="912" viewBox="0 0 873 912">
+  <g data-name="Group 697" transform="translate(-1007.266 -168)" opacity="0.15">
+    <g transform="translate(1007 349)">
+      <rect data-name="Rectangle 215" width="873" height="731" transform="translate(0.266)" fill="#fff"/>
+      <text data-name="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor #incididunt ero labore et dolore magna aliqua. Ut enim ad minim veniam" transform="translate(65.266 151)" fill="#2699fb" font-size="14" font-family="Arial"><tspan x="0" y="13">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor #incididunt ero labore et dolore magna </tspan><tspan x="0" y="37">aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut aliquip ex ea commodo consequat.</tspan></text>
+      <rect data-name="Rectangle 216" width="769" height="276" transform="translate(65.266 314)" fill="#bce0fd"/>
+      <g data-name="Likes/Comments" transform="translate(64.94 653)">
+        <g transform="translate(0)">
+          <text data-name="609" transform="translate(39.326 20)" fill="#2699fb" font-size="22" font-family="Arial" font-weight="700"><tspan x="0" y="0">609</tspan></text>
+          <g data-name="Symbol 97 – 5" transform="translate(0 0)">
+            <path d="M23.925,2.1a6.979,6.979,0,0,0-9.934,0l-.977.977L12.036,2.1A7.025,7.025,0,0,0,2.1,12.036L13.013,22.947,23.925,12.036a6.979,6.979,0,0,0,0-9.934" transform="translate(-0.025 2.191)" fill="#2699fb"/>
+            <rect data-name="Rectangle 1450" width="26" height="26" transform="translate(0.326)" fill="none"/>
+          </g>
+        </g>
+        <g transform="translate(128.257)">
+          <text data-name="120" transform="translate(39.068 20)" fill="#2699fb" font-size="22" font-family="Arial" font-weight="700"><tspan x="0" y="0">120</tspan></text>
+          <g data-name="Symbol 96 – 14" transform="translate(0 0.593)">
+            <path d="M8.118,12.988a1.534,1.534,0,0,0,1.624,1.624h6.494a1.627,1.627,0,0,0,1.624-1.624,1.534,1.534,0,0,0-1.624-1.624H9.741A1.627,1.627,0,0,0,8.118,12.988ZM0,8.118A8.039,8.039,0,0,1,8.118,0h9.741a8.039,8.039,0,0,1,8.118,8.118V24.353a1.534,1.534,0,0,1-1.624,1.624H8.118A8.039,8.039,0,0,1,0,17.859Z" fill="#2699fb"/>
+          </g>
+        </g>
+      </g>
+      <text transform="translate(831.266 672)" fill="#2699fb" font-size="22" font-family="Arial" font-weight="700"><tspan x="-77" y="0">SHARE</tspan></text>
+      <g transform="translate(65.001 51)">
+        <text data-name="Name Surname" transform="translate(143.266 33)" fill="#2699fb" font-size="22" font-family="Arial" font-weight="700"><tspan x="0" y="0">Blog Name</tspan></text>
+        <text data-name="1h ago" transform="translate(769.266 32)" fill="#2699fb" font-size="23" font-family="Arial"><tspan x="-70" y="0">1h ago</tspan></text>
+        <g data-name="Symbol 216 – 2" transform="translate(0)">
+          <circle data-name="Ellipse 234" cx="32.5" cy="32.5" r="32.5" transform="translate(0.266)" fill="#2699fb"/>
+          <g data-name="Union 44" transform="translate(19.421 19)">
+            <circle data-name="Ellipse 235" cx="6.5" cy="6.5" r="6.5" transform="translate(6.844 0)" fill="#fff"/>
+            <path data-name="Path 200" d="M12.988,10C5.845,10,0,12.922,0,16.494v3.247H25.976V16.494C25.976,12.922,20.131,10,12.988,10Z" transform="translate(0 6.708)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g data-name="Navigation Bar" transform="translate(1007 168)">
+      <rect data-name="Rectangle 68" width="873" height="32" transform="translate(0.266)" fill="#2699fb"/>
+      <rect data-name="Rectangle 69" width="873" height="78" transform="translate(0.266 32)" fill="#bce0fd"/>
+      <g id="More" transform="translate(842.265 60)">
+        <g id="Union_1" data-name="Union 1">
+          <circle data-name="Ellipse 3" cx="2.5" cy="2.5" r="2.5" fill="#2699fb"/>
+          <circle data-name="Ellipse 4" cx="2.5" cy="2.5" r="2.5" transform="translate(0 10)" fill="#2699fb"/>
+          <ellipse data-name="Ellipse 5" cx="2.5" cy="2" rx="2.5" ry="2" transform="translate(0 20)" fill="#2699fb"/>
+        </g>
+      </g>
+      <text transform="translate(437.266 78)" fill="#2699fb" font-size="23" font-family="Arial" font-weight="700"><tspan x="-30" y="0">FEED</tspan></text>
+      <g transform="translate(25.999 58)">
+        <rect data-name="Rectangle 175" width="26" height="26" transform="translate(0.266)" fill="rgba(0,0,0,0)"/>
+        <g data-name="Union 4" transform="translate(0 2)">
+          <rect data-name="Rectangle 172" width="26" height="3" transform="translate(0.266)" fill="#2699fb"/>
+          <rect data-name="Rectangle 173" width="26" height="3" transform="translate(0.266 10)" fill="#2699fb"/>
+          <rect data-name="Rectangle 174" width="13" height="3" transform="translate(0.266 20)" fill="#2699fb"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

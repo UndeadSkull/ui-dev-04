@@ -2,7 +2,7 @@
     display: flex;
     height: 100%;
     flex-wrap: wrap;
-    margin-left:-35px;
+    margin-left: -35px;
     overflow: hidden;
 }
 
@@ -35,7 +35,7 @@
     position: absolute;
     height: 65px;
     /* width: 220px; */
-    width: clamp(105px, 44%, 220px);
+    width: clamp(105px, 45%, 218px);
     background-color: var(--primary-light);
     top: -8px;
     left: -10px;
@@ -69,8 +69,13 @@
     padding: 5px;
     border-radius: 50%;
 }
+
 .linkoverlay-options section {
-    height: 76%;
+    height: 570px;
+}
+
+.linkoverlay-options :not(:hover)::-webkit-scrollbar-thumb {
+    background-color: #fff;
 }
 
 .options {
@@ -78,23 +83,25 @@
     flex-direction: column;
     position: relative;
     margin-top: 5px;
-    padding: 20px 20px 0px 20px;
+    padding: 20px 35px;
     border: 2px solid var(--primary-light);
     background-color: #fff;
     border-top-right-radius: 20px;
     height: 100%;
     gap: 20px;
-    overflow: scroll;
+    overflow-y: auto;
 }
 
 input#general:checked~section .options-1, input#design:checked~section .options-2 {
     display: flex;
 }
-.options-1 label{
+
+.options-1 label {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 .options-1 input[type='text'], .options-1 textarea {
     flex: 1;
     border: 1px solid var(--primary);
@@ -107,6 +114,7 @@ input#general:checked~section .options-1, input#design:checked~section .options-
 .options-1 input::placeholder, .options-1 textarea::placeholder {
     font-size: 14px;
 }
+
 .options-1 .icon-btn {
     border: 1px solid var(--primary);
     border-radius: 8px;
@@ -121,11 +129,121 @@ input#general:checked~section .options-1, input#design:checked~section .options-
     min-width: max-content;
 }
 
-.linkoverlay-preview {
-    flex: 7;
+.options-1 .create-btn {
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 15px 30px;
+    background-color: var(--primary);
+    color: #fff;
+    max-width: max-content;
+}
+
+.options-2 {
+    gap: 16px;
+}
+
+.options-2 .upload-image-wrap {
     display: grid;
     place-items: center;
-    perspective: 800px;
+    padding: 20px 40px;
+    background-color: var(--primary-light);
+    border-radius: 10px;
+}
+
+.options-2 .upload-image-wrap .upload-btn {
+    padding: 18px 22px;
+    font-size: 20px;
+}
+
+.options-2 .color-wrap {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.options-2 .color-wrap input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.options-2 .color-wrap input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.options-2 .color-wrap input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+.options-2 .color-wrap .color-name {
+    justify-self: flex-start;
+    font-size: 14px;
+}
+
+.options-2 .color-wrap .color-btn {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.linkoverlay-preview {
+    flex: 7;
+    max-height: 570px;
+    background: url(../../Assets/Images/website-preview.svg);
+    background-size: cover;
+    display: grid;
+    place-items: end start;
+    margin: 0 50px;
+}
+
+.linkoverlay-preview .overlay-card {
+    margin: 5px;
+    padding: 10px;
+    min-width: 300px;
+    background-color: #414866;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.linkoverlay-preview .overlay-card .overlay-label {
+    position: absolute;
+    right: 0;
+    top: -15px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    padding: 4px 20px;
+    transform-origin: top left;
+    transform: translateX(50%) rotatez(45deg);
+}
+
+.linkoverlay-preview .overlay-card .overlay-message {
+    margin: 20px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.linkoverlay-preview .overlay-card .overlay-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #D96A24;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 2px 2px 5px #00000055;
 }
 
 @media only screen and (max-width: 500px) {
