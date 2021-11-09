@@ -1,0 +1,58 @@
+.content .workspace-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px 50px;
+    flex-wrap: wrap;
+}
+
+.content .workspace-header .workspace-search {
+    position: relative;
+    flex: 3;
+    min-width: min(325px, 100%);
+}
+
+.content .workspace-header .workspace-search input {
+    padding: 15px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.content .workspace-header .workspace-search input::placeholder {
+    opacity: 0.5;
+}
+
+.content .workspace-header .workspace-search a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    padding: 5px;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.content .workspace-header .add-link-btn {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border: 2px solid #ddd;
+    font-size: 18px;
+    font-weight: 500;
+    gap: 5px;
+    height: 52.4px;
+    outline: none;
+    max-width: 250px;
+    flex: 1;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.content .workspace-header .workspace-search input:focus, .content .workspace-header .btn:focus {
+    border-color: #aaa;
+}

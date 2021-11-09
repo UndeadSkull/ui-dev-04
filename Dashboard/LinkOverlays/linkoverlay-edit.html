@@ -34,7 +34,7 @@
             <i class="fa fa-network-wired"></i>
             <span>Link Groups</span>
         </a>
-        <a href="#" class="btn menu-item">
+        <a href="../CustomDomains/customdomains.html" class="btn menu-item">
             <i class="fa fa-globe fa-lg"></i>
             <span>Custom Domains</span>
         </a>
@@ -42,11 +42,11 @@
             <i class="fa-regular fa-window-maximize fa-lg"></i>
             <span>Link Overlays</span>
         </a>
-        <a href="#" class="btn menu-item">
+        <a href="../TrackingPixels/trackingpixels.html" class="btn menu-item">
             <i class="fa fa-magnifying-glass fa-lg"></i>
             <span>Tracking Pixels</span>
         </a>
-        <a href="#" class="btn menu-item">
+        <a href="../Workspaces/workspaces.html" class="btn menu-item">
             <i class="fa fa-user-group"></i>
             <span>Workspaces</span>
         </a>
@@ -92,8 +92,8 @@
         </div>
         <div class="content linkoverlay-edit">
             <div class="linkoverlay-options">
-                <input type="radio" name="tab" id="general" checked>
-                <input type="radio" name="tab" id="design">
+                <input type="radio" name="tab" id="general">
+                <input type="radio" name="tab" id="design" checked>
                 <div class="tabs">
                     <div class="slider"></div>
                     <label for="general" class="tab-general">General<i class="fa-regular fa-pen-to-square"></i></label>
@@ -123,9 +123,12 @@
                         <a href="#" class="btn create-btn">Create</a>
                     </div>
                     <div class="options options-2">
-                        <div class="upload-image-wrap">
-                            <a href="#" class="btn upload-btn">
+                        <div id="upload-image-wrap">
+                            <a href="#" class="btn upload-btn" id="upload-btn">
                                 Upload Image
+                            </a>
+                            <a href="#" class="btn delete-btn" id="delete-btn">
+                                <i class="fa fa-trash"></i>
                             </a>
                         </div>
                         <label class="color-wrap">
@@ -201,5 +204,20 @@
 </body>
 
 <script type="text/javascript" src="../common/dashboard.js"></script>
+<script>
+    imageWrap = document.getElementById('upload-image-wrap');
+    uploadBtn = document.getElementById('upload-btn')
+    deleteBtn = document.getElementById('delete-btn')
+    uploadBtn.addEventListener("click", () => {
+        imageWrap.style.backgroundImage = 'url(https://hub.packtpub.com/wp-content/uploads/2018/03/308_Cover-Image.png)'
+        uploadBtn.style.backgroundColor = '#ffffffcc'
+        deleteBtn.style.display = 'block'
+    });
+    deleteBtn.addEventListener("click", () => {
+        imageWrap.style.backgroundImage = 'none'
+        uploadBtn.style.backgroundColor = '#fff'
+        deleteBtn.style.display = 'none'
+    });
+</script>
 
 </html>
