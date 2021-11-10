@@ -420,6 +420,14 @@ a.btn.current {
     padding: 5px 10px;
 }
 
+.table-container table tfoot .page-nav {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .table-container table tbody tr td:not(:nth-child(-n + 2)), .table-container table thead th:not(:nth-child(-n + 2)) {
     text-align: center;
 }
