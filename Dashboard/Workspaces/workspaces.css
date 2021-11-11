@@ -56,3 +56,54 @@
 .content .workspace-header .workspace-search input:focus, .content .workspace-header .btn:focus {
     border-color: #aaa;
 }
+
+.member-card {
+    display: flex;
+    align-items: center;
+    gap: min(20px, 2vw);
+}
+
+.member-card .member-image img {
+    height: 100%;
+    width: 100%;
+    min-width: 20px;
+    border-radius: 50%;
+}
+
+.member-card .member-details {
+    text-align: left;
+}
+
+.member-card .member-details .member-name {
+    line-height: 1;
+}
+
+.member-card .member-details .member-email {
+    font-size: 12px;
+}
+
+#modal-container .modal {
+    display: none;
+}
+
+#modal-container .modal .modal-section {
+    border: none;
+    padding: 0 0 10px 0;
+    margin: 10px 0;
+}
+
+#modal-container .modal .modal-section .member-row {
+    display: flex;
+    gap: 5px 15px;
+    margin: 5px 0;
+    align-items: center;
+    /* flex-wrap: wrap-reverse; */
+}
+
+#modal-container .modal .modal-section .member-row .member-card {
+    margin-right: auto;
+}
+
+#modal-container .modal .modal-section .member-row .member-remove {
+    /* color: var(--primary); */
+}

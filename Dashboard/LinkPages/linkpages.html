@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Recuttly</title>
     <link rel="stylesheet" href="../common/dashboard.css">
-    <!-- <link rel="stylesheet" href="overview.css"> -->
+    <link rel="stylesheet" href="linkpages.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 
 <body>
     <div class="menu-bar" id="menu-bar" style="width: 0px;">
-        <a href="#" class="btn menu-item">
+        <a href="../Overview/overview.html" class="btn menu-item">
             <i class="fa-regular fa-chart-bar fa-lg"></i>
             <span>Overview</span>
         </a>
@@ -42,7 +42,7 @@
             <i class="fa-regular fa-window-maximize fa-lg"></i>
             <span>Link Overlays</span>
         </a>
-        <a href="../LinkPages/linkpages.html" class="btn menu-item">
+        <a href="../LinkPages/linkpages.html" class="btn menu-item current">
             <i class="fa-solid fa-money-check fa-lg"></i>
             <span>Link Pages</span>
         </a>
@@ -65,7 +65,7 @@
         </button>
         <div class="header">
             <div class="header-top">
-                <div class="title">Dashboard</div>
+                <div class="title">Link Pages</div>
                 <div class="center">
                     <a href="#" class="btn main-btn">
                         <div class="btn-text">
@@ -87,6 +87,87 @@
             </div>
         </div>
         <div class="content">
+            <div class="linkpages-header">
+                <div class="linkpages-search">
+                    <input type="text" name="search" id="search" placeholder="Type to search for pages"
+                        autocomplete="off">
+                    <a href="#" class="filter-btn pri">
+                        <i class="fa fa-filter"></i>Filter
+                    </a>
+                </div>
+                <a href="linkpage-edit.html" class="btn add-link-btn">
+                    Add New Page
+                    <i class="fa-solid fa-circle-plus fa-lg"></i>
+                </a>
+            </div>
+            <div class="table-container">
+                <table class="linkpages-table">
+                    <thead>
+                        <th>
+                            <label class="checkbox-wrap">
+                                <input class="checkbox" type="checkbox" name="select-all" id="select-all"
+                                    onclick="toggle(this)">
+                                <span class="checkmark"></span>
+                            </label>
+                        </th>
+                        <th>
+                            <a href="#" id="delete-btn">Delete</a>
+                            <span class="table-title">Slug</span>
+                            <i class="fa fa-arrow-down fa-xs"></i>
+                        </th>
+                        <th>Body</th>
+                        <th>Last Updated</th>
+                        <th></th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox-wrap">
+                                    <input type="checkbox" name="select-row" class="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="linkpages-name">
+                                    Link Slug
+                                </div>
+                            </td>
+                            <td>Link Body</td>
+                            <td>01-10-2021</td>
+                            <td class="btn-wrap">
+                                <a href="linkpage-edit.html" class="btn">
+                                    <i class="fa fa-pen"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </tbody>
+
+                    <tfoot>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="1" class="items-per-page">
+                            <div>
+                                Items Per Page 15
+                                <i class="fa-solid fa-circle-chevron-down pri"></i>
+                            </div>
+                        </td>
+                        <td class="page-nav">
+                            <a href="#" class="nav-btn">
+                                <i class="fa fa-circle-left fa-lg sec"></i>
+                            </a>
+                            <div class="page-count">1 of 1</div>
+                            <a href="#" class="nav-btn">
+                                <i class="fa fa-circle-right fa-lg pri"></i>
+                            </a>
+                        </td>
+                    </tfoot>
+                </table>
+            </div>
             <div class="footer">
                 <div class="footer-top">
                     <div class="footer-links">
@@ -115,9 +196,9 @@
                 </div>
             </div>
         </div>
-        <div class="fader"></div>
     </div>
 </body>
 <script type="text/javascript" src="../common/dashboard.js"></script>
+<script type="text/javascript" src="../common/table.js"></script>
 
 </html>

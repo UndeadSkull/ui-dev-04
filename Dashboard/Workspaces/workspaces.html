@@ -42,6 +42,10 @@
             <i class="fa-regular fa-window-maximize fa-lg"></i>
             <span>Link Overlays</span>
         </a>
+        <a href="../LinkPages/linkpages.html" class="btn menu-item">
+            <i class="fa-solid fa-money-check fa-lg"></i>
+            <span>Link Pages</span>
+        </a>
         <a href="../TrackingPixels/trackingpixels.html" class="btn menu-item">
             <i class="fa fa-magnifying-glass fa-lg"></i>
             <span>Tracking Pixels</span>
@@ -91,7 +95,7 @@
                         <i class="fa fa-filter"></i>Filter
                     </a>
                 </div>
-                <a href="workspace-edit.html" class="btn add-link-btn">
+                <a href="#" class="btn add-link-btn" onclick="toggleModal(true,1)">
                     Add New Workspace
                     <i class="fa-solid fa-circle-plus fa-lg"></i>
                 </a>
@@ -135,14 +139,22 @@
                                 </div>
                             </td>
                             <td>
-                                Owner
+                                <div class="member-card">
+                                    <div class="member-image">
+                                        <img src="https://i.pravatar.cc/35?img=53" alt="">
+                                    </div>
+                                    <div class="member-details">
+                                        <div class="member-name">Name (You)</div>
+                                        <div class="member-email">name@gmail.com</div>
+                                    </div>
+                                </div>
                             </td>
                             <td>Workspace Owner</td>
                             <td>3</td>
                             <td>01-10-2021</td>
                             <td class="btn-wrap">
-                                <a href="#" class="btn">
-                                    <i class="fa fa-chart-bar"></i>
+                                <a href="#" class="btn" onclick="toggleModal(true,2)">
+                                    <i class="fa-solid fa-user-plus"></i>
                                 </a>
                                 <a href="workspace-edit.html" class="btn">
                                     <i class="fa fa-pen"></i>
@@ -152,7 +164,9 @@
                                 </a>
                             </td>
                         </tr>
-                        
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
                     </tbody>
 
                     <tfoot>
@@ -206,8 +220,107 @@
             </div>
         </div>
     </div>
+    <div id="modal-container">
+        <div class="modal" id="modal-1">
+            <div class="modal-header">Create Workspace</div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">Name</div>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Create</a>
+            </div>
+        </div>
+        <div class="modal" id="modal-2">
+            <div class="modal-header">Manage Workspace Members</div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-row">
+                        <label>Invite by Email
+                            <input type="text">
+                        </label>
+                        <a href="#" class="modal-btn">Invite</a>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-title">Members of Workspace</div>
+                    <div class="member-row">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="https://i.pravatar.cc/35?img=53" alt="">
+                            </div>
+                            <div class="member-details">
+                                <div class="member-name">Name (You)</div>
+                                <div class="member-email">name@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="custom-select">
+                            <select>
+                                <option value="">Workspace Owner</option>
+                                <option value="">Member</option>
+                            </select>
+                            <span class="custom-arrow">
+                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                            </span>
+                        </div>
+                        <a>
+                            <i class="fa-solid fa-circle-xmark fa-xl"></i>
+                        </a>
+                    </div>
+                    <div class="member-row">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="https://i.pravatar.cc/35?img=19" alt="">
+                            </div>
+                            <div class="member-details">
+                                <div class="member-name">Teresa</div>
+                                <div class="member-email">teresa@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="custom-select">
+                            <select>
+                                <option value="">Workspace Owner</option>
+                                <option value="" selected>Member</option>
+                            </select>
+                            <span class="custom-arrow">
+                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                            </span>
+                        </div>
+                        <a href="#">
+                            <i class="fa-solid fa-circle-xmark fa-xl pri"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Create</a>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="../common/dashboard.js"></script>
 <script type="text/javascript" src="../common/table.js"></script>
+<script>
+    modalcontainer = document.getElementById('modal-container')
+    modal1 = document.getElementById('modal-1')
+    modal2 = document.getElementById('modal-2')
+    const toggleModal = (flag, num) => {
+        if (flag) {
+            modalcontainer.style.display = 'grid'
+            if (num == 1)
+                modal1.style.display = 'block'
+            else
+                modal2.style.display = 'block'
+        } else {
+            modalcontainer.style.display = 'none'
+            modal1.style.display = 'none'
+            modal2.style.display = 'none'
+        }
+    }
+</script>
 
 </html>

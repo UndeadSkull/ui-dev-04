@@ -42,6 +42,10 @@
             <i class="fa-regular fa-window-maximize fa-lg"></i>
             <span>Link Overlays</span>
         </a>
+        <a href="../LinkPages/linkpages.html" class="btn menu-item">
+            <i class="fa-solid fa-money-check fa-lg"></i>
+            <span>Link Pages</span>
+        </a>
         <a href="../TrackingPixels/trackingpixels.html" class="btn menu-item current">
             <i class="fa fa-magnifying-glass fa-lg"></i>
             <span>Tracking Pixels</span>
@@ -91,7 +95,7 @@
                         <i class="fa fa-filter"></i>Filter
                     </a>
                 </div>
-                <a href="trackpixels-edit.html" class="btn add-link-btn">
+                <a href="#" class="btn add-link-btn" onclick="toggleModal(true)">
                     Add New Pixel
                     <i class="fa-solid fa-circle-plus fa-lg"></i>
                 </a>
@@ -135,11 +139,14 @@
                             <td>510085</td>
                             <td>01-10-2021</td>
                             <td class="btn-wrap">
-                                <a href="trackpixels-edit.html" class="btn">
+                                <a href="#" class="btn" onclick="toggleModal(true)">
                                     <i class="fa fa-pen"></i>
                                 </a>
                             </td>
                         </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
 
                     </tbody>
 
@@ -194,8 +201,77 @@
             </div>
         </div>
     </div>
+
+    <div id="modal-container">
+        <div class="modal">
+            <div class="modal-header">Create New Pixel</div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">Name</div>
+                    <input type="text">
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-title">Type</div>
+                    <div class="custom-select">
+                        <select id="pixeltype">
+                            <option value="">Facebook</option>
+                            <option value="">Twitter</option>
+                            <option value="">Google Tag Manager</option>
+                            <option value="">Google Analytics</option>
+                            <option value="">Adword</option>
+                            <option value="">Bing</option>
+                            <option value="">Pinterest</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                        <span class="custom-arrow">
+                            <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="modal-section default">
+                    <div class="modal-section-title">Pixel ID</div>
+                    <input type="text">
+                </div>
+
+                <div class="modal-section custom">
+                    <div class="modal-section-title">Custom Code for Page Head</div>
+                    <textarea rows="4"></textarea>
+                </div>
+                <div class="modal-section custom">
+                    <div class="modal-section-title">Custom Code for Page Body</div>
+                    <textarea rows="4"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Create</a>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="../common/dashboard.js"></script>
 <script type="text/javascript" src="../common/table.js"></script>
+<script>
+    const toggleModal = (flag) =>
+        document.getElementById('modal-container').style.display = flag ? 'grid' : 'none';
+    
+    pixeltype = document.getElementById('pixeltype')
+    defaultsection = document.getElementsByClassName('modal-section default')[0]
+    customsection = document.getElementsByClassName('modal-section custom')
+    pixeltype.addEventListener("change", () => {
+        value = pixeltype.options[pixeltype.selectedIndex].value;
+        value === 'custom' ? (
+            defaultsection.style.display = "none",
+            customsection[0].style.display = "flex",
+            customsection[1].style.display = "flex"
+        ) : (
+            defaultsection.style.display = "flex",
+            customsection[0].style.display = "none",
+            customsection[1].style.display = "none"
+        )
+    })
+</script>
 
 </html>

@@ -56,3 +56,83 @@
 .content .biolink-header .biolink-search input:focus, .content .biolink-header .btn:focus {
     border-color: #aaa;
 }
+
+#modal-container .modal .modal-body {
+    padding-top: 0;
+    max-height: 65vh;
+    overflow: auto;
+}
+
+#modal-container .modal .modal-body .modal-section {
+    border: none;
+    margin: 5px;
+}
+
+#modal-container .modal .modal-body .link-row {
+    margin: 5px 0;
+}
+
+#modal-container .modal .modal-body .link-row .domain {
+    text-decoration: none;
+}
+
+#modal-container .modal .modal-body .link-row #link-input {
+    display: none;
+    min-width: 80px;
+    width: 80px;
+    padding: 1px 5px;
+}
+
+#modal-container .modal .modal-body .link-row #link-edit-btn {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 8px;
+}
+
+#modal-container .modal .modal-body .checkbox-row {
+    display: flex;
+    gap: 10px;
+}
+
+#modal-container .modal .modal-body .checkbox-row .checkbox-label {
+    font-weight: 500;
+}
+
+#modal-container .modal .modal-body .checkbox-row label {
+    max-width: 55px;
+    width: 55px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid var(--primary-light);
+    border-radius: 11px;
+    position: relative;
+    cursor: pointer;
+}
+
+#modal-container .modal .modal-body .checkbox-row input {
+    display: none;
+}
+
+#modal-container .modal .modal-body .checkbox-row label .checkmark {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px 0 var(--secondary);
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+}
+
+#modal-container .modal .modal-body .checkbox-row input:checked~label {
+    background-color: var(--primary);
+}
+
+#modal-container .modal .modal-body .checkbox-row input:checked~label .checkmark {
+    left: 61%;
+    background-color: #fff;
+}

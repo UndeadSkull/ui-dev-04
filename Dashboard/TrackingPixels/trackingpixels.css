@@ -56,3 +56,17 @@
 .content .trackpixels-header .trackpixels-search input:focus, .content .trackpixels-header .btn:focus {
     border-color: #aaa;
 }
+
+#modal-container .modal-body {
+    max-height: 70vh;
+    overflow: auto;
+}
+
+#modal-container .modal-section {
+    border: none;
+    padding: 0 0 10px 0;
+}
+
+#modal-container .modal-section.custom {
+    display: none;
+}

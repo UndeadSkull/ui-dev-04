@@ -1,17 +1,17 @@
-.content .link-header {
+.content .linkpages-header {
     display: flex;
     justify-content: space-between;
     gap: 10px 50px;
     flex-wrap: wrap;
 }
 
-.content .link-header .link-search {
+.content .linkpages-header .linkpages-search {
     position: relative;
     flex: 3;
     min-width: min(325px, 100%);
 }
 
-.content .link-header .link-search input {
+.content .linkpages-header .linkpages-search input {
     padding: 15px;
     width: 100%;
     border: 2px solid #ddd;
@@ -20,11 +20,11 @@
     outline: none;
 }
 
-.content .link-header .link-search input::placeholder {
+.content .linkpages-header .linkpages-search input::placeholder {
     opacity: 0.5;
 }
 
-.content .link-header .link-search a {
+.content .linkpages-header .linkpages-search a {
     position: absolute;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@
     font-weight: 500;
 }
 
-.content .link-header .btn {
+.content .linkpages-header .add-link-btn {
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -47,19 +47,12 @@
     gap: 5px;
     height: 52.4px;
     outline: none;
-}
-
-.content .link-header .action-btn {
-    flex: 1;
-    color: var(--primary);
-}
-
-.content .link-header .addlink-btn {
+    max-width: 250px;
     flex: 1;
     background-color: var(--primary);
     color: #fff;
 }
 
-.content .link-header .link-search input:focus, .content .link-header .btn:focus {
+.content .linkpages-header .linkpages-search input:focus, .content .linkpages-header .btn:focus {
     border-color: #aaa;
 }

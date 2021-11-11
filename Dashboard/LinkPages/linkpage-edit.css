@@ -1,0 +1,99 @@
+.linkpage-option {
+    margin-bottom: 20px;
+}
+
+.linkpage-option .title-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.linkpage-option .title-input {
+    width: 100%;
+    margin: 5px 0;
+    flex: 1;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    min-width: 240px;
+}
+
+.linkpage-option.navbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.linkpage-option .navbar-input {
+    display: flex;
+}
+
+.linkpage-option .navbar-input label {
+    /* display: block; */
+    width: 62px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid var(--primary-light);
+    border-radius: 11px;
+    position: relative;
+    cursor: pointer;
+}
+
+.linkpage-option .navbar-input input {
+    display: none;
+}
+
+.linkpage-option .navbar-input label .checkmark {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px 0 var(--secondary);
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+}
+
+.linkpage-option .navbar-input input:checked~label {
+    background-color: var(--primary);
+}
+
+.linkpage-option .navbar-input input:checked~label .checkmark {
+    left: 61%;
+    background-color: #fff;
+}
+
+.linkpage-option .navbar-label {
+    font-weight: 500;
+}
+
+.linkpage-option .navbar-desc {
+    flex-basis: 100%;
+}
+
+.linkpage-option.btn-wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.linkpage-option.btn-wrap .cancel-btn {
+    background-color: var(--primary-light);
+    color: #000;
+    padding: 10px 15px;
+}
+
+.linkpage-option.btn-wrap .create-btn {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.linkpage-option.wysiwyg #toolbar-container{
+    border-radius: 10px 10px 0 0;
+}
+.linkpage-option.wysiwyg #editor{
+    background-color: #fff;
+    border-radius: 0 0 10px 10px ;
+}

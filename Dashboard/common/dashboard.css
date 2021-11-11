@@ -474,6 +474,36 @@ a.btn.current {
     background-color: var(--primary);
 }
 
+/*----------------------------- Select (Dropdown) --------------------------------*/
+
+.custom-select {
+    display: flex;
+    position: relative;
+}
+
+.custom-select select {
+    flex: 1;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 8px 40px 8px 8px;
+    font-size: 15px;
+    appearance: none;
+    color: #333;
+    background-color: #fff;
+}
+
+.custom-select select option:checked, .custom-select select option:hover {
+    box-shadow: 0 0 10px 100px var(--primary-light) inset;
+}
+
+.custom-select .custom-arrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
 /*----------------------------------- Modal --------------------------------------*/
 
 #modal-container {
