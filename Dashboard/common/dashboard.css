@@ -27,7 +27,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-a.btn {
+.btn {
     text-decoration: none;
     background-color: #fff;
     color: var(--secondary);
@@ -38,7 +38,7 @@ a.btn {
     font-weight: 600;
 }
 
-a.btn.current {
+.btn.current {
     background-color: var(--primary);
     color: #fff;
 }
@@ -48,7 +48,7 @@ a.btn.current {
     padding-top: 80px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    row-gap: min(15px, 2vh);
     align-items: flex-end;
     transition: all 0.2s;
 }
@@ -133,19 +133,19 @@ a.btn.current {
     gap: 5px;
 }
 
-.container .header .header-top a.btn {
+.container .header .header-top .btn {
     height: 50px;
     padding: 0 10px;
     box-shadow: 0 2px 0 0 var(--primary-light);
     transition: all 60ms linear;
 }
 
-.container .header a.btn:not(.current):hover, .container .header a.btn:not(.current):focus {
+.container .header .btn:not(.current):hover, .container .header .btn:not(.current):focus {
     outline: none;
     background-color: #eee;
 }
 
-.container .header .header-top a.btn:active {
+.container .header .header-top .btn:active {
     box-shadow: none;
     transform: translateY(2px);
 }
@@ -162,14 +162,81 @@ a.btn.current {
     flex: 1;
 }
 
-.container .header .main-btn {
+.container .header .center .workspace-wrap {
+    position: relative;
+}
+
+.container .header .workspace-wrap .workspace-btn {
     gap: 10px;
 }
 
-.container .header .main-btn .btn-text .sub {
+.container .header .workspace-wrap .workspace-btn .btn-text .sub {
     font-size: 12px;
     font-weight: normal;
     opacity: 0.7;
+}
+
+.container .header .workspace-wrap .workspace-popup {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* left: 0; */
+    right: 0;
+    /* left: min(0px, calc(1vw * -1)); */
+    top: calc(100% + 10px);
+    min-width: max-content;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    gap: 5px;
+    box-shadow: 0 5px 20px 5px #00000033;
+    z-index: 1000;
+}
+
+.container .header .workspace-wrap .workspace-popup .popup-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.container .header .workspace-wrap .workspace-popup .popup-item.current {
+    color: #000;
+    background-color: var(--primary-light);
+}
+
+.container .header .workspace-wrap .popup-item .item-details {
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+}
+
+.container .header .workspace-wrap .popup-item .item-details .members {
+    font-size: 12px;
+}
+
+.container .header .workspace-wrap .popup-item .item-settings {
+    margin-left: auto;
+}
+
+.container .header .workspace-wrap .create-workspace {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--primary);
+    padding: 5px;
+    border-top: 1px solid var(--primary);
+}
+
+.container .header .workspace-wrap .workspace-btn:focus {
+    box-shadow: 0 2px 0 0 var(--primary-light), 0 5px 20px 5px #00000022;
+    background-color: #fff;
+}
+
+.container .header .workspace-wrap .workspace-btn:focus~.workspace-popup, .container .header .workspace-wrap .workspace-popup:hover {
+    display: flex;
 }
 
 .container .header .right {
@@ -179,8 +246,49 @@ a.btn.current {
     gap: 10px;
 }
 
+.container .header .right .my-account-wrap {
+    position: relative;
+}
+
+.container .header .right .my-account-wrap .account-popup {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    right: 0;
+    top: calc(100% + 10px);
+    min-width: max-content;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 5px 20px 5px #00000033;
+    z-index: 1000;
+}
+
+.container .header .right .my-account-wrap .account-popup .popup-item {
+    color: var(--secondary);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+.container .header .right .my-account-wrap .account-popup .popup-item:hover {
+    background-color: #eee;
+}
+
 .container .header .right .account-btn {
     gap: 10px;
+}
+
+.container .header .right .account-btn:focus {
+    box-shadow: 0 2px 0 0 var(--primary-light), 0 5px 20px 5px #00000022;
+    background-color: #fff;
+}
+
+.container .header .right .account-btn:focus~.account-popup, .container .header .right .account-popup:hover {
+    display: flex;
 }
 
 .container .header .right .account-btn img {
@@ -199,13 +307,13 @@ a.btn.current {
     display: none;
 }
 
-.container .header .header-bottom a.btn {
+.container .header .header-bottom .btn {
     padding: 10px;
     border: 1px solid #08564833;
     box-shadow: 0px 0px 2px #085648;
 }
 
-.container .header .header-bottom a.btn.current:hover {
+.container .header .header-bottom .btn.current:hover {
     background-color: var(--primary);
 }
 

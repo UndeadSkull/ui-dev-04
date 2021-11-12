@@ -97,7 +97,7 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     margin-bottom: 10px;
 }
 
-.content-header a.btn {
+.content-header .btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,7 +239,7 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     gap: 10px;
 }
 
-#all-items .item-wrap .item-body .item-right .item-btns a.btn {
+#all-items .item-wrap .item-body .item-right .item-btns .btn {
     padding: 5px;
     background-color: var(--primary);
     color: #fff;
