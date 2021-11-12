@@ -311,15 +311,14 @@
     const toggleModal = (flag, num) => {
         if (flag) {
             modalcontainer.style.display = 'grid'
+            modal1.style.display = 'none'
+            modal2.style.display = 'none'
             if (num == 1)
                 modal1.style.display = 'block'
             else
                 modal2.style.display = 'block'
-        } else {
+        } else
             modalcontainer.style.display = 'none'
-            modal1.style.display = 'none'
-            modal2.style.display = 'none'
-        }
     }
 </script>
 

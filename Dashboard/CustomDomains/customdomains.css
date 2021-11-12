@@ -56,3 +56,49 @@
 .content .cstmdomain-header .cstmdomain-search input:focus, .content .cstmdomain-header .btn:focus {
     border-color: #aaa;
 }
+
+#modal-container .modal .modal-body {
+    padding-top: 0;
+}
+
+#modal-container .modal .modal-body .modal-section {
+    border: none;
+    /* margin: 0; */
+}
+
+#modal-container .modal .modal-body .modal-section .modal-section-desc {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+#modal-container .modal .modal-body .modal-section .alert-box{
+    background-color: var(--primary-light);
+    padding: 30px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#modal-container .modal .modal-body .modal-section .alert-box i{
+    color: #fff;
+}
+#modal-container .modal .modal-body .modal-section .refresh-btn{
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#modal-container .modal .next-btn, #modal-container .modal .previous-btn {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 15px;
+}
+
+#modal-container .modal .next-btn.disabled {
+    background-color: var(--primary-light);
+    pointer-events: none;
+}
+
+#modal-container .modal .previous-btn {
+    margin-left: auto;
+}

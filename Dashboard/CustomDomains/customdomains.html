@@ -95,7 +95,7 @@
                         <i class="fa fa-filter"></i>Filter
                     </a>
                 </div>
-                <a href="#" class="btn add-link-btn">
+                <a href="#" class="btn add-link-btn" onclick="toggleModal(true,1)">
                     Connect Domain
                     <i class="fa-solid fa-circle-plus fa-lg"></i>
                 </a>
@@ -198,8 +198,97 @@
             </div>
         </div>
     </div>
+    <div id="modal-container">
+        <div class="modal" id="modal-1">
+            <div class="modal-header">Connect Domain</div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">Host</div>
+                    <input type="text" placeholder="https://example.com">
+                    <div class="modal-section-desc">
+                        Enter the exact domain name you want your links to be accessible with. It can be a subdomain
+                        (example.yourdomain.com) or root domain (yourdomain.com).
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
+                <a href="#" class="btn next-btn" onclick="toggleModal(true,2)">Next</a>
+            </div>
+        </div>
+        <div class="modal" id="modal-2">
+            <div class="modal-header">Connect Domain</div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-desc">
+                        Add this A record to your domain by visiting your DNS provider or registrar.
+                    </div>
+                    <input readonly type="text" id="a-record" value="A. 184.168.98.206" onclick="copyToClipboard()">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
+                <a href="#" class="btn previous-btn" onclick="toggleModal(true,1)">Previous</a>
+                <a href="#" class="btn next-btn" onclick="toggleModal(true,3)">Next</a>
+            </div>
+        </div>
+        <div class="modal" id="modal-3">
+            <div class="modal-header">Connect Domain</div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="alert-box">
+                        <i class="fa-solid fa-circle-exclamation fa-5x"></i>                        <div class="alert-text">
+                            The domain is missing A record pointing to 184.168.98.206 or the changes haven't propagated
+                            yet.
+                        </div>
+                    </div>
+                    <div class="modal-section-desc">
+                        You can wait and try again later or 
+                        <a href="#" class="refresh-btn">
+                            refresh 
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
+                <a href="#" class="btn previous-btn" onclick="toggleModal(true,2)">Previous</a>
+                <a href="#" class="btn next-btn disabled" onclick="toggleModal(false)">Next</a>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="../common/dashboard.js"></script>
 <script type="text/javascript" src="../common/table.js"></script>
+<script>
+    modalcontainer = document.getElementById('modal-container')
+    modal1 = document.getElementById('modal-1')
+    modal2 = document.getElementById('modal-2')
+    modal3 = document.getElementById('modal-3')
+    const toggleModal = (flag, num) => {
+        if (flag) {
+            modalcontainer.style.display = 'grid'
+            modal1.style.display = 'none'
+            modal2.style.display = 'none'
+            modal3.style.display = 'none'
+            if (num == 1)
+                modal1.style.display = 'block'
+            else if (num == 2)
+                modal2.style.display = 'block'
+            else
+                modal3.style.display = 'block'
+        } else
+            modalcontainer.style.display = 'none'
+    }
+
+    //=============Copy To Clipboard==============//
+    function copyToClipboard() {
+        var copyText = document.getElementById("a-record");
+        copyText.setSelectionRange(3, 99999); /* For mobile devices */
+
+        navigator.clipboard.writeText(copyText.value.slice(3, -1));
+    }
+</script>
 
 </html>
