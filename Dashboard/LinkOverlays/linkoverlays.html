@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Recuttly</title>
     <link rel="stylesheet" href="../common/dashboard.css">
-    <link rel="stylesheet" href="linkoverlays.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -128,13 +127,145 @@
             </div>
         </div>
         <div class="content">
-            <div class="linkoverlay-header">
-                <div class="linkoverlay-search">
+            <div class="content-header">
+                <div class="content-search">
                     <input type="text" name="search" id="search" placeholder="Type to search for link overlays"
                         autocomplete="off">
-                    <a href="#" class="filter-btn pri">
+                    <a href="#" class="filter-btn pri" onclick="filterToggle()">
                         <i class="fa fa-filter"></i>Filter
                     </a>
+                    <div class="filter-wrap" id="filter-wrap">
+                        <input type="radio" name="filter" id="filter-1" checked>
+                        <input type="radio" name="filter" id="filter-2">
+                        <input type="radio" name="filter" id="filter-3">
+                        <input type="radio" name="filter" id="filter-4">
+                        <div class="field-wrap">
+                            <label for="filter-1" class="filter-1">Status</label>
+                            <label for="filter-2" class="filter-2">Rotator</label>
+                            <label for="filter-3" class="filter-3">Created At</label>
+                            <label for="filter-4" class="filter-4">Updated At</label>
+                        </div>
+                        <form class="desc-wrap">
+                            <div class="filter-tab tab-1">
+                                <div class="filter-question">
+                                    Whether group is public or not
+                                </div>
+                                <div class="filter-answer">
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="status">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Active</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="status">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Disabled</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-tab tab-2">
+                                <div class="filter-question">
+                                    Whether group is used as link rotator
+                                </div>
+                                <div class="filter-answer">
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="rotator">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Yes</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="rotator">
+                                        <div class="checkmark"></div>
+                                        <div class="label">No</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-tab tab-3">
+                                <div class="filter-question">
+                                    Date file was uploaded
+                                </div>
+                                <div class="filter-condition">
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="created">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="created">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is not</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="created">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is greater than</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="created">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is greater than or equal</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="created">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is less than</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="created">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is less than or equal</div>
+                                    </label>
+                                </div>
+                                <div class="filter-answer">
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="filter-tab tab-4">
+                                <div class="filter-question">
+                                    Date file was updated
+                                </div>
+                                <div class="filter-condition">
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="updated">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="updated">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is not</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="updated">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is greater than</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="updated">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is greater than or equal</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="updated">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is less than</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="updated">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is less than or equal</div>
+                                    </label>
+                                </div>
+                                <div class="filter-answer">
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="btns-wrap">
+                                <input class="btn clear-btn" type="reset" value="Reset All">
+                                <a href="#" class="btn apply-btn" onclick="filterToggle()">Apply</a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <a href="linkoverlay-edit.html" class="btn add-link-btn">
                     Add New Overlay

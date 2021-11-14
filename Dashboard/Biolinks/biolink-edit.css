@@ -90,14 +90,14 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     display: block;
 }
 
-.options-1 .content-header {
+.options-1 .content-top {
     display: flex;
     gap: 15px;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.content-header .btn {
+.content-top .btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,15 +109,15 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     height: 50px;
 }
 
-.content-header .add-link {
+.content-top .add-link {
     flex: 4;
 }
 
-.content-header .add-widget {
+.content-top .add-widget {
     flex: 2;
 }
 
-.content-header .add-widget i {
+.content-top .add-widget i {
     background-color: #fff;
     color: var(--primary);
     padding: 5px;

@@ -1,16 +1,22 @@
 var rot = 360;
 const menuToggle = () => {
-    var x = document.getElementById("menu-bar");
+    var menu = document.getElementById("menu-bar");
     // var b = document.getElementById("menu-toggle")
-    if (x.style.width === "0px") {
-        x.style.width = "315px";
-        x.style.opacity = 1;
+    if (menu.style.width === "0px") {
+        menu.style.width = "315px";
+        menu.style.opacity = 1;
     } else {
-        x.style.width = "0px";
-        x.style.opacity = 0;
+        menu.style.width = "0px";
+        menu.style.opacity = 0;
     }
     var icon = document.getElementById("menu-icon");
     icon.classList.toggle("fa-times");
     icon.style = 'transform: rotate(' + rot + 'deg)';
     rot += 360;
+}
+const filterToggle = () => {
+    var filterwrap = document.getElementById('filter-wrap')
+    filterwrap.style.display == '' || filterwrap.style.display == 'none'
+        ? filterwrap.style.display = 'flex'
+        : filterwrap.style.display = 'none'
 }
