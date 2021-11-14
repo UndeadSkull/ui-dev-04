@@ -139,49 +139,70 @@
                         <input type="radio" name="filter" id="filter-1" checked>
                         <input type="radio" name="filter" id="filter-2">
                         <input type="radio" name="filter" id="filter-3">
-                        <input type="radio" name="filter" id="filter-4">
                         <div class="field-wrap">
-                            <label for="filter-1" class="filter-1">Status</label>
-                            <label for="filter-2" class="filter-2">Rotator</label>
-                            <label for="filter-3" class="filter-3">Created At</label>
-                            <label for="filter-4" class="filter-4">Updated At</label>
+                            <label for="filter-1" class="filter-1">Type</label>
+                            <label for="filter-2" class="filter-2">Created At</label>
+                            <label for="filter-3" class="filter-3">Updated At</label>
                         </div>
                         <form class="desc-wrap">
                             <div class="filter-tab tab-1">
                                 <div class="filter-question">
-                                    Whether group is public or not
+                                    Tracking Pixel Type
                                 </div>
                                 <div class="filter-answer">
                                     <label class="checkbox-wrap">
-                                        <input class="checkbox" type="radio" name="status">
+                                        <input class="checkbox" type="checkbox" name="type">
                                         <div class="checkmark"></div>
-                                        <div class="label">Active</div>
+                                        <div class="label">Facebook</div>
                                     </label>
                                     <label class="checkbox-wrap">
-                                        <input class="checkbox" type="radio" name="status">
+                                        <input class="checkbox" type="checkbox" name="type">
                                         <div class="checkmark"></div>
-                                        <div class="label">Disabled</div>
+                                        <div class="label">Twitter</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Google Tag Manager</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Google Analytics</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Adwords</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Bing</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Pinterest</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">LinkedIn</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Quora</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Custom</div>
                                     </label>
                                 </div>
                             </div>
                             <div class="filter-tab tab-2">
-                                <div class="filter-question">
-                                    Whether group is used as link rotator
-                                </div>
-                                <div class="filter-answer">
-                                    <label class="checkbox-wrap">
-                                        <input class="checkbox" type="radio" name="rotator">
-                                        <div class="checkmark"></div>
-                                        <div class="label">Yes</div>
-                                    </label>
-                                    <label class="checkbox-wrap">
-                                        <input class="checkbox" type="radio" name="rotator">
-                                        <div class="checkmark"></div>
-                                        <div class="label">No</div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="filter-tab tab-3">
                                 <div class="filter-question">
                                     Date file was uploaded
                                 </div>
@@ -221,7 +242,7 @@
                                     <input type="date">
                                 </div>
                             </div>
-                            <div class="filter-tab tab-4">
+                            <div class="filter-tab tab-3">
                                 <div class="filter-question">
                                     Date file was updated
                                 </div>
@@ -262,7 +283,7 @@
                                 </div>
                             </div>
                             <div class="btns-wrap">
-                                <input class="btn clear-btn" type="reset" value="Reset All">
+                                <input class="btn clear-btn" type="reset" value="Clear All">
                                 <a href="#" class="btn apply-btn" onclick="filterToggle()">Apply</a>
                             </div>
                         </form>
@@ -429,7 +450,7 @@
 <script>
     const toggleModal = (flag) =>
         document.getElementById('modal-container').style.display = flag ? 'grid' : 'none';
-    
+
     pixeltype = document.getElementById('pixeltype')
     defaultsection = document.getElementsByClassName('modal-section default')[0]
     customsection = document.getElementsByClassName('modal-section custom')

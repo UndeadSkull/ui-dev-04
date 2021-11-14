@@ -140,22 +140,62 @@
                         <input type="radio" name="filter" id="filter-2">
                         <input type="radio" name="filter" id="filter-3">
                         <input type="radio" name="filter" id="filter-4">
+                        <input type="radio" name="filter" id="filter-5">
+                        <input type="radio" name="filter" id="filter-6">
+                        <input type="radio" name="filter" id="filter-7">
+                        <input type="radio" name="filter" id="filter-8">
                         <div class="field-wrap">
-                            <label for="filter-1" class="filter-1">Status</label>
-                            <label for="filter-2" class="filter-2">Rotator</label>
-                            <label for="filter-3" class="filter-3">Created At</label>
-                            <label for="filter-4" class="filter-4">Updated At</label>
+                            <label for="filter-1" class="filter-1">Type</label>
+                            <label for="filter-2" class="filter-2">Status</label>
+                            <label for="filter-3" class="filter-3">Password</label>
+                            <label for="filter-4" class="filter-4">Click Count</label>
+                            <label for="filter-5" class="filter-5">Clicked At</label>
+                            <label for="filter-6" class="filter-6">Expires At</label>
+                            <label for="filter-7" class="filter-7">Created At</label>
+                            <label for="filter-8" class="filter-8">Updated At</label>
                         </div>
                         <form class="desc-wrap">
                             <div class="filter-tab tab-1">
                                 <div class="filter-question">
-                                    Whether group is public or not
+                                    Type of the link
+                                </div>
+                                <div class="filter-answer">
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">All</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Direct</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Overlay</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Frame</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="checkbox" name="type">
+                                        <div class="checkmark"></div>
+                                        <div class="label">Custom Page</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-tab tab-2">
+                                <div class="filter-question">
+                                    Whether link is disabled or not
                                 </div>
                                 <div class="filter-answer">
                                     <label class="checkbox-wrap">
                                         <input class="checkbox" type="radio" name="status">
                                         <div class="checkmark"></div>
-                                        <div class="label">Active</div>
+                                        <div class="label">Enabled</div>
                                     </label>
                                     <label class="checkbox-wrap">
                                         <input class="checkbox" type="radio" name="status">
@@ -164,24 +204,113 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="filter-tab tab-2">
+                            <div class="filter-tab tab-3">
                                 <div class="filter-question">
-                                    Whether group is used as link rotator
+                                    Whether link is password protected
                                 </div>
                                 <div class="filter-answer">
                                     <label class="checkbox-wrap">
-                                        <input class="checkbox" type="radio" name="rotator">
+                                        <input class="checkbox" type="radio" name="password">
                                         <div class="checkmark"></div>
                                         <div class="label">Yes</div>
                                     </label>
                                     <label class="checkbox-wrap">
-                                        <input class="checkbox" type="radio" name="rotator">
+                                        <input class="checkbox" type="radio" name="password">
                                         <div class="checkmark"></div>
                                         <div class="label">No</div>
                                     </label>
                                 </div>
                             </div>
-                            <div class="filter-tab tab-3">
+                            <div class="filter-tab tab-4">
+                                <div class="filter-question">
+                                    Total number of clicks for the link
+                                </div>
+                                <div class="filter-answer">
+                                    <input type="number" name="clicks">
+                                </div>
+                            </div>
+                        
+                            <div class="filter-tab tab-5">
+                                <div class="filter-question">
+                                    Date Clicked
+                                </div>
+                                <div class="filter-condition">
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="click">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="click">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is not</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="click">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is greater than</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="click">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is greater than or equal</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="click">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is less than</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="click">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is less than or equal</div>
+                                    </label>
+                                </div>
+                                <div class="filter-answer">
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="filter-tab tab-6">
+                                <div class="filter-question">
+                                    Date Expired
+                                </div>
+                                <div class="filter-condition">
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="expire">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="expire">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is not</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="expire">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is greater than</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="expire">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is greater than or equal</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="expire">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is less than</div>
+                                    </label>
+                                    <label class="checkbox-wrap">
+                                        <input class="checkbox" type="radio" name="expire">
+                                        <div class="checkmark"></div>
+                                        <div class="label">is less than or equal</div>
+                                    </label>
+                                </div>
+                                <div class="filter-answer">
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="filter-tab tab-7">
                                 <div class="filter-question">
                                     Date file was uploaded
                                 </div>
@@ -221,7 +350,7 @@
                                     <input type="date">
                                 </div>
                             </div>
-                            <div class="filter-tab tab-4">
+                            <div class="filter-tab tab-8">
                                 <div class="filter-question">
                                     Date file was updated
                                 </div>
@@ -262,7 +391,7 @@
                                 </div>
                             </div>
                             <div class="btns-wrap">
-                                <input class="btn clear-btn" type="reset" value="Reset All">
+                                <input class="btn clear-btn" type="reset" value="Clear All">
                                 <a href="#" class="btn apply-btn" onclick="filterToggle()">Apply</a>
                             </div>
                         </form>
