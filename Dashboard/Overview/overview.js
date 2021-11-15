@@ -12,7 +12,7 @@ const charts = (xValues, yValues) => {
                 backgroundColor: '#FFB200',
                 data: yValues,
                 borderRadius: 50,
-                barThickness: 15
+                // barThickness: 15
             }],
         },
         options: {
