@@ -15,7 +15,7 @@
     color: var(--primary);
 }
 
-.content .content-header .addcontent-btn {
+.content .content-header .addlink-btn {
     flex: 1;
     background-color: var(--primary);
     color: #fff;
