@@ -154,6 +154,7 @@ body {
     flex: 1;
     font-size: 38px;
     font-weight: 700;
+    line-height: 1;
 }
 
 .container .header .center {
@@ -361,6 +362,7 @@ body {
     gap: 5px;
     font-weight: 500;
     border-radius: 5px;
+    background-color: #fff;
 }
 
 .content .content-header .content-search .filter-btn:hover, .content .content-header .content-search .filter-btn:focus {
@@ -478,7 +480,7 @@ body {
 .content .content-header .add-link-btn {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: min(1vw,10px);
     border: 2px solid #ddd;
     font-size: 18px;
     font-weight: 500;
@@ -686,17 +688,6 @@ body {
 .table-container table tfoot {
     height: 60px;
     box-shadow: 0 -1px 0 0 var(--primary);
-}
-
-.table-container table tfoot td {
-    text-align: center;
-}
-
-.table-container table tfoot .items-per-page div {
-    display: inline-block;
-    border: 1px solid var(--primary);
-    border-radius: 8px;
-    padding: 5px 10px;
 }
 
 .table-container table tfoot .page-nav {
