@@ -1,0 +1,150 @@
+:root {
+    --content-bg: #F5F6FA;
+    --primary: #00B22D;
+    --primary-light: #00B22D47;
+    --secondary: #707070;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--content-bg);
+    color: var(--secondary);
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    text-decoration: none;
+    border-radius: 10px;
+    line-height: 1;
+    font-weight: 400;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 8px 16px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.btn-secondary {
+    background-color: var(--primary-light);
+    color: var(--secondary);
+}
+
+h1 {
+    font-size: clamp(16px, 5vw, 28px)
+}
+
+h2 {
+    font-size: clamp(13px, 4vw, 17px)
+}
+
+p {
+    font-size: clamp(12px, 3vw, 16px)
+}
+
+#navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: var(--content-bg);
+    transition: box-shadow 300ms;
+}
+
+#navbar.scrolled {
+    box-shadow: 0 0px 20px 0px #ccc;
+}
+
+#navbar .btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: var(--secondary);
+    height: 45px;
+    min-width: 0;
+    padding: 0 10px;
+    box-shadow: 0 2px 0 0 var(--primary-light);
+    transition: all 60ms linear;
+}
+
+#navbar .btn:hover, #navbar .btn:focus {
+    outline: none;
+    background-color: #eee;
+}
+
+#navbar .btn:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+#navbar .logo img {
+    height: 40px;
+}
+
+#navbar .right {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+#navbar .right .my-account-wrap {
+    position: relative;
+}
+
+#navbar .right .my-account-wrap .account-popup {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    right: 0;
+    top: calc(100% + 10px);
+    min-width: max-content;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 5px 20px 5px #00000033;
+    z-index: 1000;
+}
+
+#navbar .right .my-account-wrap .account-popup .popup-item {
+    color: var(--secondary);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+#navbar .right .my-account-wrap .account-popup .popup-item:hover {
+    background-color: #eee;
+}
+
+#navbar .right .account-btn {
+    gap: 10px;
+}
+
+#navbar .right .account-btn:focus {
+    box-shadow: 0 2px 0 var(--primary-light), 0 5px 20px 5px #00000022;
+    background-color: #fff;
+}
+
+#navbar .right .account-btn:focus~.account-popup, #navbar .right .account-popup:hover {
+    display: flex;
+}
+
+#navbar .right .account-btn img {
+    border-radius: 50%;
+}
+
+.body {
+    width: min(100%, 800px);
+    margin: auto;
+    padding: 20px;
+}
