@@ -184,11 +184,11 @@ body {
     right: 0;
     top: calc(100% + 10px);
     min-width: max-content;
-    padding: 10px;
+    padding: 15px;
     background-color: #fff;
     border: 2px solid var(--primary-light);
     border-radius: 10px;
-    gap: 5px;
+    gap: 10px;
     box-shadow: 0 5px 20px 5px #00000033;
     z-index: 1000;
 }
@@ -256,11 +256,11 @@ body {
     right: 0;
     top: calc(100% + 10px);
     min-width: max-content;
-    padding: 20px;
+    padding: 15px;
     background-color: #fff;
     border: 2px solid var(--primary-light);
     border-radius: 10px;
-    gap: 10px;
+    gap: 5px;
     box-shadow: 0 5px 20px 5px #00000033;
     z-index: 1000;
 }
@@ -269,7 +269,7 @@ body {
     color: var(--secondary);
     text-decoration: none;
     border-radius: 5px;
-    padding: 2px 8px;
+    padding: 8px;
 }
 
 .container .header .right .my-account-wrap .account-popup .popup-item:hover {
@@ -369,14 +369,15 @@ body {
 
 .content .content-header .content-search .filter-wrap {
     position: absolute;
+    right: 0;
     z-index: 1000;
     background-color: #fff;
     border: 2px solid var(--primary-light);
     border-radius: 10px;
     box-shadow: 0 5px 10px #00000033;
-    width: clamp(350px, 100%, 600px);
-    min-height: 311px;
-    font-size: 14px;
+    width: clamp(350px, 100%, 700px);
+    min-height: 380px;
+    font-size: 16px;
     display: none;
 }
 
@@ -440,7 +441,7 @@ body {
 
 .content .content-header .content-search .filter-wrap .desc-wrap .checkbox-wrap .label {
     margin-left: 25px;
-    line-height: 1.3;
+    line-height: 1.1;
 }
 
 .content .content-header .content-search .filter-wrap .desc-wrap input[type="number"], .content .content-header .content-search .filter-wrap .desc-wrap input[type="date"] {
@@ -547,7 +548,7 @@ body {
     height: 40px;
     width: 100%;
     background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--content-bg) 95%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--content-bg) 90%);
     z-index: 10;
     position: absolute;
     bottom: 0;

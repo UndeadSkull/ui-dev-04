@@ -220,31 +220,31 @@
                                     </div>
                                     <div class="item-body">
                                         <div class="item-top">
-                                        <div class="item-left ">
-                                            Facebook Link
-                                            <div class="sub-title">
-                                                www.youtube.co/jancjh
+                                            <div class="item-left ">
+                                                Facebook Link
+                                                <div class="sub-title">
+                                                    www.youtube.co/jancjh
+                                                </div>
+
                                             </div>
-                                            
-                                        </div>
-                                        <div class="item-right">
-                                            <input type="checkbox" id='check-3'>
-                                            <label for="check-3">
-                                                <div class="checkmark"></div>
-                                            </label>
-                                            <div class="item-btns">
-                                                <a href="#" class="btn edit-btn">
-                                                    <i class="fa fa-pen"></i>
-                                                </a>
-                                                <a href="#" class="btn delete-btn">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
+                                            <div class="item-right">
+                                                <input type="checkbox" id='check-3'>
+                                                <label for="check-3">
+                                                    <div class="checkmark"></div>
+                                                </label>
+                                                <div class="item-btns">
+                                                    <a href="#" class="btn edit-btn">
+                                                        <i class="fa fa-pen"></i>
+                                                    </a>
+                                                    <a href="#" class="btn delete-btn">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
                                         <div class="item-bottom">
-                                            <input type="radio" name="link-radio" id="link-none" >
-                                            <input type="radio" name="link-radio" id="link-thumbnail" >
+                                            <input type="radio" name="link-radio" id="link-none">
+                                            <input type="radio" name="link-radio" id="link-thumbnail">
                                             <input type="radio" name="link-radio" id="link-statistics">
                                             <input type="radio" name="link-radio" id="link-animation">
                                             <input type="radio" name="link-radio" id="link-leaplink">
@@ -314,7 +314,7 @@
                                                             <a href="#" class="btn">TADA</a>
                                                             <a href="#" class="btn">WOBBLE</a>
                                                             <a href="#" class="btn">JELLO</a>
-                                                            <a href="#" class="btn">HEARTBEAT</a>  
+                                                            <a href="#" class="btn">HEARTBEAT</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -341,7 +341,8 @@
                                                         </label>
                                                     </div>
                                                     <div class="link-options-desc">
-                                                        <p>Enter a date when link should be active. Both start and end dates are optional</p>
+                                                        <p>Enter a date when link should be active. Both start and end
+                                                            dates are optional</p>
                                                     </div>
                                                     <div class="link-options-body">
                                                         <div class="datetime-row">
@@ -483,9 +484,15 @@
 
                         <div class="settings-section">
                             <div class="settings-section-title">Status</div>
-                            <a href="#" class="icon-btn">
-                                Activate <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
-                            </a>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="">Activate</option>
+                                    <option value="">Disabled</option>
+                                </select>
+                                <span class="custom-arrow">
+                                    <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                </span>
+                            </div>
                         </div>
                         <div class="settings-section no-border locked">
                             <div class="settings-section-title">Password</div>
@@ -546,10 +553,16 @@
                             <div class="settings-row">
                                 <label>
                                     Country
-                                    <a href="#" class="icon-btn">
-                                        United States
-                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
-                                    </a>
+                                    <div class="custom-select">
+                                        <select>
+                                            <option value="">United States</option>
+                                            <option value="">India</option>
+                                            <option value="">Qatar</option>
+                                        </select>
+                                        <span class="custom-arrow">
+                                            <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                        </span>
+                                    </div>
                                 </label>
                                 <label>
                                     URL
@@ -568,10 +581,16 @@
                             <div class="settings-row">
                                 <label>
                                     Device
-                                    <a href="#" class="icon-btn">
-                                        Mobile
-                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
-                                    </a>
+                                    <div class="custom-select">
+                                        <select>
+                                            <option value="">Desktop</option>
+                                            <option value="">Tablet</option>
+                                            <option value="">Mobile</option>
+                                        </select>
+                                        <span class="custom-arrow">
+                                            <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                        </span>
+                                    </div>
                                 </label>
                                 <label>
                                     URL
@@ -590,10 +609,18 @@
                             <div class="settings-row">
                                 <label>
                                     Platform
-                                    <a href="#" class="icon-btn">
-                                        Windows
-                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
-                                    </a>
+                                    <div class="custom-select">
+                                        <select>
+                                            <option value="">Windows</option>
+                                            <option value="">Linux</option>
+                                            <option value="">MacOS</option>
+                                            <option value="">Android</option>
+                                            <option value="">iOS</option>
+                                        </select>
+                                        <span class="custom-arrow">
+                                            <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                        </span>
+                                    </div>
                                 </label>
                                 <label>
                                     URL
@@ -686,7 +713,7 @@
             $("#link-input").css('display', 'none');
         }
     })
-    $(".settings-section.locked").find("input").prop('disabled', true);
+    $(".settings-section.locked").find("input, select").prop('disabled', true);
 
 </script>
 <script type="text/javascript" src="../common/dashboard.js"></script>

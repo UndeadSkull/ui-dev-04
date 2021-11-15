@@ -159,7 +159,7 @@ section {
 section .section-heading {
     z-index: 10;
     position: relative;
-    padding: 15px 40px;
+    padding: 15px 50px;
     border-radius: 10px 10px 15px 15px;
     box-shadow: 0 5px 5px -4px #ccc;
     background-color: #fff;
@@ -196,6 +196,43 @@ section .section-body {
     font-weight: 300;
 }
 
+.section-row .custom-select {
+    margin-left: auto;
+    width: min(100%, 400px);
+    max-width: 400px;
+}
+
+.custom-select {
+    display: flex;
+    position: relative;
+}
+
+.custom-select select {
+    outline-color: var(--primary);
+    flex: 1;
+    width: 100%;
+    border: 2px solid var(--primary-light);
+    border-radius: 5px;
+    padding: 8px 40px 8px 8px;
+    font-size: 15px;
+    appearance: none;
+    color: #333;
+    background-color: #fff;
+}
+
+.custom-select select option:checked, .custom-select select option:hover {
+    box-shadow: 0 0 10px 100px var(--primary-light) inset;
+}
+
+.custom-select .custom-arrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--primary);
+}
+
 .section-row .btn {
     margin-left: auto;
 }
@@ -219,12 +256,10 @@ section .section-body {
 
 section .footer-btn {
     display: table;
-    margin-left: auto;
-    margin-top: 15px;
+    margin: 15px 20px 0 auto;
 }
 
 section .token-body .section-row {
-    /* border-bottom: 1px solid var(--primary-light); */
     box-shadow: 0 21px 0 -20px var(--primary-light);
 }
 

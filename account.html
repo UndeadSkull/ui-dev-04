@@ -120,7 +120,15 @@
             <div class="section-body">
                 <div class="section-row">
                     <label for="language">Language</label>
-                    <input type="text" name="language">
+                    <div class="custom-select">
+                        <select>
+                            <option value="">English (US)</option>
+                            <option value="">English (UK)</option>
+                        </select>
+                        <span class="custom-arrow">
+                            <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                        </span>
+                    </div>
                 </div>
                 <div class="section-row">
                     <label for="country">Country</label>
@@ -128,7 +136,17 @@
                 </div>
                 <div class="section-row">
                     <label for="timezone">Timezone</label>
-                    <input type="text" name="timezone">
+                    <div class="custom-select">
+                        <select>
+                            <option value="-12">(GMT-12:00) International Date Line West</option>
+                            <option value="-11">(GMT-11:00) Midway Island, Samoa</option>
+                            <option value="-10">(GMT-10:00) Hawaii</option>
+                            <option value="-9">(GMT-09:00) Alaska</option>
+                        </select>
+                        <span class="custom-arrow">
+                            <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                        </span>
+                    </div>
                 </div>
                 <a href="#" class="btn footer-btn">Save Changes</a>
             </div>
