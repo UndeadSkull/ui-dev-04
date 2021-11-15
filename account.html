@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Recuttly</title>
+    <link rel="stylesheet" href="account.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header id="navbar">
+        <a href="/" class="logo">
+            <img src="Assets/Images/logo.jpg" alt="">
+        </a>
+        <div class="right">
+            <a href="#" class="btn">
+                <i class="fa-regular fa-bell fa-xl"></i>
+            </a>
+            <div class="my-account-wrap">
+                <a href="#" class="btn account-btn">
+                    <img src="https://i.pravatar.cc/28?img=53" alt="">
+                    <div>My Account</div>
+                </a>
+                <div class="account-popup">
+                    <a href="Dashboard/Overview/overview.html" class="popup-item">
+                        <i class="fa-regular fa-chart-bar"></i>
+                        Dashboard
+                    </a>
+                    <a href="#" class="popup-item">
+                        <i class="fa-solid fa-gear"></i>
+                        Account Settings
+                    </a>
+                    <a href="#" class="popup-item">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body">
+        <h1>Account Settings</h1>
+        <p>View and update your account details, profile and more.</p>
+        <section>
+            <div class="section-heading">
+                <h2>Basic Details</h2>
+            </div>
+            <div class="section-body">
+                <div class="section-row">
+                    <label>First Name</label>
+                    <input type="text" name="firstname">
+                </div>
+                <div class="section-row">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname">
+                </div>
+                <div class="section-row">
+                    <label>Profile Image</label>
+                    <div class="profile-image">
+                        <img src="https://i.pravatar.cc/100?img=53" alt="">
+                    </div>
+                    <div>
+                        <p>For best results, upload a high resolution image</p>
+                        <a href="#" class="btn">Upload</a>
+                        <a href="#" class="btn btn-secondary">Remove</a>
+                    </div>
+                </div>
+                <a href="#" class="btn footer-btn">Update</a>
+            </div>
+        </section>
+        <section>
+            <div class="section-heading">
+                <h2>Manage Social Login</h2>
+            </div>
+            <div class="section-body">
+                <div class="section-row">
+                    <i class="fa-brands fa-google-plus fa-2x"></i>
+                    <label>Google+ Account</label>
+                    <a href="#" class="btn">Enable</a>
+                </div>
+                <div class="section-row">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                    <label>Facebook</label>
+                    <a href="#" class="btn">Enable</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-heading">
+                <h2>Update Password</h2>
+            </div>
+            <div class="section-body">
+                <div class="section-row">
+                    <label for="password">Current Password</label>
+                    <input type="password" name="password">
+                </div>
+                <div class="section-row">
+                    <label for="new">New Password</label>
+                    <input type="password" name="new">
+                </div>
+                <div class="section-row">
+                    <label for="confirm">Confirm Password</label>
+                    <input type="password" name="confirm">
+                </div>
+                <a href="#" class="btn footer-btn">Update</a>
+            </div>
+        </section>
+        <section>
+            <div class="section-heading">
+                <h2>Regional Details</h2>
+            </div>
+            <div class="section-body">
+                <div class="section-row">
+                    <label for="language">Language</label>
+                    <input type="text" name="language">
+                </div>
+                <div class="section-row">
+                    <label for="country">Country</label>
+                    <input type="text" name="country">
+                </div>
+                <div class="section-row">
+                    <label for="timezone">Timezone</label>
+                    <input type="text" name="timezone">
+                </div>
+                <a href="#" class="btn footer-btn">Save Changes</a>
+            </div>
+        </section>
+        <section>
+            <div class="section-heading">
+                <h2>Tokens</h2>
+            </div>
+            <div class="section-body token-body">
+                <div class="section-row">
+                    <div class="token-card">
+                        <div class="token-label">Name</div>
+                        <div class="token-data">Token Name</div>
+                        <div class="token-label">Date</div>
+                        <div class="token-data">11/11/21</div>
+                    </div>
+                    <a href="#" class="btn">Delete</a>
+                </div>
+                <div class="section-row">
+                    <div class="token-card">
+                        <div class="token-label">Name</div>
+                        <div class="token-data">Token Name</div>
+                        <div class="token-label">Date</div>
+                        <div class="token-data">11/11/21</div>
+                    </div>
+                    <a href="#" class="btn">Delete</a>
+                </div>
+                <a href="#" class="btn footer-btn">Create New Token</a>
+            </div>
+        </section>
+        <section>
+            <div class="section-heading">
+                <h2>Danger Zone</h2>
+            </div>
+            <div class="section-body danger-body">
+                <a href="#" class="btn delete-btn">Delete Account</a>
+            </div>
+        </section>
+    </div>
+</body>
+<script type="text/javascript" src="account.js"></script>
+
+</html>

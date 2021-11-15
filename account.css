@@ -1,0 +1,252 @@
+:root {
+    --content-bg: #F5F6FA;
+    --primary: #00B22D;
+    --primary-light: #00B22D47;
+    --secondary: #707070;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--content-bg);
+    color: var(--secondary);
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    text-decoration: none;
+    border-radius: 10px;
+    line-height: 1;
+    font-weight: 400;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 8px 16px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.btn-secondary {
+    background-color: var(--primary-light);
+    color: var(--secondary);
+}
+
+#navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: var(--content-bg);
+    transition: box-shadow 300ms;
+}
+
+#navbar.scrolled {
+    box-shadow: 0 0px 20px 0px #ccc;
+}
+
+#navbar .btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: var(--secondary);
+    height: 45px;
+    min-width: 0;
+    padding: 0 10px;
+    box-shadow: 0 2px 0 0 var(--primary-light);
+    transition: all 60ms linear;
+}
+
+#navbar .btn:hover, #navbar .btn:focus {
+    outline: none;
+    background-color: #eee;
+}
+
+#navbar .btn:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+#navbar .logo img {
+    height: 40px;
+}
+
+#navbar .right {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+#navbar .right .my-account-wrap {
+    position: relative;
+}
+
+#navbar .right .my-account-wrap .account-popup {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    right: 0;
+    top: calc(100% + 10px);
+    min-width: max-content;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 5px 20px 5px #00000033;
+    z-index: 1000;
+}
+
+#navbar .right .my-account-wrap .account-popup .popup-item {
+    color: var(--secondary);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+#navbar .right .my-account-wrap .account-popup .popup-item:hover {
+    background-color: #eee;
+}
+
+#navbar .right .account-btn {
+    gap: 10px;
+}
+
+#navbar .right .account-btn:focus {
+    box-shadow: 0 2px 0 var(--primary-light), 0 5px 20px 5px #00000022;
+    background-color: #fff;
+}
+
+#navbar .right .account-btn:focus~.account-popup, #navbar .right .account-popup:hover {
+    display: flex;
+}
+
+#navbar .right .account-btn img {
+    border-radius: 50%;
+}
+
+.body {
+    width: min(100%, 800px);
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: clamp(16px, 5vw, 28px)
+}
+
+h2 {
+    font-size: clamp(13px, 4vw, 17px)
+}
+
+p {
+    font-size: clamp(12px, 3vw, 16px)
+}
+
+section {
+    border: 2px solid var(--primary-light);
+    margin-top: 3vw;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+section .section-heading {
+    z-index: 10;
+    position: relative;
+    padding: 15px 40px;
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: 0 5px 5px -4px #ccc;
+    background-color: #fff;
+}
+
+section .section-body {
+    border-radius: 10px;
+    margin-top: -15px;
+    padding: 25px 15px 15px 15px;
+    /* box-shadow: inset 0 0 10px 0px #ccc; */
+    font-weight: 300;
+}
+
+.section-row {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: calc(12px + 2vw);
+}
+
+.section-row label {
+    font-weight: 400;
+}
+
+.section-row input {
+    border: 2px solid var(--primary-light);
+    border-radius: 5px;
+    margin-left: auto;
+    width: min(100%, 400px);
+    line-height: 2;
+    padding: 0 5px;
+    outline-color: var(--primary);
+    font-weight: 300;
+}
+
+.section-row .btn {
+    margin-left: auto;
+}
+
+.section-row .profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.section-row .profile-image~div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-row .profile-image~div .btn {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+section .footer-btn {
+    display: table;
+    margin-left: auto;
+    margin-top: 15px;
+}
+
+section .token-body .section-row {
+    /* border-bottom: 1px solid var(--primary-light); */
+    box-shadow: 0 21px 0 -20px var(--primary-light);
+}
+
+section .token-body .token-card .token-label {
+    margin-top: 3px;
+    font-weight: 400;
+}
+
+section .token-body .token-card .token-data {
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+
+section .danger-body {
+    height: 200px;
+    display: grid;
+    place-items: center;
+}
+
+section .danger-body .btn {
+    padding: 26px 30px;
+    background-color: red;
+    font-size: 16px;
+    font-weight: 500;
+}
