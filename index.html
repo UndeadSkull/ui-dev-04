@@ -5,14 +5,222 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
+    <title>Home - Recuttly</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="General/Pricing/pricing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer type="text/javascript" src="index.js"></script>
 
 <body>
-    <h1>RECUTTLY</h1>
-    <div><a href="Dashboard/Overview/overview.html">Dashboard</a></div>
-    <div><a href="General/AccountSettings/accountsettings.html">Account Settings</a></div>
-    <div><a href="Auth/Login/login.html">Login</a></div>
+    <header id="navbar">
+        <a href="../../index.html" class="logo">
+            <img src="../../Assets/Images/logo.png" alt="">
+        </a>
+        <div class="btn-wrap">
+            <a href="Auth/login.html" class="btn btn-secondary">Log In</a>
+            <a href="Auth/signup.html" class="btn btn-secondary">Sign Up</a>
+            <a href="General/Pricing/pricing.html" class="btn">Pricing</a>
+        </div>
+    </header>
+    <div class="content">
+        <section class="section-1 left">
+            <div id="biolink">
+                <div class="details-wrap">
+                    <h2 class="section-heading">Biolink</h2>
+                    <div class="section-caption">The only link you'll ever need.</div>
+                    <div class="line"></div>
+                    <div class="section-desc">
+                        Biolink is the launchpad to your latest video, song, article, recipe, tour, store, website,
+                        social post everywhere you are online.
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="Auth/signup.html" class="btn">Sign Up</a>
+                        <a href="javascript:switchSection('url')" class="btn btn-secondary">URL Shortener</a>
+                    </div>
+                </div>
+                <div class="image-wrap">
+                    <img src="Assets/Images/Home/section-1-biolink.png" alt="">
+                </div>
+            </div>
+            <div id="url-short">
+                <div class="details-wrap">
+                    <h2 class="section-heading">URL Shortener</h2>
+                    <div class="section-caption">Make your link easy to read.</div>
+                    <div class="line"></div>
+                    <div class="section-desc">
+                        Recuttly helps you maximize the impact of every digital initiative with industry-leading
+                        features and tools.
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="Auth/signup.html" class="btn">Sign Up</a>
+                        <a href="javascript:switchSection('bio')" class="btn btn-secondary">Biolink</a>
+                    </div>
+                </div>
+                <div class="image-wrap">
+                    <img src="Assets/Images/Home/section-1-urlshort.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="url-shortener">
+                <input class="shorten-input" type="text" name="url-input" placeholder="Paste a long url">
+                <input class="shorten-btn" type="button" value="Shorten">
+            </div>
+            <div class="url-shortener-terms">
+                By using our service you accept the <a href="#">Terms of service</a> and <a href="#">Privacy</a>.
+            </div>
+        </section>
+        <section>
+            <div class="card-wrap">
+                <div class="card">
+                    <img class="card-image" src="Assets/Images/Home/card-1.svg" alt="">
+                    <div class="card-title">Password Protect</div>
+                    <div class="card-desc">
+                        Set a password to protect your links from unauthorized access.
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="Assets/Images/Home/card-2.svg" alt="">
+                    <div class="card-title">Retargeting</div>
+                    <div class="card-desc">
+                        Add retargeting pixels to your links and turn every URL into perfectly targeted ads.
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="Assets/Images/Home/card-3.svg" alt="">
+                    <div class="card-title">Groups</div>
+                    <div class="card-desc">
+                        Group links together for easier management and analytics for a group as well as individual
+                        links.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-4 right">
+            <div class="image-wrap">
+                <img class="background" src="Assets/Images/Home/section-4-bg.svg" alt="">
+                <div class="item" style="animation-delay: 0s;">
+                    <img class="icon" src="Assets/Images/Home/icon-1.svg" alt="">
+                </div>
+                <div class="item" style="animation-delay: -2s;">
+                    <img class="icon" src="Assets/Images/Home/icon-2.svg" alt="">
+                </div>
+                <div class="item" style="animation-delay: -4s;">
+                    <img class="icon" src="Assets/Images/Home/icon-3.svg" alt="">
+                </div>
+                <div class="item" style="animation-delay: -6s;">
+                    <img class="icon" src="Assets/Images/Home/icon-4.svg" alt="">
+                </div>
+                <img loading=lazy class="mobile" src="/Assets/Images/Home/section-4-mobile.gif" alt="">
+            </div>
+            <div class="details-wrap">
+                <h2 class="section-heading">Biolink</h2>
+                <div class="section-caption">The only link you'll ever need.</div>
+                <div class="line"></div>
+                <div class="section-desc">
+                    Biolink is the launchpad to your latest video, song, article, recipe, tour, store, website,
+                    social post everywhere you are online.
+                </div>
+            </div>
+        </section>
+        <section class="section-5 left">
+            <div class="details-wrap">
+                <h2 class="section-heading">ADVANCED ANALYTICS</h2>
+                <div class="section-caption">Monitor your link performance.</div>
+                <div class="line"></div>
+                <div class="section-desc">
+                    Full analytics for individual links and link groups, including geo and device information,
+                    referrers, browser, ip and more.
+                </div>
+            </div>
+            <div class="image-wrap">
+                <img class="background" src="Assets/Images/Home/section-5.png" alt="">
+                <img class="icon chart" src="Assets/Images/Home/section-5-chart.svg" alt="">
+                <img class="icon pie" src="Assets/Images/Home/section-5-pie.svg" alt="">
+            </div>
+        </section>
+        <section class="section-6 right">
+            <div class="image-wrap">
+                <img class="background" src="Assets/Images/Home/section-6.png" alt="">
+                <img class="icon bar" src="Assets/Images/Home/section-6-bar.svg" alt="">
+                <img class="icon link" src="Assets/Images/Home/section-6-link.svg" alt="">
+                <img class="icon pen" src="Assets/Images/Home/section-6-pen.svg" alt="">
+            </div>
+            <div class="details-wrap">
+                <h2 class="section-heading">FULLY-FEATURED DASHBOARD</h2>
+                <div class="section-desc">
+                    Control everything from the dashboard. Manage your URLs, groups, custom pages, pixels, custom
+                    domains and more.
+                </div>
+                <div class="line"></div>
+                <div class="section-caption">Manage your links.</div>
+            </div>
+        </section>
+        <section class="section-7">
+            <div class="pricing-table-wrap">
+                <h1 class="heading">
+                    Pricing
+                </h1>
+                <div class="feature-card">
+                    <h2 class="title">Features</h2>
+                    <div class="feature-list">
+                        <div class="feature">Feature 1</div>
+                        <div class="feature">Feature 2</div>
+                        <div class="feature">Feature 3</div>
+                        <div class="feature">Feature 4</div>
+                        <div class="feature">Feature 5</div>
+                    </div>
+                </div>
+                <div class="pricing-card card-1">
+                    <div class="card-header">
+                        FREE
+                    </div>
+                    <div class="card-body">
+                        <div class="feature"><span>Feature 1</span><i class="fa fa-circle-check"></i></div>
+                        <div class="feature"><span>Feature 2</span><i class="fa fa-circle-xmark"></i></div>
+                        <div class="feature"><span>Feature 3</span><i class="fa fa-circle-xmark"></i></div>
+                        <div class="feature"><span>Feature 4</span><i class="fa fa-circle-xmark"></i></div>
+                        <div class="feature"><span>Feature 5</span><i class="fa fa-circle-xmark"></i></div>
+                    </div>
+                    <a href="#" class="plan-btn">Choose Plan</a>
+                </div>
+                <div class="pricing-card card-2">
+                    <div class="card-header">
+                        PRO
+                        <div class="price">₹499/Month</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="feature">
+                            <span>Feature 1</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                        <div class="feature">
+                            <span>Feature 2</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                        <div class="feature">
+                            <span>Feature 3</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                        <div class="feature">
+                            <span>Feature 4</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                        <div class="feature">
+                            <span>Feature 5</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <a href="#" class="plan-btn">Choose Plan</a>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

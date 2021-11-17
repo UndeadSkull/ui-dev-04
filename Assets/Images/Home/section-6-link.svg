@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="134.115" height="100.939" viewBox="0 0 134.115 100.939">
+  <defs>
+    <filter id="Path_373" x="0" y="0" width="134.115" height="100.939" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#085648"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_454" data-name="Group 454" transform="translate(9 9)">
+    <g transform="matrix(1, 0, 0, 1, -9, -9)" filter="url(#Path_373)">
+      <path id="Path_373-2" data-name="Path 373" d="M24.882,0H91.233a24.882,24.882,0,0,1,24.882,24.882V58.058A24.882,24.882,0,0,1,91.233,82.939H24.882A24.882,24.882,0,0,1,0,58.058V24.882A24.882,24.882,0,0,1,24.882,0Z" transform="translate(9 9)" fill="#fff"/>
+    </g>
+    <g id="Icon_feather-link" data-name="Icon feather-link" transform="translate(33.176 16.433)">
+      <path id="Path_344" data-name="Path 344" d="M17.5,31.594a12.772,12.772,0,0,0,19.26,1.379l7.663-7.663A12.771,12.771,0,1,0,26.362,7.249L21.97,11.619" transform="translate(2.947 -3.509)" fill="none" stroke="#00b22d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+      <path id="Path_345" data-name="Path 345" d="M34.156,20.863A12.772,12.772,0,0,0,14.9,19.483L7.233,27.146A12.771,12.771,0,1,0,25.294,45.207l4.367-4.369" transform="translate(-3.491 2.113)" fill="none" stroke="#00b22d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+    </g>
+  </g>
+</svg>
