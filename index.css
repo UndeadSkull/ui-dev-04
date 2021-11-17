@@ -35,11 +35,14 @@ h2 {
     transition: background-color 300ms;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #F3FCF2;
     color: var(--secondary);
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
     margin-top: 80px;
 }
 
@@ -49,7 +52,7 @@ body {
     z-index: 1000;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100vw;
     display: flex;
     align-items: center;
     padding: 8px 4vw;
@@ -61,7 +64,7 @@ body {
 }
 
 #navbar.scrolled .btn-secondary {
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 #navbar .btn-wrap {
@@ -238,7 +241,20 @@ body {
     align-content: center;
     text-align: center;
     gap: 20px;
-    transition: all 200ms;
+    transition: transform 300ms, box-shadow 200ms;
+    transform: translateY(50%);
+}
+
+.content section .card-wrap .card.appear:nth-child(3) {
+    transition-delay: 100ms;
+}
+
+.content section .card-wrap .card.appear:nth-child(2) {
+    transition-delay: -50ms;
+}
+
+.content section .card-wrap .card.appear {
+    transform: translateY(0%);
 }
 
 .content section .card-wrap .card:hover {
@@ -327,6 +343,17 @@ body {
     margin: auto 0 auto 4vw;
 }
 
+.content section.section-5 .image-wrap {
+    transition: all 1500ms;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.content section.section-5 .image-wrap.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .content section.section-5 .image-wrap .icon {
     position: absolute;
     animation: wobble 5s ease-in-out infinite;
@@ -355,6 +382,14 @@ body {
 .content section.section-6 .image-wrap {
     position: absolute;
     margin-left: 5vw;
+    transition: all 1500ms;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.content section.section-6 .image-wrap.appear {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .content section.section-6 .image-wrap .icon {
