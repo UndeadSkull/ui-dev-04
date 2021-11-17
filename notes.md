@@ -1,1 +1,2 @@
 primary light
+textarea stretch vertically
