@@ -16,13 +16,14 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer type="text/javascript" src="../common/common.js"></script>
+    <script defer type="text/javascript" src="pricing.js"></script>
 
 </head>
 
 <body>
     <header id="navbar">
         <a href="../../index.html" class="logo">
-            <img src="../../Assets/Images/logo.png" alt="">
+            <img src="../../Assets/logo/logo.png" alt="">
         </a>
         <div class="right">
             <a href="#" class="btn">
@@ -51,62 +52,183 @@
         </div>
     </header>
     <div class="body">
-        <div class="pricing-table-wrap">
-            <h1 class="heading">
-                Pricing
-            </h1>
-            <div class="feature-card">
-                <h2 class="title">Features</h2>
-                <div class="feature-list">
-                    <div class="feature">Feature 1</div>
-                    <div class="feature">Feature 2</div>
-                    <div class="feature">Feature 3</div>
-                    <div class="feature">Feature 4</div>
-                    <div class="feature">Feature 5</div>
-                </div>
+        <div class="section-bar-wrap">
+            <div class="section-bar current">
+                <div class="section-num">1</div>
+                <div class="section-title">Subscription Plan</div>
             </div>
-            <div class="pricing-card card-1">
-                <div class="card-header">
-                    FREE
-                </div>
-                <div class="card-body">
-                    <div class="feature"><span>Feature 1</span><i class="fa fa-circle-check"></i></div>
-                    <div class="feature"><span>Feature 2</span><i class="fa fa-circle-xmark"></i></div>
-                    <div class="feature"><span>Feature 3</span><i class="fa fa-circle-xmark"></i></div>
-                    <div class="feature"><span>Feature 4</span><i class="fa fa-circle-xmark"></i></div>
-                    <div class="feature"><span>Feature 5</span><i class="fa fa-circle-xmark"></i></div>
-                </div>
-                <a href="#" class="plan-btn">Choose Plan</a>
+            <div class="section-bar">
+                <div class="section-num">2</div>
+                <div class="section-title">Subscription Duration</div>
             </div>
-            <div class="pricing-card card-2">
-                <div class="card-header">
-                    PRO
-                    <div class="price">₹499/Month</div>
-                </div>
-                <div class="card-body">
-                    <div class="feature">
-                        <span>Feature 1</span>
-                        <i class="fa fa-circle-check"></i>
-                    </div>
-                    <div class="feature">
-                        <span>Feature 2</span>
-                        <i class="fa fa-circle-check"></i>
-                    </div>
-                    <div class="feature">
-                        <span>Feature 3</span>
-                        <i class="fa fa-circle-check"></i>
-                    </div>
-                    <div class="feature">
-                        <span>Feature 4</span>
-                        <i class="fa fa-circle-check"></i>
-                    </div>
-                    <div class="feature">
-                        <span>Feature 5</span>
-                        <i class="fa fa-circle-check"></i>
-                    </div>
-                </div>
-                <a href="#" class="plan-btn">Choose Plan</a>
+            <div class="section-bar">
+                <div class="section-num">3</div>
+                <div class="section-title">Payment</div>
             </div>
+        </div>
+        <div class="section-wrap">
+            <section class="pricing-table-wrap">
+                <div class="feature-card">
+                    <h2 class="title">Features</h2>
+                    <div class="feature-list">
+                        <div class="feature">Feature 1</div>
+                        <div class="feature">Feature 2</div>
+                        <div class="feature">Feature 3</div>
+                        <div class="feature">Feature 4</div>
+                        <div class="feature">Feature 5</div>
+                    </div>
+                </div>
+                <div class="pricing-card card-1">
+                    <div class="card-header">
+                        FREE
+                    </div>
+                    <div class="card-body">
+                        <div class="feature"><span>Feature 1</span><i class="fa fa-circle-check"></i></div>
+                        <div class="feature"><span>Feature 2</span><i class="fa fa-circle-xmark"></i></div>
+                        <div class="feature"><span>Feature 3</span><i class="fa fa-circle-xmark"></i></div>
+                        <div class="feature"><span>Feature 4</span><i class="fa fa-circle-xmark"></i></div>
+                        <div class="feature"><span>Feature 5</span><i class="fa fa-circle-xmark"></i></div>
+                    </div>
+                    <a href="../../Auth/signup.html" class="plan-btn">Get Started</a>
+                </div>
+                <div class="pricing-card card-2">
+                    <div class="card-header">
+                        PRO
+                        <div class="price">₹499/Month</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="feature">
+                            <span>Feature 1</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                        <div class="feature">
+                            <span>Feature 2</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                        <div class="feature">
+                            <span>Feature 3</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                        <div class="feature">
+                            <span>Feature 4</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                        <div class="feature">
+                            <span>Feature 5</span>
+                            <i class="fa fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="plan-btn" onclick="sectionSwitch(2)">Choose Plan</a>
+                </div>
+            </section>
+            <section>
+                <div class="duration-wrap">
+                    <div class="duration-desc">
+                        Select the duration of your plan. Longer plans offer better discounts!
+                    </div>
+                    <div class="duration-options">
+                        <div class="option">
+                            <label class="checkbox-wrap">
+                                <input class="checkbox" type="radio" name="option" checked>
+                                <div class="checkmark"></div>
+                                <div class="label">1 Month subscription: <span>₹ 599.00/month</span></div>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label class="checkbox-wrap">
+                                <input class="checkbox" type="radio" name="option">
+                                <div class="checkmark"></div>
+                                <div class="label">6 Months subscription: <span>₹ 549.00/month</span></div>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label class="checkbox-wrap">
+                                <input class="checkbox" type="radio" name="option">
+                                <div class="checkmark"></div>
+                                <div class="label">12 Months subscription: <span>₹ 499.00/month</span></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0)" class="btn btn-secondary" onclick="sectionSwitch(1)">Back</a>
+                        <a href="javascript:void(0)" class="btn" onclick="sectionSwitch(3)">Select</a>
+                    </div>
+                </div>
+                <div class="section-right">
+                    <div class="payment-methods">
+                        <div class="title">Accepted Payment Methods</div>
+                        <div class="images">
+                            <img src="../../Assets/Images/visa.png" alt="">
+                            <img src="../../Assets/Images/discover.png" alt="">
+                            <img src="../../Assets/Images/american-express.png" alt="">
+                            <img src="../../Assets/Images/mastercard.png" alt="">
+                        </div>
+                    </div>
+                    <div class="selected-plan">
+                        PRO PLAN
+                    </div>
+                    <div class="ssl-card">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m25 0-8 3L4 8H3v1c0 15 5 25 11 32 5 6 11 9 11 9S47 38 47 9V8h-1L33 3l-8-3zm0 2 7 3 13 5c0 27-19 37-20 38-1-1-5-3-10-9-5-5-10-15-10-29l13-5 7-3zm8 13h-1l-8 13-5-5h-1l-1 1v1l7 5v1l1-1 9-13v-1z" />
+                        </svg>
+                        <div class="card-text">
+                            <div class="card-title">SSL SECURE PAYMENT</div>
+                            <div class="card-desc">
+                                Your information is protected by 256-bit SSL encryption.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="payment-wrap">
+                    <div class="payment-amount">
+                        <div class="row">
+                            <div class="name">Monthly Payment</div>
+                            <div class="amount">₹150.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="name">VAT/GST/Sales taxes (18%)</div>
+                            <div class="amount">₹150.00</div>
+                        </div>
+                        <div class="row total">
+                            <div class="name">TOTAL</div>
+                            <div class="amount">₹177.00</div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0)" class="btn btn-secondary" onclick="sectionSwitch(2)">Back</a>
+                        <a href="#" class="btn">Proceed</a>
+                    </div>
+                </div>
+                <div class="section-right">
+                    <div class="payment-methods">
+                        <div class="title">Accepted Payment Methods</div>
+                        <div class="images">
+                            <img src="../../Assets/Images/visa.png" alt="">
+                            <img src="../../Assets/Images/discover.png" alt="">
+                            <img src="../../Assets/Images/american-express.png" alt="">
+                            <img src="../../Assets/Images/mastercard.png" alt="">
+                        </div>
+                    </div>
+                    <div class="selected-plan">
+                        PRO PLAN
+                    </div>
+                    <div class="ssl-card">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m25 0-8 3L4 8H3v1c0 15 5 25 11 32 5 6 11 9 11 9S47 38 47 9V8h-1L33 3l-8-3zm0 2 7 3 13 5c0 27-19 37-20 38-1-1-5-3-10-9-5-5-10-15-10-29l13-5 7-3zm8 13h-1l-8 13-5-5h-1l-1 1v1l7 5v1l1-1 9-13v-1z" />
+                        </svg>
+                        <div class="card-text">
+                            <div class="card-title">SSL SECURE PAYMENT</div>
+                            <div class="card-desc">
+                                Your information is protected by 256-bit SSL encryption.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </body>

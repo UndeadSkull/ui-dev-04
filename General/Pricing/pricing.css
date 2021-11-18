@@ -1,15 +1,77 @@
 .body {
-    width: min(100%, 1000px);
+    width: min(100%, 1200px);
+}
+
+.section-bar-wrap {
+    position: relative;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    /* margin: 20px 0; */
+}
+
+.section-bar-wrap .section-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    min-width: 200px;
+    background-color: var(--content-bg);
+    box-shadow: inset 0 -4px 0 -2px var(--primary-light);
+}
+
+.section-bar-wrap .section-bar.current {
+    border-radius: 15px 15px 0 0;
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 #fff;
+    /* box-shadow:0 2px 0 0 #fff, -1px -1px 0 var(--primary-light); */
+}
+
+.section-bar-wrap .section-bar .section-num {
+    display: grid;
+    place-items: center;
+    background-color: var(--primary);
+    line-height: 1;
+    font-size: 20px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.section-bar-wrap .section-bar .section-title {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.section-wrap section {
+    display: none;
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px var(--primary-light), 0px 0px 6px #B8EAC4;
+    border-radius: 10px;
+    padding: calc(15px + 2vw) 0;
+    min-height: 60vh;
+}
+
+.section-wrap section::before {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    border-top: 3px dashed var(--primary-light);
 }
 
 .pricing-table-wrap {
-    display: flex;
-    background-color: #fff;
-    box-shadow: 0 0 0 2px var(--primary-light);
-    border-radius: 10px;
+    padding: 0 calc(15px + 2vw);
     justify-content: space-evenly;
     text-align: center;
-    padding: calc(20px + 3vw);
     flex-wrap: wrap;
     gap: 40px 20px;
 }
@@ -20,26 +82,26 @@
     display: none;
 }
 
-.feature-card .title, .pricing-card .card-header {
+.pricing-table-wrap .feature-card .title, .pricing-table-wrap .pricing-card .card-header {
     height: 75px;
     display: grid;
     place-items: center;
     align-content: center;
 }
 
-.feature-card .title {
+.pricing-table-wrap .feature-card .title {
     font-size: 50px;
 }
 
-.feature-card .feature-list, .pricing-card .card-body {
+.pricing-table-wrap .feature-card .feature-list, .pricing-table-wrap .pricing-card .card-body {
     padding: 10px 20px;
 }
 
-.feature-list .feature {
+.pricing-table-wrap .feature-list .feature {
     width: max-content;
 }
 
-.feature {
+.pricing-table-wrap .feature {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -51,7 +113,7 @@
     line-height: 1.7;
 }
 
-.feature::after {
+.pricing-table-wrap .feature::after {
     content: '';
     position: absolute;
     top: 130%;
@@ -62,7 +124,7 @@
     background-color: var(--primary-light);
 }
 
-.pricing-card {
+.pricing-table-wrap .pricing-card {
     box-shadow: 0px 0px 3px #00B22D85;
     /* box-shadow: 0 2px 4px 2px #ccc; */
     min-width: 260px;
@@ -72,12 +134,12 @@
     background-color: #fff;
 }
 
-.pricing-card:hover {
+.pricing-table-wrap .pricing-card:hover {
     transform: scale(1.02);
     box-shadow: 0 2px 30px 2px #ccc;
 }
 
-.pricing-card .card-header {
+.pricing-table-wrap .pricing-card .card-header {
     color: #fff;
     background-color: var(--primary);
     font-size: 26px;
@@ -85,27 +147,27 @@
     line-height: 1.1;
 }
 
-.pricing-card .card-header .price {
+.pricing-table-wrap .pricing-card .card-header .price {
     font-size: 18px;
     font-weight: 400;
 }
 
-.pricing-card .card-body .feature span {
+.pricing-table-wrap .pricing-card .card-body .feature span {
     display: none;
 }
 
-.pricing-card .card-body .feature i {
+.pricing-table-wrap .pricing-card .card-body .feature i {
     font-size: 30px;
     color: var(--primary);
     line-height: 1.2;
     margin: auto;
 }
 
-.pricing-card .card-body .feature i.fa-circle-xmark {
+.pricing-table-wrap .pricing-card .card-body .feature i.fa-circle-xmark {
     color: var(--primary-light);
 }
 
-.pricing-card .plan-btn {
+.pricing-table-wrap .pricing-card .plan-btn {
     text-decoration: none;
     color: #fff;
     background-color: var(--primary);
@@ -114,14 +176,191 @@
     border-radius: 25px 25px 0 0;
 }
 
+.duration-wrap {
+    flex: 1;
+    padding: 0 calc(15px + 2vw);
+    display: flex;
+    flex-direction: column;
+}
+
+.duration-wrap .duration-options {
+    padding: 3vw;
+    gap: 30px;
+}
+
+.duration-wrap .duration-options .option {
+    margin: 25px 0;
+}
+
+.duration-wrap .checkbox-wrap {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 6px;
+}
+
+.duration-wrap .checkbox-wrap .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.duration-wrap .checkbox-wrap .checkmark {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.duration-wrap .checkbox-wrap .checkbox:focus~.checkmark {
+    background-color: #eee;
+}
+
+.duration-wrap .checkbox-wrap .checkbox:checked~.checkmark {
+    background-color: var(--primary);
+}
+
+.duration-wrap .checkbox-wrap .label {
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.duration-wrap .checkbox-wrap .label span {
+    display: inline-block;
+    color: var(--primary);
+}
+
+section .btn-wrap {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.payment-wrap {
+    flex: 1;
+    padding: 0 calc(15px + 2vw);
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-wrap .payment-amount {
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px -1px #ccc;
+    padding: 2vw;
+}
+
+.payment-wrap .payment-amount .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.payment-wrap .payment-amount .row.total {
+    color: var(--primary);
+}
+
+.section-right {
+    border-left: 2px solid var(--primary-light);
+    padding: 0 calc(10px + 1vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: calc(335px + 2vw);
+}
+
+.section-right .payment-methods .title {
+    margin-bottom: 10px;
+}
+
+.section-right .payment-methods .images {
+    display: flex;
+    gap: 5px;
+}
+
+.section-right .payment-methods .images img {
+    width: 75px;
+}
+
+.section-right .selected-plan {
+    margin: 10px 0;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    border-top: 1px solid var(--primary-light);
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.section-right .ssl-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px -5px #ccc;
+    background-color: #F3FCF2;
+    gap: 10px;
+}
+
+.section-right .ssl-card svg {
+    width: 50px;
+    fill: var(--primary);
+    flex-shrink: 0;
+}
+
+.section-right .ssl-card .card-title {
+    font-weight: 500;
+}
+
+.section-right .ssl-card .card-desc {
+    font-size: 12px;
+}
+
 @media only screen and (max-width: 950px) {
-    .feature-card {
+    .section-bar-wrap {
+        padding: 0;
+    }
+    .section-bar-wrap .section-bar.current {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .section-bar-wrap .section-bar.current .section-num {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .section-bar-wrap .section-bar.current .section-title {
+        font-size: 26px;
+        font-weight: 500;
+    }
+    .section-bar-wrap .section-bar:not(.current) {
         display: none;
     }
-    .pricing-card .card-body .feature span {
+    .section-wrap section::before {
+        display: none;
+    }
+    .pricing-table-wrap .feature-card {
+        display: none;
+    }
+    .pricing-table-wrap .pricing-card .card-body .feature span {
         display: block;
     }
-    .pricing-card .card-body .feature i {
+    .pricing-table-wrap .pricing-card .card-body .feature i {
         margin: 0;
     }
 }
@@ -132,7 +371,7 @@
         border: none;
         box-shadow: none;
     }
-    .pricing-table-wrap .heading {
-        display: block;
+    .section-right {
+        display: none;
     }
 }
