@@ -8,4 +8,4 @@ const sectionSwitch = (next) => {
     bars[next - 1].classList.add('current')
     section[next - 1].style.display = 'flex'
 }
-sectionSwitch(3)
+sectionSwitch(1)

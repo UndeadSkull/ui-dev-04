@@ -912,6 +912,7 @@ body {
     border-radius: 8px;
     padding: 8px;
     font-size: 15px;
+    resize: none;
 }
 
 .modal .modal-body input[type='text'] {

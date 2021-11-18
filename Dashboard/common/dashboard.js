@@ -24,3 +24,9 @@ const toggleDeleteModal = (flag) => {
     document.getElementById('modal-container').style.display = flag ? 'grid' : 'none'
     document.getElementById('delete-modal').style.display = flag ? 'flex' : 'none'
 }
+document.getElementById('modal-container').addEventListener('click', (e) => {
+    if (e.target.id == 'modal-container')
+        document.getElementById('delete-modal').style.display == 'flex'
+            ? toggleDeleteModal(false)
+            : toggleModal(false)
+})
