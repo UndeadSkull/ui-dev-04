@@ -20,3 +20,7 @@ const filterToggle = () => {
         ? filterwrap.style.display = 'flex'
         : filterwrap.style.display = 'none'
 }
+const toggleDeleteModal = (flag) => {
+    document.getElementById('modal-container').style.display = flag ? 'grid' : 'none'
+    document.getElementById('delete-modal').style.display = flag ? 'flex' : 'none'
+}

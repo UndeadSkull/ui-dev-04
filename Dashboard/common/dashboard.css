@@ -286,6 +286,7 @@ body {
     gap: 10px;
     border-radius: 8px;
 }
+
 .container .header .right .notification-wrap .noti-popup .noti-content .noti-item:hover {
     background-color: var(--content-bg);
 }
@@ -856,6 +857,10 @@ body {
     display: none;
 }
 
+#modal-container>* {
+    display: none;
+}
+
 .modal {
     background-color: #fff;
     width: min(600px, 100vw);
@@ -927,13 +932,13 @@ body {
     gap: 5px;
 }
 
-.modal .modal-body #modal-advanced {
+.modal .modal-body #modal-advanced, .modal .modal-body #modal-advanced-1, .modal .modal-body #modal-advanced-2 {
     height: 0;
     transition: height 0.2s;
     overflow-x: auto;
 }
 
-.modal .modal-body #modal-advanced:target {
+.modal .modal-body #modal-advanced:target, .modal .modal-body #modal-advanced-1:target, .modal .modal-body #modal-advanced-2:target {
     height: 350px;
 }
 
@@ -1030,6 +1035,51 @@ body {
     background-color: var(--primary);
     color: #fff;
     padding: 10px 15px;
+}
+
+/*--------------------------------- Delete Modal ----------------------------------*/
+
+#delete-modal {
+    width: min(400px, 98%);
+    height: min(160px);
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px 5px #00000033;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+#delete-modal .delete-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#delete-modal .btn-wrap {
+    margin-top: auto;
+    display: flex;
+    gap: 20px;
+}
+
+#delete-modal .btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    line-height: 1;
+    font-weight: 400;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px;
+    min-width: 110px;
+    text-align: center;
+}
+
+#delete-modal .btn-secondary {
+    margin-left: auto;
+    background-color: var(--primary-light);
+    color: #555;
+    transition: background-color 300ms;
 }
 
 /*--------------------------------- Media Query ----------------------------------*/

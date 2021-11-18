@@ -274,7 +274,7 @@
                             </label>
                         </th>
                         <th>
-                            <a href="#" id="delete-btn">Delete</a>
+                            <a href="javascript:void(0)" id="delete-btn" onclick="toggleDeleteModal(true)">Delete</a>
                             <span class="table-title">Slug</span>
                             <i class="fa fa-arrow-down fa-xs"></i>
                         </th>
@@ -315,17 +315,17 @@
                         <td></td>
                         <td class="items-per-page">
                             <div class="custom-select">
-                            <select>
-                                <option value="">Items Per Page 15</option>
-                                <option value="">Items Per Page 25</option>
-                                <option value="">Items Per Page 50</option>
-                                <option value="">Items Per Page 75</option>
-                                <option value="">Items Per Page 100</option>
-                            </select>
-                            <span class="custom-arrow">
-                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
-                            </span>
-                        </div>
+                                <select>
+                                    <option value="">Items Per Page 15</option>
+                                    <option value="">Items Per Page 25</option>
+                                    <option value="">Items Per Page 50</option>
+                                    <option value="">Items Per Page 75</option>
+                                    <option value="">Items Per Page 100</option>
+                                </select>
+                                <span class="custom-arrow">
+                                    <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                </span>
+                            </div>
                         </td>
                         <td class="page-nav">
                             <a href="#" class="nav-btn">
@@ -365,6 +365,20 @@
                 <div class="footer-bottom">
                     Copyright © 2021, All Rights Reserved
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-container">
+        <div id="delete-modal">
+            <div class="delete-title">
+                Delete
+            </div>
+            <div class="delete-desc">
+                Are you sure you want to delete?
+            </div>
+            <div class="btn-wrap">
+                <a href="javascript:void(0)" class="btn btn-secondary" onclick="toggleDeleteModal(false)">Cancel</a>
+                <a href="javascript:void(0)" class="btn" onclick="toggleDeleteModal(false)">Confirm</a>
             </div>
         </div>
     </div>

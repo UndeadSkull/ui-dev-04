@@ -1,4 +1,4 @@
-.content .content-header>.btn {
+.content .content-header .action-btn, .content .content-header .shorten-btn {
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -10,9 +10,51 @@
     outline: none;
 }
 
-.content .content-header .action-btn {
+.content .content-header .action-wrap {
     flex: 1;
-    color: var(--primary);
+    position: relative;
+}
+
+.content .content-header .action-wrap .action-popup {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: calc(100% + 10px);
+    min-width: max-content;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px 5px #00000033;
+    z-index: 1000;
+}
+
+.content .content-header .action-wrap .action-popup .action {
+    text-decoration: none;
+    color: var(--secondary);
+    display: flex;
+    gap: 5px;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.content .content-header .action-wrap .action-popup .action:hover {
+    background-color: var(--content-bg);
+}
+
+.content .content-header .action-wrap .action-popup .action .action-icon {
+    text-align: center;
+    width: 36px;
+}
+
+.content .content-header .action-wrap .action-btn:focus {
+    box-shadow: 0 2px 0 0 var(--primary-light), 0 5px 10px 5px #00000022;
+    background-color: #fff;
+}
+
+.content .content-header .action-wrap .action-btn:focus~.action-popup, .content .content-header .action-wrap .action-popup:hover {
+    display: block;
 }
 
 .content .content-header .shorten-btn {

@@ -323,7 +323,7 @@
                             </label>
                         </th>
                         <th>
-                            <a href="#" id="delete-btn">Delete</a>
+                            <a href="javascript:void(0)" id="delete-btn" onclick="toggleDeleteModal(true)">Delete</a>
                             <span class="table-title">Summary</span>
                         </th>
                         <th>Clicks
@@ -506,6 +506,18 @@
         </div>
     </div>
     <div id="modal-container">
+        <div id="delete-modal">
+            <div class="delete-title">
+                Delete
+            </div>
+            <div class="delete-desc">
+                Are you sure you want to delete?
+            </div>
+            <div class="btn-wrap">
+                <a href="javascript:void(0)" class="btn btn-secondary" onclick="toggleDeleteModal(false)">Cancel</a>
+                <a href="javascript:void(0)" class="btn" onclick="toggleDeleteModal(false)">Confirm</a>
+            </div>
+        </div>
         <div class="modal">
             <div class="modal-header">New Link</div>
             <div class="modal-body">
@@ -688,8 +700,10 @@
 <script type="text/javascript" src="../common/dashboard.js"></script>
 <script type="text/javascript" src="../common/table.js"></script>
 <script>
-    const toggleModal = (flag) =>
+    const toggleModal = (flag) => {
         document.getElementById('modal-container').style.display = flag ? 'grid' : 'none';
+        document.querySelectorAll('.modal')[0].style.display = flag ? 'block' : 'none';
+    }
 </script>
 
 </html>

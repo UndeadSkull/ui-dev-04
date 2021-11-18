@@ -274,7 +274,7 @@
                             </label>
                         </th>
                         <th>
-                            <a href="#" id="delete-btn">Delete</a>
+                            <a href="javascript:void(0)" id="delete-btn" onclick="toggleDeleteModal(true)">Delete</a>
                             <span class="table-title">
                                 Host
                                 <i class="fa fa-arrow-down fa-xs"></i>
@@ -373,6 +373,18 @@
         </div>
     </div>
     <div id="modal-container">
+        <div id="delete-modal">
+            <div class="delete-title">
+                Delete
+            </div>
+            <div class="delete-desc">
+                Are you sure you want to delete?
+            </div>
+            <div class="btn-wrap">
+                <a href="javascript:void(0)" class="btn btn-secondary" onclick="toggleDeleteModal(false)">Cancel</a>
+                <a href="javascript:void(0)" class="btn" onclick="toggleDeleteModal(false)">Confirm</a>
+            </div>
+        </div>
         <div class="modal" id="modal-1">
             <div class="modal-header">Connect Domain</div>
             <div class="modal-body">
@@ -452,8 +464,12 @@
                 modal2.style.display = 'block'
             else
                 modal3.style.display = 'block'
-        } else
+        } else{
             modalcontainer.style.display = 'none'
+            modal1.style.display = 'none'
+            modal2.style.display = 'none'
+            modal3.style.display = 'none'
+        }
     }
 
     //=============Copy To Clipboard==============//
