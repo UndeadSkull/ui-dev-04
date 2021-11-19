@@ -335,6 +335,23 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
 .link-options .link-options-body .btn:focus, .link-options .link-options-body .wide-btn {
     color: #fff;
     background-color: var(--primary);
+    flex: 1;
+}
+
+.link-options .link-options-body .upload-wrap {
+    display: none;
+    align-items: center;
+}
+
+.link-options .link-options-body .upload-wrap .thumbnail {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+}
+
+.link-options .link-options-body .upload-wrap .btn-wrap {
+    flex-direction: column;
+    flex: 1;
 }
 
 .link-options input {
@@ -755,27 +772,33 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     .biolink-options .tabs label i {
         display: none;
     }
+
     .biolink-options section .options-3 {
         border-top-right-radius: 0;
     }
+
     .biolink-options .options .item-wrap .item-body {
         flex-direction: column;
         gap: 20px;
     }
+
     .biolink-options .options {
         margin: 0;
         padding: 10px;
     }
+
     .biolink-options .content-body {
         max-height: unset !important;
         margin: -5px;
     }
+
     .biolink-preview .viewport {
         margin: 20px 0 100px 0;
         transform: rotateX(0);
         border-width: 4px;
         box-shadow: none;
     }
+
     .biolink-preview .viewport::after {
         width: 0;
     }

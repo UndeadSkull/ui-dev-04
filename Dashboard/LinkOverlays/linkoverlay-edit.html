@@ -55,9 +55,32 @@
             <i class="fa fa-user-group"></i>
             <span>Workspaces</span>
         </a>
-        <a href="../../General/Pricing/pricing.html" class="btn menu-btn">
+        <a href="../../General/Pricing/pricing.html" class="btn menu-btn popover-wrap">
             <div class="sub">1 of Unlimited links created</div>
             <div>Upgrade Account</div>
+            <div class="popover">
+                <div class="popover-title">
+                    Current Plan: Free
+                    <div class="popover-subtitle">
+                        Next Payment: Never
+                    </div>
+                </div>
+                <div class="popover-desc">
+                    1 out of 20 Links
+                    <br>
+                    0 out of 2 Biolinks
+                    <br>
+                    1 out of 5 Link Overlay
+                    <br>
+                    0 out of 5 Custom Link Pages
+                    <br>
+                    0 out of 5 Custom Domains
+                    <br>
+                    0 out of 5 Link Groups
+                    <br>
+                    0 out of 5 Tracking Pixels
+                </div>
+            </div>
         </a>
     </div>
     <div class="container" id="container">
@@ -89,7 +112,7 @@
                                         <div class="name">Second</div>
                                         <div class="members">2 Members</div>
                                     </a>
-                                    <a href="#" class="item-settings">
+                                    <a href="../Workspaces/workspaces.html" class="item-settings">
                                         <i class="fa fa-gear"></i>
                                     </a>
                                 </div>
@@ -177,19 +200,33 @@
                         <label>Name<input type="text"></label>
                         <label>
                             Position
-                            <a href="#" class="icon-btn">
-                                Bottom Left
-                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
-                            </a>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="">Bottom Left</option>
+                                    <option value="">Top Right</option>
+                                    <option value="">Top Left</option>
+                                    <option value="">Bottom Right</option>
+                                </select>
+                                <span class="custom-arrow">
+                                    <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                </span>
+                            </div>
                         </label>
                         <label>
                             Theme
-                            <a href="#" class="icon-btn">
-                                Default
-                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
-                            </a>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="">Default</option>
+                                    <option value="">Full Width</option>
+                                    <option value="">Pill</option>
+                                    <option value="">Rounded</option>
+                                </select>
+                                <span class="custom-arrow">
+                                    <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                </span>
+                            </div>
                         </label>
-                        <label>Message <textarea rows="2"></textarea></label>
+                        <label>Message <textarea rows="3"></textarea></label>
                         <label>Label<input type="text"></label>
                         <label>Button Link<input type="text"></label>
                         <label>Button Text<input type="text"></label>

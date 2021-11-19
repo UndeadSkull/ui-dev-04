@@ -62,14 +62,15 @@ body {
     padding: 0 10px 0 15px;
     gap: 10px;
     transition: all 50ms linear;
+    outline-color: var(--primary);
+    outline-offset: 3px;
 }
 
-.menu-bar .menu-item:hover, .menu-bar .menu-item:focus {
+.menu-bar .menu-item:hover {
     box-shadow: inset 4px 0 0 1px var(--primary);
-    outline: none;
 }
 
-.menu-bar .menu-item:active {
+.menu-bar .menu-item:active, .menu-bar .menu-item:focus {
     box-shadow: inset 15px 0 0 24px var(--primary);
     color: #fff;
 }
@@ -221,6 +222,10 @@ body {
     margin-left: auto;
 }
 
+.container .header .workspace-wrap .popup-item .item-settings i {
+    color: var(--secondary);
+}
+
 .container .header .workspace-wrap .create-workspace {
     text-decoration: none;
     font-size: 15px;
@@ -348,6 +353,7 @@ body {
 
 .container .header .right .account-btn {
     gap: 10px;
+    font-weight: 500;
 }
 
 .container .header .right .account-btn:focus {
@@ -845,9 +851,72 @@ body {
 
 /*----------------------------------- Modal --------------------------------------*/
 
+.popover-wrap {
+    position: relative;
+}
+
+.popover-wrap i {
+    font-size: 18px;
+    color: #ccc;
+    transform: translateY(-25%);
+    cursor: help;
+}
+
+.popover-wrap:hover .popover,
+.popover-wrap .popover:hover {
+    display: block;
+}
+
+.popover-wrap .popover {
+    color: #000;
+    display: none;
+    position: absolute;
+    width: 310px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px -2px #ccc;
+    z-index: 1000;
+    text-align: left;
+}
+
+.popover-wrap.btn .popover {
+    width: max-content;
+    bottom: calc(100% + 10px);
+    left: 50%;
+}
+
+.popover-wrap .popover .popover-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.popover-wrap .popover .popover-subtitle {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.popover-wrap .popover .popover-desc {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.3;
+    list-style-position: inside;
+}
+
+.popover-wrap.btn .popover .popover-desc {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--primary-light);
+    font-size: 14px;
+    line-height: 2;
+}
+
+/*----------------------------------- Modal --------------------------------------*/
+
 #modal-container {
     position: absolute;
-    z-index: 100;
+    z-index: 2000;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -1096,16 +1165,20 @@ body {
     #menu-toggle {
         display: block;
     }
+
     #menu-bar {
         width: 0px;
     }
+
     .menu-bar .menu-btn {
         padding: 6px 4px;
     }
+
     .container {
         border-radius: 15px;
         padding: 8px 5px;
     }
+
     .container .header .center {
         justify-content: flex-end;
     }

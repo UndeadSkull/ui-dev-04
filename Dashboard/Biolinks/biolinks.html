@@ -55,9 +55,32 @@
             <i class="fa fa-user-group"></i>
             <span>Workspaces</span>
         </a>
-        <a href="../../General/Pricing/pricing.html" class="btn menu-btn">
+        <a href="../../General/Pricing/pricing.html" class="btn menu-btn popover-wrap">
             <div class="sub">1 of Unlimited links created</div>
             <div>Upgrade Account</div>
+            <div class="popover">
+                <div class="popover-title">
+                    Current Plan: Free
+                    <div class="popover-subtitle">
+                        Next Payment: Never
+                    </div>
+                </div>
+                <div class="popover-desc">
+                    1 out of 20 Links
+                    <br>
+                    0 out of 2 Biolinks
+                    <br>
+                    1 out of 5 Link Overlay
+                    <br>
+                    0 out of 5 Custom Link Pages
+                    <br>
+                    0 out of 5 Custom Domains
+                    <br>
+                    0 out of 5 Link Groups
+                    <br>
+                    0 out of 5 Tracking Pixels
+                </div>
+            </div>
         </a>
     </div>
     <div class="container" id="container">
@@ -66,7 +89,21 @@
         </button>
         <div class="header">
             <div class="header-top">
-                <div class="title">Biolinks</div>
+                <div class="title">Biolinks
+                    <span class="popover-wrap">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div class="popover">
+                            <div class="popover-title">
+                                Link in Bio
+                            </div>
+                            <div class="popover-desc">
+                                Offer multiple choices to your followers when they click on your Biolink. Share all your
+                                Social Media profiles, videos, songs, articles and other important links with just one
+                                url.
+                            </div>
+                        </div>
+                    </span>
+                </div>
                 <div class="center">
                     <div class="workspace-wrap">
                         <a href="#" class="btn workspace-btn">
@@ -89,7 +126,7 @@
                                         <div class="name">Second</div>
                                         <div class="members">2 Members</div>
                                     </a>
-                                    <a href="#" class="item-settings">
+                                    <a href="../Workspaces/workspaces.html" class="item-settings">
                                         <i class="fa fa-gear"></i>
                                     </a>
                                 </div>
@@ -390,7 +427,7 @@
                                 <a href="#" class="btn">
                                     <i class="fa fa-link"></i>
                                 </a>
-                                <a href="#" class="btn">
+                                <a href="biolink-edit.html" class="btn">
                                     <i class="fa fa-pen"></i>
                                 </a>
                             </td>
@@ -422,7 +459,7 @@
                                 <a href="#" class="btn">
                                     <i class="fa fa-link"></i>
                                 </a>
-                                <a href="#" class="btn">
+                                <a href="biolink-edit.html" class="btn">
                                     <i class="fa fa-pen"></i>
                                 </a>
                             </td>
@@ -454,7 +491,7 @@
                                 <a href="#" class="btn">
                                     <i class="fa fa-link"></i>
                                 </a>
-                                <a href="#" class="btn">
+                                <a href="biolink-edit.html" class="btn">
                                     <i class="fa fa-pen"></i>
                                 </a>
                             </td>
@@ -584,7 +621,7 @@
 <script type="text/javascript" src="../common/dashboard.js"></script>
 <script type="text/javascript" src="../common/table.js"></script>
 <script>
-    const toggleModal = (flag) =>{
+    const toggleModal = (flag) => {
         document.getElementById('modal-container').style.display = flag ? 'grid' : 'none';
         document.querySelectorAll('.modal')[0].style.display = flag ? 'block' : 'none';
     }

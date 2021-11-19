@@ -6,7 +6,9 @@ window.onscroll = () => {
     else
         myNav.classList.remove("scrolled")
 };
-const switchSection = (section) => {
+
+
+const sectionSwitch = (section) => {
     var biolink = document.getElementById('biolink');
     var urlshort = document.getElementById('url-short');
     if (section == 'url') {
@@ -23,6 +25,10 @@ const switchSection = (section) => {
 
     }
 }
+
+//================ Slide Animations====================//
+
+
 const slideUp = document.querySelectorAll(".slideup");
 const slideIn = document.querySelectorAll(".slidein");
 

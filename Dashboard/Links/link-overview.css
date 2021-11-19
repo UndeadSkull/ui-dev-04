@@ -1,0 +1,103 @@
+.container .content {
+    margin: 8px -20px -6px -6px;
+    padding: 8px;
+    height: 83.7%;
+    overflow-y: scroll;
+}
+
+.container .content .overview-row {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container .content .overview-card.overall {
+    flex: 4;
+}
+
+.container .content .overview-card.device {
+    flex: 3;
+}
+
+.container .content .overview-card.referrer {
+    flex: 3;
+}
+
+.container .content .overview-card.location {
+    flex: 4;
+}
+
+.container .content .overview-card {
+    background-color: #fff;
+    box-shadow: 0 0 12px 0 #00000022;
+    border-radius: 20px;
+    padding: 10px 0;
+    flex: 1;
+    max-height: 420px;
+    z-index: 1;
+}
+
+.container .content .overview-card .card-heading {
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container .content .overview-card .sub {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.container .content .overview-card .divider {
+    background-color: var(--primary);
+    border-top: 1px solid var(--primary);
+    opacity: 0.3;
+    height: 1px;
+    margin-top: 10px;
+}
+
+.container .content .overview-card .card-body {
+    height: 79%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.container .content .overview-card:not(.overall) .card-body canvas {
+    max-height: 300px;
+}
+
+.container .content .overview-card .card-body canvas {
+    padding: 20px;
+}
+
+.container .content .overview-card.referrer .card-body {
+    display: block;
+    margin: 25px;
+}
+
+.container .content .overview-card.referrer .card-body .refer-card {
+    position: relative;
+}
+
+.container .content .overview-card.referrer .card-body .refer-card:nth-child(odd) {
+    background-color: #eee;
+}
+
+.container .content .overview-card.referrer .card-body .refer-card .refer-name {
+    color: #000;
+    padding: 8px 5px;
+}
+
+.container .content .overview-card.referrer .card-body .refer-card .refer-count {
+    position: absolute;
+    background-color: var(--primary);
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 2px 6px;
+}

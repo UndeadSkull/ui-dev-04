@@ -1,3 +1,3 @@
 primary light - done
-textarea stretch vertically
+textarea stretch vertically - done
 Home page navbar buttons

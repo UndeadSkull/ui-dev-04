@@ -107,7 +107,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    transition: opacity 200ms;
+    transition: opacity 300ms;
 }
 
 .content section #url-short {
@@ -155,6 +155,10 @@ body {
 
 .content section .details-wrap .btn-wrap .btn-secondary {
     font-weight: 500;
+    box-shadow: 0 0 0 2px var(--primary-light);
+    background: linear-gradient(121deg, rgba(184, 234, 196, 1) 9%, rgba(251, 254, 251, 1) 45%, rgba(184, 234, 196, 1) 100%);
+    background-size: 200% 100%;
+    animation: shine 6s ease infinite;
 }
 
 .content section.left .image-wrap {
@@ -761,5 +765,17 @@ body {
     }
     100% {
         transform: translateY(0)
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 10% 0%
+    }
+    50% {
+        background-position: 100% 0%
+    }
+    100% {
+        background-position: 10% 0%
     }
 }

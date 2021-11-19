@@ -102,13 +102,14 @@ input#general:checked~section .options-1, input#design:checked~section .options-
     gap: 5px;
 }
 
-.options-1 input[type='text'], .options-1 textarea {
+.options-1 input[type='text'], .options-1 textarea, .options-1 select {
     flex: 1;
     border: 1px solid var(--primary);
     border-radius: 8px;
     padding: 12px;
     font-size: 16px;
     min-width: 240px;
+    resize: none;
 }
 
 .options-1 input::placeholder, .options-1 textarea::placeholder {
@@ -268,13 +269,16 @@ input#general:checked~section .options-1, input#design:checked~section .options-
     .linkoverlay-options .tabs label i {
         display: none;
     }
+
     .linkoverlay-options section .options-2 {
         border-top-right-radius: 0;
     }
+
     .linkoverlay-options .options .item-wrap .item-body {
         flex-direction: column;
         gap: 20px;
     }
+
     .linkoverlay-options .options {
         margin: 0;
         padding: 10px;

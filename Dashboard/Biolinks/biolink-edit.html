@@ -55,9 +55,32 @@
             <i class="fa fa-user-group"></i>
             <span>Workspaces</span>
         </a>
-        <a href="../../General/Pricing/pricing.html" class="btn menu-btn">
+        <a href="../../General/Pricing/pricing.html" class="btn menu-btn popover-wrap">
             <div class="sub">1 of Unlimited links created</div>
             <div>Upgrade Account</div>
+            <div class="popover">
+                <div class="popover-title">
+                    Current Plan: Free
+                    <div class="popover-subtitle">
+                        Next Payment: Never
+                    </div>
+                </div>
+                <div class="popover-desc">
+                    1 out of 20 Links
+                    <br>
+                    0 out of 2 Biolinks
+                    <br>
+                    1 out of 5 Link Overlay
+                    <br>
+                    0 out of 5 Custom Link Pages
+                    <br>
+                    0 out of 5 Custom Domains
+                    <br>
+                    0 out of 5 Link Groups
+                    <br>
+                    0 out of 5 Tracking Pixels
+                </div>
+            </div>
         </a>
     </div>
     <div class="container" id="container">
@@ -89,7 +112,7 @@
                                         <div class="name">Second</div>
                                         <div class="members">2 Members</div>
                                     </a>
-                                    <a href="#" class="item-settings">
+                                    <a href="../Workspaces/workspaces.html" class="item-settings">
                                         <i class="fa fa-gear"></i>
                                     </a>
                                 </div>
@@ -177,7 +200,7 @@
                 <section>
                     <div class="options options-1">
                         <div class="content-top">
-                            <a href="#" class="btn add-link">
+                            <a href="javascript:void(0)" class="btn add-link" onclick="toggleModal(true)">
                                 Add New Link
                                 <i class="fa-solid fa-circle-plus fa-xl"></i>
                             </a>
@@ -208,7 +231,8 @@
                                                 <a href="#" class="btn edit-btn">
                                                     <i class="fa fa-pen"></i>
                                                 </a>
-                                                <a href="#" class="btn delete-btn">
+                                                <a href="javasript:void(0)" class="btn delete-btn"
+                                                    onclick="toggleDeleteModal(true)">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </div>
@@ -235,7 +259,8 @@
                                                 <a href="#" class="btn edit-btn">
                                                     <i class="fa fa-pen"></i>
                                                 </a>
-                                                <a href="#" class="btn delete-btn">
+                                                <a href="javasript:void(0)" class="btn delete-btn"
+                                                    onclick="toggleDeleteModal(true)">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </div>
@@ -264,7 +289,8 @@
                                                     <a href="#" class="btn edit-btn">
                                                         <i class="fa fa-pen"></i>
                                                     </a>
-                                                    <a href="#" class="btn delete-btn">
+                                                    <a href="javasript:void(0)" class="btn delete-btn"
+                                                        onclick="toggleDeleteModal(true)">
                                                         <i class="fa fa-trash"></i>
                                                     </a>
                                                 </div>
@@ -273,7 +299,6 @@
                                         <div class="item-bottom">
                                             <input type="radio" name="link-radio" id="link-none">
                                             <input type="radio" name="link-radio" id="link-thumbnail">
-                                            <input type="radio" name="link-radio" id="link-statistics">
                                             <input type="radio" name="link-radio" id="link-animation">
                                             <input type="radio" name="link-radio" id="link-leaplink">
                                             <input type="radio" name="link-radio" id="link-schedule">
@@ -281,9 +306,9 @@
                                                 <label for="link-thumbnail" class="btn active">
                                                     <i class="fa fa-image"></i>
                                                 </label>
-                                                <label for="link-statistics" class="btn">
+                                                <a href="#" class="btn">
                                                     <i class="fa-regular fa-chart-bar"></i>
-                                                </label>
+                                                </a>
                                                 <label for="link-animation" class="btn active">
                                                     <i class="fa-solid fa-meteor"></i>
                                                 </label>
@@ -303,18 +328,18 @@
                                                         </label>
                                                     </div>
                                                     <div class="link-options-body">
-                                                        <a href="#" class="btn wide-btn">Upload Thumbnail</a>
-                                                    </div>
-                                                </div>
-                                                <div class="link-options link-options-2">
-                                                    <div class="link-options-header">
-                                                        <div class="link-options-title">Statistics</div>
-                                                        <label for="link-none" class="link-options-close">
-                                                            <i class="fa fa-times"></i>
-                                                        </label>
-                                                    </div>
-                                                    <div class="link-options-desc"></div>
-                                                    <div class="link-options-body">
+                                                        <a href="javascript:void(0)" class="btn wide-btn"
+                                                            onclick="upload(true)" id="upload-btn">Upload Thumbnail</a>
+                                                        <div class="upload-wrap" id="upload-wrap">
+                                                            <img class="thumbnail"
+                                                                src="https://brandlogos.net/wp-content/uploads/2021/10/meta-logo-512x512.png"
+                                                                alt="">
+                                                            <div class="btn-wrap">
+                                                                <a href="#" class="btn wide-btn">Change</a>
+                                                                <a href="javascript:void(0)" onclick="upload(false)"
+                                                                    class="btn wide-btn">Remove</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="link-options link-options-3">
@@ -417,7 +442,8 @@
                                                 <a href="#" class="btn edit-btn">
                                                     <i class="fa fa-pen"></i>
                                                 </a>
-                                                <a href="#" class="btn delete-btn">
+                                                <a href="javasript:void(0)" class="btn delete-btn"
+                                                    onclick="toggleDeleteModal(true)">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </div>
@@ -446,7 +472,8 @@
                                                 <a href="#" class="btn edit-btn">
                                                     <i class="fa fa-pen"></i>
                                                 </a>
-                                                <a href="#" class="btn delete-btn">
+                                                <a href="javasript:void(0)" class="btn delete-btn"
+                                                    onclick="toggleDeleteModal(true)">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </div>
@@ -709,6 +736,223 @@
             </div>
         </div>
     </div>
+    <div id="modal-container">
+        <div id="delete-modal">
+            <div class="delete-title">
+                Delete
+            </div>
+            <div class="delete-desc">
+                Are you sure you want to delete?
+            </div>
+            <div class="btn-wrap">
+                <a href="javascript:void(0)" class="btn btn-secondary" onclick="toggleDeleteModal(false)">Cancel</a>
+                <a href="javascript:void(0)" class="btn" onclick="toggleDeleteModal(false)">Confirm</a>
+            </div>
+        </div>
+        <div class="modal" id="modal-1">
+            <div class="modal-header">New Link</div>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <input type="text" placeholder="Enter long URL">
+                    <a href="#" class="modal-btn">
+                        Direct <i class="fa-solid fa-circle-chevron-down"></i></a>
+                </div>
+                <div class="modal-row">
+                    <a href="#modal-advanced-1" id="advanced-btn"><i class="fa fa-gear"></i> Advanced Options</a>
+                </div>
+                <div id="modal-advanced-1">
+                    <div class="modal-section">
+                        <div class="modal-row">
+                            <label>Custom Link ID
+                                <input type="text">
+                            </label>
+                            <label>Status
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="">Activate</option>
+                                        <option value="">Disabled</option>
+                                    </select>
+                                    <span class="custom-arrow">
+                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label>
+                                Password
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <a href="#modal-advanced-1" class="icon-btn">UTM Builder</a>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Schedule Link</div>
+                        <div class="modal-section-desc">
+                            Enter a date when link should be active. Both start and end dates are optional.
+                        </div>
+                        <div class="modal-row datetime-row">
+                            <label>Start Date
+                                <input type="date">
+                            </label>
+                            <label>
+                                <a href="#modal-advanced-1" class="clear-btn">Clear</a>
+                                <input type="time">
+                            </label>
+                        </div>
+                        <div class="modal-row datetime-row">
+                            <label>End Date
+                                <input type="date">
+                            </label>
+                            <label>
+                                <a href="#modal-advanced-1" class="clear-btn">Clear</a>
+                                <input type="time">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Link Groups</div>
+                        <a href="#modal-advanced-1" class="icon-btn">Select Group <i
+                                class="fa-solid fa-circle-chevron-down fa-xl pri"></i></a>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Details</div>
+                        <div class="modal-section-desc">
+                            Add title, description and upload an image to personalise the link.
+                        </div>
+                        <div class="modal-row">
+                            <a href="#modal-advanced-1" class="btn image-btn">
+                                <i class="fa fa-images fa-2x"></i>
+                            </a>
+                            <label>
+                                Title
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label>
+                                Tags
+                                <input type="text" placeholder="New tags">
+                            </label>
+                        </div>
+                        <div class="modal-row">
+                            <label>
+                                Description
+                                <textarea rows="3"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Tracking Pixel</div>
+                        <div class="modal-section-desc">Select tracking pixels that should be use for this link.</div>
+                        <a href="#modal-advanced-1" class="icon-btn">
+                            None
+                            <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                        </a>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Expiration Clicks</div>
+                        <div class="modal-section-desc">After biolink is visited specified amound of times, it will no
+                            longer be accessible. Optionally, after click amount is reached biolink can redirect to
+                            specified url instead.</div>
+                        <div class="modal-row">
+                            <label>Max Clicks<input type="number"></label>
+                            <label>Redirect URL<input type="text" placeholder="(optional)"></label>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Location Targeting</div>
+                        <div class="modal-section-desc">Redirect users to different url based on their location.</div>
+                        <div class="modal-row">
+                            <label>
+                                Country
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="">United States</option>
+                                        <option value="">India</option>
+                                        <option value="">Qatar</option>
+                                    </select>
+                                    <span class="custom-arrow">
+                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                    </span>
+                                </div>
+                            </label>
+                            <label>
+                                URL
+                                <input type="text">
+                            </label>
+                            <a href="#modal-advanced-1">
+                                <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                            </a>
+                        </div>
+                        <a href="#modal-advanced-1" class="modal-btn">Add</a>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Device Targeting</div>
+                        <div class="modal-section-desc">Redirect users to different url based on their device.</div>
+                        <div class="modal-row">
+                            <label>
+                                Device
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="">Desktop</option>
+                                        <option value="">Tablet</option>
+                                        <option value="">Mobile</option>
+                                    </select>
+                                    <span class="custom-arrow">
+                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                    </span>
+                                </div>
+                            </label>
+                            <label>
+                                URL
+                                <input type="text">
+                            </label>
+                            <a href="#modal-advanced-1">
+                                <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                            </a>
+                        </div>
+                        <a href="#modal-advanced-1" class="modal-btn">Add</a>
+                    </div>
+                    <div class="modal-section">
+                        <div class="modal-section-title">Platform Targeting</div>
+                        <div class="modal-section-desc">Redirect users to different url based on their platform.</div>
+                        <div class="modal-row">
+                            <label>
+                                Platform
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="">Windows</option>
+                                        <option value="">Linux</option>
+                                        <option value="">MacOS</option>
+                                        <option value="">Android</option>
+                                        <option value="">iOS</option>
+                                    </select>
+                                    <span class="custom-arrow">
+                                        <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                                    </span>
+                                </div>
+                            </label>
+                            <label>
+                                URL
+                                <input type="text">
+                            </label>
+                            <a href="#modal-advanced-1">
+                                <i class="fa-solid fa-circle-plus fa-2x pri"></i>
+                            </a>
+                        </div>
+                        <a href="#modal-advanced-1" class="modal-btn">Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Cancel</a>
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Confirm</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
@@ -745,5 +989,15 @@
 
 </script>
 <script type="text/javascript" src="../common/dashboard.js"></script>
+<script>
+    const toggleModal = (flag) => {
+        document.getElementById('modal-container').style.display = flag ? 'grid' : 'none';
+        document.querySelectorAll('.modal')[0].style.display = flag ? 'block' : 'none';
+    }
+    const upload = (flag) => {
+        document.getElementById('upload-btn').style.display = flag ? 'none' : 'block';
+        document.getElementById('upload-wrap').style.display = flag ? 'flex' : 'none';
+    }
+</script>
 
 </html>
