@@ -62,3 +62,34 @@
     background-color: var(--primary);
     color: #fff;
 }
+
+.modal {
+    /* position: relative; */
+}
+
+.modal .utm-wrap {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: min(480px, 95vw);
+    box-shadow: 0 0 20px -3px #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal .utm-wrap .modal-row input {
+    min-width: 100px;
+}
+
+.modal .utm-wrap .info-card {
+    margin: 20px 0;
+    padding: 5px 15px;
+    background-color: #F3FCF2;
+    border-radius: 5px;
+    box-shadow: inset 10px 0 0 -5px var(--primary);
+    font-size: 14px;
+    font-weight: 300;
+}

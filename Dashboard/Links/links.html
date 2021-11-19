@@ -647,7 +647,7 @@
                         <a href="#" class="link">Developers</a>
                         <a href="#" class="link">Privacy Policy</a>
                         <a href="#" class="link">Terms of Service</a>
-                        <a href="General/ContactUs/contactus.html" class="link">Contact Us</a>
+                        <a href="../../General/ContactUs/contactus.html" class="link">Contact Us</a>
                     </div>
                     <div class="footer-socials">
                         <a href="#" class="social">
@@ -707,7 +707,41 @@
                             </label>
                         </div>
                         <div class="modal-row">
-                            <a href="#modal-advanced-1" class="icon-btn">UTM Builder</a>
+                            <a href="#modal-advanced-1" class="icon-btn" id="open-utm">UTM Builder</a>
+                        </div>
+                        <div class="utm-wrap" id="utm-wrap">
+                            <div class="title">
+                                UTM Builder
+                            </div>
+                            <div class="modal-row">
+                                <label>
+                                    Source
+                                    <input type="text" placeholder="e.g: adwords, google, facebook">
+                                </label>
+                                <label>
+                                    Medium
+                                    <input type="text" placeholder="e.g: banner, email, social post">
+                                </label>
+                            </div>
+                            <div class="modal-row">
+                                <label>
+                                    Campain
+                                    <input type="text" placeholder="e.g: holiday special, birthday promotion">
+                                </label>
+                                <label>
+                                    Term
+                                    <input type="text" placeholder="e.g: use to identify ppc keywords">
+                                </label>
+                            </div>
+                            <label>
+                                Content
+                                <input type="text" placeholder="Use to differentiate ads or words on a page">
+                            </label>
+                            <div class="info-card">
+                                UTM codes specified here will be applied to the link automatically when redirecting from
+                                short url to destination url.
+                            </div>
+                            <a href="#modal-advanced-1" class="modal-btn" id="close-utm">Save</a>
                         </div>
                     </div>
                     <div class="modal-section">
@@ -1110,6 +1144,9 @@
             modal2.style.display = 'none'
         }
     }
+    utmwrap = document.getElementById('utm-wrap')
+    document.getElementById('open-utm').onclick = () => utmwrap.style.display = 'block'
+    document.getElementById('close-utm').onclick = () => utmwrap.style.display = 'none'
 </script>
 
 </html>
