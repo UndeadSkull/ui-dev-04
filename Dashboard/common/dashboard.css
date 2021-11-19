@@ -391,6 +391,26 @@ body {
     background-color: var(--primary);
 }
 
+.container .header .header-bottom .custom-date-wrap {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 5px;
+}
+
+.container .header .header-bottom .custom-date-wrap input {
+    border: 2px solid var(--primary);
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+.container .header .header-bottom .custom-date-wrap input[type="button"] {
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .container .content {
     margin: 8px -20px -6px -6px;
     padding: 8px;

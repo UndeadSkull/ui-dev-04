@@ -768,6 +768,90 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
     object-fit: cover;
 }
 
+/********************************* Modal ******************************/
+.modal#modal-2 {
+    width: min(750px, 100vw);
+}
+
+.modal .widget-card-wrap {
+    padding: 10px 0;
+    max-height: 70vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 210px);
+    gap: 14px;
+    justify-content: center;
+}
+
+.modal .widget-card-wrap .widget-card {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px -1px #ccc;
+    cursor: pointer;
+    min-height: 210px;
+}
+
+.modal .widget-card-wrap .widget-card:hover {
+    background-color: #eeeeee55;
+}
+
+.modal .widget-card-wrap .widget-card .card-image img {
+    height: 55px;
+}
+
+.modal .widget-card-wrap .widget-card .card-title {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.modal .widget-card-wrap .widget-card .card-desc {
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 300;
+}
+
+.modal .image-widget-wrap {
+    min-height: 40vh;
+}
+
+.modal #upload-image-wrap {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    background: linear-gradient(130deg, #ccc, #eee, #ddd)
+}
+
+.modal #upload-image-wrap .btn {
+    height: 35px;
+    padding: 0 10px;
+    display: grid;
+    place-items: center;
+}
+
+.modal #upload-image-wrap .delete-btn {
+    display: none;
+}
+
+.modal .widget-input-wrap {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal .widget-input-wrap label {
+    margin: 20px 0 5px 0;
+}
+
+.modal .widget-input-wrap input {
+    width: 100%;
+    margin-bottom: 20px;
+    outline-color: var(--primary);
+}
+
 @media only screen and (max-width: 500px) {
     .biolink-options .tabs label i {
         display: none;

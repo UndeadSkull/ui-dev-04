@@ -200,11 +200,11 @@
                 <section>
                     <div class="options options-1">
                         <div class="content-top">
-                            <a href="javascript:void(0)" class="btn add-link" onclick="toggleModal(true)">
+                            <a href="javascript:void(0)" class="btn add-link" onclick="toggleModal(true,1)">
                                 Add New Link
                                 <i class="fa-solid fa-circle-plus fa-xl"></i>
                             </a>
-                            <a href="#" class="btn add-widget">
+                            <a href="javascript:void(0)" class="btn add-widget" onclick="toggleModal(true,2)">
                                 Add Widget
                                 <i class="fa-solid fa-table-cells-large"></i>
                             </a>
@@ -952,6 +952,272 @@
                 <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Confirm</a>
             </div>
         </div>
+        <div class="modal" id="modal-2">
+            <div class="modal-header">Add New Widget</div>
+            <div class="modal-body">
+                <div class="widget-card-wrap">
+                    <div class="widget-card" onclick="widgetModal('image')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/image.png" alt="">
+                        </div>
+                        <div class="card-title">Image</div>
+                        <div class="card-desc">
+                            Upload an image and optionally add a link it will redirect to when clicked.
+                        </div>
+                    </div>
+                    <div class="widget-card" onclick="widgetModal('text')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/text.png" alt="">
+                        </div>
+                        <div class="card-title">Text</div>
+                        <div class="card-desc">
+                            Add title and optional description. Can be used as a header for the whole biolink or a group
+                            of multiple widgets.
+                        </div>
+                    </div>
+                    <div class="widget-card" onclick="widgetModal('socials')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/socials.png" alt="">
+                        </div>
+                        <div class="card-title">Social Links</div>
+                        <div class="card-desc">
+                            Add your socials links to display them as icon buttons.
+                        </div>
+                    </div>
+                    <div class="widget-card" onclick="widgetModal('youtube')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/youtube.png" alt="">
+                        </div>
+                        <div class="card-title">Youtube Video</div>
+                        <div class="card-desc">
+                            Paste a Youtube video URL to show it as a video embed in your profile.
+                        </div>
+                    </div>
+                    <div class="widget-card" onclick="widgetModal('soundcloud')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/soundcloud.png" alt="">
+                        </div>
+                        <div class="card-title">SoundCloud Audio</div>
+                        <div class="card-desc">
+                            Paste a SoundCloud URL to show it as a playable song in your profile.
+                        </div>
+                    </div>
+                    <div class="widget-card" onclick="widgetModal('vimeo')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/vimeo.jpeg" alt="">
+                        </div>
+                        <div class="card-title">Vimeo Video</div>
+                        <div class="card-desc">
+                            Paste a vimeo video URL to show it as a video embed in your profile.
+                        </div>
+                    </div>
+                    <div class="widget-card" onclick="widgetModal('spotify')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/spotify.png" alt="">
+                        </div>
+                        <div class="card-title">Spotify Embed</div>
+                        <div class="card-desc">
+                            Paste a spotify song, album, artist, playlist, podcast or episode url to show it as an embed
+                            in your profile.
+                        </div>
+                    </div>
+                    <div class="widget-card" onclick="widgetModal('twitch')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/twitch.svg" alt="">
+                        </div>
+                        <div class="card-title">Twitch Embed</div>
+                        <div class="card-desc">
+                            Paste a twitch profile URL to show it as an embed in your profile.
+                        </div>
+                    </div>
+                    <div class="widget-card" onclick="widgetModal('tiktok')">
+                        <div class="card-image">
+                            <img src="../../Assets/Images/Biolink/tiktok.png" alt="">
+                        </div>
+                        <div class="card-title">TikTok Embed</div>
+                        <div class="card-desc">
+                            Paste a TikTok video URL to show it as a video embed in your profile.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="image">
+            <div class="modal-header">Add Image Widget</div>
+            <div class="modal-body">
+                <div class="image-widget-wrap">
+                    <div id="upload-image-wrap">
+                        <a href="#" class="btn upload-btn" id="upload-image-btn">
+                            Upload Image
+                        </a>
+                        <a href="#" class="btn delete-btn" id="delete-image-btn">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </div>
+                    <div class="widget-input-wrap">
+                        <label for="type">Type</label>
+                        <div class="custom-select">
+                            <select>
+                                <option value="">Default</option>
+                                <option value="">Avatar</option>
+                            </select>
+                            <span class="custom-arrow">
+                                <i class="fa-solid fa-circle-chevron-down fa-xl pri"></i>
+                            </span>
+                        </div>
+                        <label for="url">Destination url</label>
+                        <input type="text" placeholder="Optional">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="text">
+            <div class="modal-header">Add Text Widget</div>
+            <div class="modal-body">
+                <div class="widget-input-wrap">
+                    <label for="title">Title</label>
+                    <input type="text">
+                    <label for="desc">Description</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="socials">
+            <div class="modal-header">Add Social Links</div>
+            <div class="modal-body">
+                <div class="widget-input-wrap">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="your@email.com">
+                    <label for="facebook">Facebook Url</label>
+                    <input type="text" placeholder="facebook.com/username">
+                    <label for="twitter">Twitter</label>
+                    <input type="text" placeholder="@twitterhandle">
+                    <label for="Instagram">Instagram</label>
+                    <input type="text" placeholder="@instahandle">
+                    <label for="TikTok">TikTok</label>
+                    <input type="text" placeholder="@tiktokhandle">
+                    <label for="Youtube">Youtube</label>
+                    <input type="text" placeholder="youtube.com/channel/channelname">
+                    <label for="SoundCloud">SoundCloud</label>
+                    <input type="text" placeholder="soundcloud.com/username">
+                    <label for="bandcamp">Bandcamp Url</label>
+                    <input type="text" placeholder="you.bandcamp.com">
+                    <label for="Instagram">LinkedIn Url</label>
+                    <input type="text" placeholder="linkedin.com/in/username">
+                    <label for="Instagram">Whatsapp</label>
+                    <input type="tel" placeholder="+0000000000">
+                    <label for="telegram">Telegram Url</label>
+                    <input type="text" placeholder="t.me/">
+                    <label for="Twitch">Twitch Url</label>
+                    <input type="text" placeholder="twitch.tv/username">
+                    <label for="patreon">Patreon Url</label>
+                    <input type="text" placeholder="patreon.com/username">
+                    <label for="pinterest">Pinterest Url</label>
+                    <input type="text" placeholder="pinterest.com/">
+                    <label for="Spotify">Spotify Artist Url</label>
+                    <input type="text" placeholder="open.spotify.com/artist/artistname">
+                    <label for="Amazon">Amazon Shop Url</label>
+                    <input type="text" placeholder="amazon.com/shop/shopname">
+                    <label for="Snapchat">Snapchat Url</label>
+                    <input type="text" placeholder="snapchat.com/add/username">
+                    <label for="Apple">Apple Music Url</label>
+                    <input type="text" placeholder="music.apple.com/us/album/youralbum">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="youtube">
+            <div class="modal-header">Add Youtube Video</div>
+            <div class="modal-body">
+                <div class="widget-input-wrap">
+                    <label for="title">Youtube url</label>
+                    <input type="text" placeholder="youtu.be/Jh083kL">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="soundcloud">
+            <div class="modal-header">Add SoundCloud Widget</div>
+            <div class="modal-body">
+                <div class="widget-input-wrap">
+                    <label for="title">SoundCloud url</label>
+                    <input type="text" placeholder="soundcloud.com/Jh083kL">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="vimeo">
+            <div class="modal-header">Add Vimeo Widget</div>
+            <div class="modal-body">
+                <div class="widget-input-wrap">
+                    <label for="title">Vimeo url</label>
+                    <input type="text" placeholder="vimeo.com/Jh083kL">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="spotify">
+            <div class="modal-header">Add Spotify Widget</div>
+            <div class="modal-body">
+                <div class="widget-input-wrap">
+                    <label for="title">Spotify url</label>
+                    <input type="text" placeholder="spotify.com/Jh083kL">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="twitch">
+            <div class="modal-header">Add Twitch Widget</div>
+            <div class="modal-body">
+                <div class="widget-input-wrap">
+                    <label for="title">Twitch url</label>
+                    <input type="text" placeholder="twitch.tv/Jh083kL">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
+        <div class="modal" id="tiktok">
+            <div class="modal-header">Add TikTok Widget</div>
+            <div class="modal-body">
+                <div class="widget-input-wrap">
+                    <label for="title">TikTok url</label>
+                    <input type="text" placeholder="tiktok.com/Jh083kL">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn confirm-btn" onclick="toggleModal(false)">Add</a>
+                <a href="#" class="btn cancel-btn" onclick="toggleModal(false)">Close</a>
+            </div>
+        </div>
     </div>
 </body>
 
@@ -989,15 +1255,6 @@
 
 </script>
 <script type="text/javascript" src="../common/dashboard.js"></script>
-<script>
-    const toggleModal = (flag) => {
-        document.getElementById('modal-container').style.display = flag ? 'grid' : 'none';
-        document.querySelectorAll('.modal')[0].style.display = flag ? 'block' : 'none';
-    }
-    const upload = (flag) => {
-        document.getElementById('upload-btn').style.display = flag ? 'none' : 'block';
-        document.getElementById('upload-wrap').style.display = flag ? 'flex' : 'none';
-    }
-</script>
+<script type="text/javascript" src="biolink-edit.js"></script>
 
 </html>
