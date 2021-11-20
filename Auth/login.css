@@ -11,6 +11,12 @@
     box-sizing: border-box;
 }
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 body {
     background: var(--content-bg) url(../Assets/Images/login-bg.svg) 50% 50% no-repeat;
     background-size: cover;
