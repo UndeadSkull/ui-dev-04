@@ -8,23 +8,35 @@ window.onscroll = () => {
 };
 
 
+var biolink = document.getElementById('biolink');
+var urlshort = document.getElementById('url-short');
+let sectionflag = true;
 const sectionSwitch = (section) => {
-    var biolink = document.getElementById('biolink');
-    var urlshort = document.getElementById('url-short');
     if (section == 'url') {
         biolink.style.opacity = 0;
         biolink.style.pointerEvents = 'none';
         urlshort.style.opacity = 1;
         urlshort.style.pointerEvents = 'auto';
+        sectionflag = false
     }
     else {
         biolink.style.opacity = 1;
         biolink.style.pointerEvents = 'auto';
         urlshort.style.opacity = 0;
         urlshort.style.pointerEvents = 'none';
-
+        sectionflag = true
     }
 }
+
+setInterval(() => {
+    if (sectionflag) {
+        sectionSwitch('url')
+        sectionflag = false
+    } else {
+        sectionSwitch('bio')
+        sectionflag = true
+    }
+}, 6000);
 
 //================ Slide Animations====================//
 

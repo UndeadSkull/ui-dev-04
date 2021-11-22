@@ -15,6 +15,7 @@ input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    font-family: inherit;
 }
 
 h2 {
@@ -218,7 +219,6 @@ body {
 .content section .url-shortener .shorten-btn {
     background-color: var(--primary);
     color: #fff;
-    font-family: inherit;
     font-size: 16px;
     font-weight: 300;
     border: 2px solid var(--primary-light);
