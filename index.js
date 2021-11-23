@@ -36,7 +36,7 @@ setInterval(() => {
         sectionSwitch('bio')
         sectionflag = true
     }
-}, 6000);
+}, 4000);
 
 //================ Slide Animations====================//
 
