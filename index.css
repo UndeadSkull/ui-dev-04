@@ -160,9 +160,10 @@ body {
 }
 
 .content section .details-wrap .btn-wrap {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-auto-flow: column;
     gap: 5vw;
+    max-width: 475px;
 }
 
 .content section .details-wrap .btn-wrap .btn-secondary {
@@ -650,7 +651,8 @@ body {
     }
 
     .content section .details-wrap .btn-wrap {
-        flex-direction: column;
+        grid-auto-flow: row;
+
     }
 
     .content section .details-wrap .btn-wrap .btn {

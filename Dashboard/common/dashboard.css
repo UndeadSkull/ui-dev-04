@@ -52,12 +52,18 @@ body {
 
 .menu-bar {
     width: 315px;
-    padding-top: 80px;
+    /* padding-top: 80px; */
     display: flex;
     flex-direction: column;
     row-gap: min(15px, 2vh);
     align-items: flex-end;
     transition: all 0.2s;
+}
+
+.menu-bar .logo {
+    height: 80px;
+    padding: 5px;
+    align-self: center;
 }
 
 .menu-bar .menu-item {
