@@ -39,8 +39,10 @@ body {
     background-color: #fff;
     color: var(--secondary);
     border-radius: 10px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
+    display: grid;
+    grid-auto-flow: column;
     line-height: 1;
     font-weight: 600;
 }
@@ -52,18 +54,17 @@ body {
 
 .menu-bar {
     width: 315px;
-    /* padding-top: 80px; */
-    display: flex;
-    flex-direction: column;
-    row-gap: min(15px, 2vh);
-    align-items: flex-end;
+    display: grid;
+    justify-items: end;
+    row-gap: min(2px, 2vh);
     transition: all 0.2s;
 }
 
 .menu-bar .logo {
-    height: 80px;
+    height: 70px;
     padding: 5px;
     align-self: center;
+    justify-self: center;
 }
 
 .menu-bar .menu-item {
@@ -72,7 +73,8 @@ body {
     border: 1px solid var(--primary);
     border-radius: 10px 0 0 10px;
     box-shadow: inset 4px 0 0 var(--primary);
-    padding: 0 10px 0 15px;
+    padding: 0 15px;
+    justify-content: start;
     gap: 10px;
     transition: all 50ms linear;
     outline-color: var(--primary);
@@ -144,7 +146,10 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap-reverse;
-    gap: 5px;
+}
+
+.container .header .header-top>*+* {
+    margin-top: 5px;
 }
 
 .container .header .header-top .btn {
@@ -181,8 +186,8 @@ body {
     position: relative;
 }
 
-.container .header .workspace-wrap .workspace-btn {
-    gap: 10px;
+.container .header .workspace-wrap .workspace-btn .btn-text {
+    margin-right: 10px;
 }
 
 .container .header .workspace-wrap .workspace-btn .btn-text .sub {
@@ -203,7 +208,6 @@ body {
     background-color: #fff;
     border: 2px solid var(--primary-light);
     border-radius: 10px;
-    gap: 10px;
     box-shadow: 0 5px 20px 5px #00000033;
     z-index: 1000;
 }
@@ -240,6 +244,7 @@ body {
 }
 
 .container .header .workspace-wrap .create-workspace {
+    margin-top: 10px;
     text-decoration: none;
     font-size: 15px;
     color: var(--primary);
@@ -260,17 +265,20 @@ body {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
 }
 
 .container .header .right .notification-wrap {
     position: relative;
 }
 
+.container .header .right .notification-wrap .noti-btn {
+    margin: 0 10px;
+}
+
 .container .header .right .notification-wrap .noti-popup {
     display: none;
     position: absolute;
-    right: 0;
+    right: 10px;
     top: calc(100% + 10px);
     width: min(350px, 100vw);
     padding: 15px;
@@ -301,7 +309,6 @@ body {
     margin: 10px 0;
     padding: 5px;
     display: flex;
-    gap: 10px;
     border-radius: 8px;
 }
 
@@ -312,6 +319,7 @@ body {
 .container .header .right .notification-wrap .noti-popup .noti-content .noti-item .item-icon {
     color: var(--primary);
     padding: 10px 0;
+    margin-right: 10px;
 }
 
 .container .header .right .notification-wrap .noti-popup .noti-content .noti-item .item-title {
@@ -348,9 +356,12 @@ body {
     background-color: #fff;
     border: 2px solid var(--primary-light);
     border-radius: 10px;
-    gap: 5px;
     box-shadow: 0 5px 20px 5px #00000033;
     z-index: 1000;
+}
+
+.container .header .right .my-account-wrap .account-popup>*+* {
+    margin-top: 5px;
 }
 
 .container .header .right .my-account-wrap .account-popup .popup-item {
@@ -365,7 +376,6 @@ body {
 }
 
 .container .header .right .account-btn {
-    gap: 10px;
     font-weight: 500;
 }
 
@@ -379,6 +389,7 @@ body {
 }
 
 .container .header .right .account-btn img {
+    margin-right: 10px;
     border-radius: 50%;
 }
 
@@ -386,8 +397,25 @@ body {
     display: flex;
     margin: 5px 0;
     padding: 5px 1px;
-    gap: 8px;
     overflow-x: auto;
+}
+
+.container .header .header-bottom>*+* {
+    margin-left: 8px;
+}
+
+.container .header .header-bottom.custom {
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.container .header .header-bottom.custom .btn-wrap {
+    display: flex;
+    padding: 5px 1px;
+}
+
+.container .header .header-bottom.custom .btn-wrap>*+* {
+    margin-left: 8px;
 }
 
 .container .header .header-bottom::-webkit-scrollbar {
@@ -408,7 +436,10 @@ body {
     display: flex;
     align-items: center;
     margin-left: auto;
-    gap: 5px;
+}
+
+.container .header .header-bottom .custom-date-wrap input[type="date"] {
+    margin: 0 5px;
 }
 
 .container .header .header-bottom .custom-date-wrap input {
@@ -434,9 +465,13 @@ body {
 .content .content-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     row-gap: 10px;
-    column-gap: min(5vw, 50px);
     flex-wrap: wrap;
+}
+
+.content .content-header>*+* {
+    margin-left: min(5vw, 50px);
 }
 
 .content .content-header .content-search {
@@ -467,10 +502,13 @@ body {
     transform: translateY(-50%);
     text-decoration: none;
     padding: 5px;
-    gap: 5px;
     font-weight: 500;
     border-radius: 5px;
     background-color: #fff;
+}
+
+.content .content-header .content-search .filter-btn i {
+    margin-right: 5px;
 }
 
 .content .content-header .content-search .filter-btn:hover, .content .content-header .content-search .filter-btn:focus {
@@ -501,10 +539,10 @@ body {
     flex: 2;
     padding: 20px 0;
     border-right: 2px solid var(--primary-light);
-    gap: 3px;
 }
 
 .content .content-header .content-search .filter-wrap .field-wrap label {
+    margin-top: 4px;
     padding: 4px 10px;
     cursor: pointer;
 }
@@ -517,7 +555,6 @@ body {
     flex: 4;
     padding: 20px;
     display: flex;
-    gap: 20px;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -525,7 +562,11 @@ body {
 .content .content-header .content-search .filter-wrap .desc-wrap .filter-tab {
     display: none;
     flex-direction: column;
-    gap: 10px;
+}
+
+.content .content-header .content-search .filter-wrap .desc-wrap .filter-tab>*+* {
+    margin-top: 10px;
+
 }
 
 .filter-wrap #filter-1:checked~.desc-wrap .tab-1, .filter-wrap #filter-2:checked~.desc-wrap .tab-2, .filter-wrap #filter-3:checked~.desc-wrap .tab-3, .filter-wrap #filter-4:checked~.desc-wrap .tab-4, .filter-wrap #filter-5:checked~.desc-wrap .tab-5, .filter-wrap #filter-6:checked~.desc-wrap .tab-6, .filter-wrap #filter-7:checked~.desc-wrap .tab-7, .filter-wrap #filter-8:checked~.desc-wrap .tab-8 {
@@ -565,6 +606,7 @@ body {
 .content .content-header .content-search .filter-wrap .desc-wrap .btns-wrap {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .content .content-header .content-search .filter-wrap .desc-wrap .btns-wrap .btn {
@@ -592,7 +634,6 @@ body {
     border: 2px solid #ddd;
     font-size: 18px;
     font-weight: 500;
-    gap: 5px;
     height: 52.4px;
     outline: none;
     max-width: 250px;
@@ -614,7 +655,7 @@ body {
 .container .footer .footer-top {
     display: flex;
     padding: 20px 0;
-    gap: 35px 250px;
+    gap: 15px 250px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -779,7 +820,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 60px;
-    gap: 5px;
+    /* gap: 5px; */
 }
 
 .table-container table tbody tr .btn-wrap .btn {
@@ -787,6 +828,7 @@ body {
     box-shadow: 0 0 5px 0 #00000022;
     width: 40px;
     height: 40px;
+    margin: 0 2px;
 }
 
 .table-container table tbody tr .btn-wrap .btn i {
@@ -803,7 +845,10 @@ body {
     height: 60px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+}
+
+.table-container table tfoot .page-nav .nav-btn {
+    margin: 0 10px;
 }
 
 .table-container table tbody tr td:not(:nth-child(-n + 2)), .table-container table thead th:not(:nth-child(-n + 2)) {
@@ -1203,6 +1248,11 @@ body {
         width: 0px;
     }
 
+    .menu-bar .logo {
+        height: 50px;
+        padding: 0;
+    }
+
     .menu-bar .menu-btn {
         padding: 6px 4px;
     }
@@ -1214,5 +1264,30 @@ body {
 
     .container .header .center {
         justify-content: flex-end;
+    }
+
+    .container .header .right .notification-wrap .noti-popup {
+        right: -152.9px
+    }
+
+    .content .content-header>* {
+        margin: 0;
+    }
+
+    .content .content-header :nth-child(2) {
+        margin-right: 12px;
+    }
+
+    .container .footer .footer-top {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .container .footer .footer-top .footer-links>* {
+        margin: 0 10px 10px 10px;
+    }
+
+    .container .footer .footer-top .footer-socials>* {
+        margin: 0 10px;
     }
 }

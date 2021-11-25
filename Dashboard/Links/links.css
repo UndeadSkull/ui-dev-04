@@ -18,7 +18,7 @@
 .content .content-header .action-wrap .action-popup {
     position: absolute;
     display: none;
-    right: 0;
+    /* right: 0; */
     top: calc(100% + 10px);
     min-width: max-content;
     padding: 15px;
@@ -61,10 +61,6 @@
     flex: 1;
     background-color: var(--primary);
     color: #fff;
-}
-
-.modal {
-    /* position: relative; */
 }
 
 .modal .utm-wrap {
