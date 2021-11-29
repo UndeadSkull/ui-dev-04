@@ -169,7 +169,6 @@ body {
 .content section .details-wrap .btn-wrap .btn-secondary {
     font-weight: 500;
     box-shadow: 0 0 0 2px var(--primary-light);
-    animation: shine 6s ease infinite;
 }
 
 .content section.left .image-wrap {
@@ -832,19 +831,5 @@ body {
 
     100% {
         transform: translateY(0)
-    }
-}
-
-@keyframes shine {
-    0% {
-        background-position: 10% 0%
-    }
-
-    50% {
-        background-position: 100% 0%
-    }
-
-    100% {
-        background-position: 10% 0%
     }
 }

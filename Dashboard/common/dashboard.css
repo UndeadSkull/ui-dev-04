@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-input {
+input, textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -61,10 +61,13 @@ body {
 }
 
 .menu-bar .logo {
-    height: 70px;
-    padding: 5px;
     align-self: center;
     justify-self: center;
+}
+
+.menu-bar .logo img {
+    height: 70px;
+    padding: 5px;
 }
 
 .menu-bar .menu-item {
@@ -820,7 +823,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 60px;
-    /* gap: 5px; */
 }
 
 .table-container table tbody tr .btn-wrap .btn {
@@ -910,6 +912,8 @@ body {
     border-radius: 8px;
     padding: 8px 40px 8px 8px;
     font-size: 15px;
+    font-family: inherit;
+    line-height: 1.5;
     appearance: none;
     color: #333;
     background-color: #fff;
@@ -1030,13 +1034,20 @@ body {
     font-weight: 400;
 }
 
-.modal .modal-row {
+/* .modal .modal-row {
     display: flex;
     justify-content: space-between;
-    gap: 5px 15px;
     margin: 20px 0;
     align-items: flex-end;
     flex-wrap: wrap;
+} */
+
+.modal .modal-row {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 20px 0;
+    align-items: flex-end;
+    gap: 5px 15px;
 }
 
 .modal .modal-body .modal-btn {
@@ -1059,6 +1070,7 @@ body {
     border-radius: 8px;
     padding: 8px;
     font-size: 15px;
+    line-height: 1.5;
     resize: none;
 }
 
@@ -1090,6 +1102,10 @@ body {
     height: 350px;
 }
 
+.modal .modal-body #open-utm {
+    max-width: max-content;
+}
+
 .modal .modal-body .modal-section {
     margin: 20px 0;
     padding: 20px 0 10px 0;
@@ -1110,7 +1126,6 @@ body {
 }
 
 .modal .modal-body label {
-    flex: 1;
     display: flex;
     flex-direction: column;
     font-size: 15px;
@@ -1149,6 +1164,7 @@ body {
     color: #000;
     padding: 10px;
     position: relative;
+    max-width: max-content;
 }
 
 .modal .modal-body .image-btn::before {
@@ -1248,7 +1264,7 @@ body {
         width: 0px;
     }
 
-    .menu-bar .logo {
+    .menu-bar .logo img {
         height: 50px;
         padding: 0;
     }

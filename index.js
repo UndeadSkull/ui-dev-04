@@ -10,24 +10,22 @@ window.onscroll = () => {
 
 var biolink = document.getElementById('biolink');
 var urlshort = document.getElementById('url-short');
-let sectionflag = true;
 const sectionSwitch = (section) => {
     if (section == 'url') {
         biolink.style.opacity = 0;
         biolink.style.pointerEvents = 'none';
         urlshort.style.opacity = 1;
         urlshort.style.pointerEvents = 'auto';
-        sectionflag = false
     }
     else {
         biolink.style.opacity = 1;
         biolink.style.pointerEvents = 'auto';
         urlshort.style.opacity = 0;
         urlshort.style.pointerEvents = 'none';
-        sectionflag = true
     }
 }
 
+let sectionflag = true;
 setInterval(() => {
     if (sectionflag) {
         sectionSwitch('url')
@@ -64,10 +62,6 @@ const appearOnScroll = new IntersectionObserver(function (
 },
     appearOptions);
 
-slideIn.forEach(slideIn => {
-    appearOnScroll.observe(slideIn);
-});
+slideIn.forEach(slideIn => appearOnScroll.observe(slideIn));
 
-slideUp.forEach(slideUp => {
-    appearOnScroll.observe(slideUp);
-});
+slideUp.forEach(slideUp => appearOnScroll.observe(slideUp));

@@ -6,9 +6,7 @@
 }
 
 .container .content .overview-row {
-    margin-bottom: 20px;
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -32,6 +30,7 @@
     background-color: #fff;
     box-shadow: 0 0 12px 0 #00000022;
     border-radius: 20px;
+    margin: 10px;
     padding: 10px 0;
     flex: 1;
     max-height: 420px;
