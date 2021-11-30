@@ -90,7 +90,7 @@
 }
 
 .pricing-table-wrap .feature-card .title {
-    font-size: 50px;
+    font-size: 44px;
 }
 
 .pricing-table-wrap .feature-card .feature-list, .pricing-table-wrap .pricing-card .card-body {
@@ -126,8 +126,7 @@
 
 .pricing-table-wrap .pricing-card {
     box-shadow: 0px 0px 3px #00B22D85;
-    /* box-shadow: 0 2px 4px 2px #ccc; */
-    min-width: 260px;
+    min-width: 230px;
     border-radius: 8px;
     overflow: hidden;
     transition: all 150ms;
@@ -314,6 +313,7 @@ section .btn-wrap {
     box-shadow: 0 0 15px -5px #ccc;
     background-color: #F3FCF2;
     gap: 10px;
+    user-select: none;
 }
 
 .section-right .ssl-card svg {

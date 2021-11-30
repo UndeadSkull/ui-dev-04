@@ -46,7 +46,7 @@ html, body {
 }
 
 body {
-    background-color: #F3FCF2;
+    /* background-color: #F3FCF2; */
     color: var(--secondary);
     font-family: 'Poppins', sans-serif;
     margin-top: 80px;
@@ -63,10 +63,14 @@ body {
     align-items: center;
     padding: 8px 4vw;
     transition: all 300ms;
+    border-bottom: 2px solid transparent;
 }
 
 #navbar.scrolled {
-    background-color: #fff;
+    border-color: #F3FCF2;
+    background-color: #F3FCF299;
+    backdrop-filter: blur(10px);
+    /* box-shadow: 0 4px 10px -4px #00000022; */
 }
 
 #navbar .btn-wrap {
@@ -159,11 +163,22 @@ body {
     margin: 20px 0;
 }
 
+.content section #url-short .details-wrap .btn-wrap {
+    margin-top: 55px;
+}
+
 .content section .details-wrap .btn-wrap {
     display: grid;
     grid-auto-flow: column;
     gap: 5vw;
     max-width: 475px;
+}
+
+.content section .details-wrap .btn-wrap .btn {
+    font-size: 20px;
+    padding: calc(12px + 1vw) 0;
+    min-width: 220px;
+    /* border-radius: 0; */
 }
 
 .content section .details-wrap .btn-wrap .btn-secondary {
@@ -444,6 +459,50 @@ body {
 }
 
 .content section.section-7 {
+    /* background-color: #F3FCF2 */
+    box-shadow: 0 0 30px -20px #00000055;
+}
+.content section.section-7 .payment-heading{
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 20px;
+}
+
+.content section.section-7 .payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: min(900px, 100vw);
+    margin: 20px 0;
+}
+
+.content section.section-7 .method {
+    margin: 10px;
+    width: min-content;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    width: min-content;
+}
+
+.content section.section-7 .method img {
+    max-width: 90px;
+    width: 90px;
+    min-width: 30px;
+}
+
+.content section.section-7 .method i {
+    font-size: 24px;
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+
+.content section.section-8 {
     margin: 0 10vw;
     border-radius: 10px;
     display: flex;
@@ -451,23 +510,24 @@ body {
     position: relative;
 }
 
-.content section.section-7 .faq {
+.content section.section-8 .faq {
+    color: #000;
     padding: 10px 20px;
 }
 
-.content section.section-7 .faq .title {
+.content section.section-8 .faq .title {
     font-size: 30px;
     font-weight: 600;
 }
 
-.content section.section-7 .faq .faq-wrap {
+.content section.section-8 .faq .faq-wrap {
     margin: 12px;
     border-bottom: 1px solid #ccc;
     position: relative;
 }
 
-.content section.section-7 .faq .faq-wrap .question {
-    font-size: 18px;
+.content section.section-8 .faq .faq-wrap .question {
+    font-size: 20px;
     font-weight: 500;
     margin: 10px 0;
     padding: 5px calc(8px + 1vw);
@@ -476,7 +536,7 @@ body {
     width: 100%;
 }
 
-.content section.section-7 .faq .faq-wrap .question::after {
+.content section.section-8 .faq .faq-wrap .question::after {
     content: '+';
     position: absolute;
     right: calc(8px + 1vw);
@@ -484,7 +544,8 @@ body {
     line-height: 1;
 }
 
-.content section.section-7 .faq .faq-wrap .answer {
+.content section.section-8 .faq .faq-wrap .answer {
+    font-size: 17px;
     max-height: 0px;
     overflow: hidden;
     box-sizing: content-box;
@@ -492,17 +553,17 @@ body {
     margin: 0 calc(5px + 1vw);
 }
 
-.content section.section-7 .faq input[name="faq"]:checked~.answer {
+.content section.section-8 .faq input[name="faq"]:checked~.answer {
     margin: calc(5px + 1vw);
-    max-height: 50px;
+    max-height: 80px;
 }
 
-.content section.section-7 .faq input[name="faq"]:checked~.question::after {
+.content section.section-8 .faq input[name="faq"]:checked~.question::after {
     content: '-';
 }
 
 
-.content section.section-7 .image {
+.content section.section-8 .image {
     width: 30%;
     margin-top: auto;
     margin-bottom: -48px;
@@ -635,9 +696,8 @@ body {
         position: absolute;
         display: none;
         flex-direction: column;
-        left: 50%;
-        transform: translateX(-50%);
-        top: calc(100% + 1vw);
+        right: -2vw;
+        top: calc(100% + 2vw);
         background-color: #fff;
         padding: 3vw;
         border-radius: 8px;
@@ -718,32 +778,32 @@ body {
         bottom: 0;
     }
 
-    .content section.section-7 {
+    .content section.section-8 {
         margin: 0 5vw;
     }
 
-    .content section.section-7 .faq {
+    .content section.section-8 .faq {
         padding: 0;
     }
 
-    .content section.section-7 .faq .faq-wrap {
+    .content section.section-8 .faq .faq-wrap {
         margin: 0;
     }
 
-    .content section.section-7 .faq .faq-wrap .question {
+    .content section.section-8 .faq .faq-wrap .question {
         margin: 0;
         padding: 15px calc(8px + 1vw)
     }
 
-    .content section.section-7 .faq .faq-wrap .answer {
+    .content section.section-8 .faq .faq-wrap .answer {
         font-size: 14px;
     }
 
-    .content section.section-7 .faq input[name="faq"]:checked~.answer {
+    .content section.section-8 .faq input[name="faq"]:checked~.answer {
         max-height: 120px;
     }
 
-    .content section.section-7 .image {
+    .content section.section-8 .image {
         position: absolute;
         right: 0;
         bottom: 0;
