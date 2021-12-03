@@ -935,7 +935,7 @@ body {
     pointer-events: none;
 }
 
-/*----------------------------------- Modal --------------------------------------*/
+/*----------------------------------- Popover --------------------------------------*/
 
 .popover-wrap {
     position: relative;
@@ -1305,16 +1305,21 @@ body {
         right: -48px
     }
 
+    .content .content {
+        padding: 0;
+        margin: 8px 0;
+    }
+
     .content .content-header>* {
         margin: 0;
     }
 
     .content .content-header .btn {
-        max-width: 50vw !important;
-        padding: 10px !important;
-        height: min-content !important;
-        font-size: 14px !important;
-        font-weight: 400 !important;
+        max-width: 50vw;
+        padding: 10px;
+        height: min-content;
+        font-size: 14px;
+        font-weight: 400;
     }
 
     .content .content-header :nth-child(2) {
@@ -1332,5 +1337,9 @@ body {
 
     .container .footer .footer-top .footer-socials>* {
         margin: 0 10px;
+    }
+
+    .popover-wrap i {
+        font-size: 14px;
     }
 }
