@@ -157,6 +157,7 @@ body {
 
 .container .header .header-top .btn {
     height: 50px;
+    width: max-content;
     padding: 0 10px;
     box-shadow: 0 2px 0 0 var(--primary-light);
     transition: all 60ms linear;
@@ -630,7 +631,7 @@ body {
     color: #fff;
 }
 
-.content .content-header .add-link-btn {
+.content .content-header .primary-btn {
     display: flex;
     justify-content: space-around;
     padding: min(1vw, 10px);
@@ -750,8 +751,11 @@ body {
 }
 
 .table-container table thead {
-    height: 70px;
     box-shadow: 0 1px 0 0 var(--primary);
+}
+
+.table-container table thead th {
+    height: 70px;
 }
 
 .table-container table thead th {
@@ -1034,14 +1038,6 @@ body {
     font-weight: 400;
 }
 
-/* .modal .modal-row {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    align-items: flex-end;
-    flex-wrap: wrap;
-} */
-
 .modal .modal-row {
     display: grid;
     grid-auto-flow: column;
@@ -1278,16 +1274,47 @@ body {
         padding: 8px 5px;
     }
 
+    .container .header .title {
+        font-size: 28px;
+        min-width: 50vw;
+        height: 40px;
+    }
+
     .container .header .center {
         justify-content: flex-end;
     }
 
+    .container .header .center i {
+        font-size: 18px;
+    }
+
+    .container .header .right .btn {
+        box-shadow: none;
+        height: 40px;
+    }
+
+    .container .header .right .btn.account-btn img {
+        margin: 0;
+    }
+
+    .container .header .right .btn.account-btn div {
+        display: none;
+    }
+
     .container .header .right .notification-wrap .noti-popup {
-        right: -152.9px
+        right: -48px
     }
 
     .content .content-header>* {
         margin: 0;
+    }
+
+    .content .content-header .btn {
+        max-width: 50vw !important;
+        padding: 10px !important;
+        height: min-content !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
     }
 
     .content .content-header :nth-child(2) {

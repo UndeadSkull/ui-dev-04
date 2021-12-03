@@ -65,7 +65,7 @@ const charts = (xValues, yValues) => {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: true,
+            // maintainAspectRatio: true,
             cutout: 100,
             plugins: {
                 legend: {
@@ -123,7 +123,7 @@ const charts = (xValues, yValues) => {
         },
         options: {
             responsive: true,
-            cutout: 110,
+            cutout: 105,
             plugins: {
                 legend: {
                     position: 'right',
@@ -156,7 +156,7 @@ const charts = (xValues, yValues) => {
             }]
         },
         options: {
-            cutout: 110,
+            cutout: 100,
             responsive: true,
             plugins: {
                 legendItem: { borderRadius: 5 },

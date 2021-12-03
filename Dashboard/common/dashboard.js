@@ -1,7 +1,6 @@
 var rot = 360;
 const menuToggle = () => {
     var menu = document.getElementById("menu-bar");
-    // var b = document.getElementById("menu-toggle")
     if (menu.style.width === "0px") {
         menu.style.width = "315px";
         menu.style.opacity = 1;

@@ -1,13 +1,7 @@
-.content .content-header .action-btn, .content .content-header .shorten-btn {
+.content .content-header .action-btn{
     display: flex;
     justify-content: space-around;
-    padding: 10px;
     border: 2px solid #ddd;
-    font-size: 18px;
-    font-weight: 500;
-    gap: 5px;
-    height: 52.4px;
-    outline: none;
 }
 
 .content .content-header .action-wrap {
@@ -55,12 +49,6 @@
 
 .content .content-header .action-wrap .action-btn:focus~.action-popup, .content .content-header .action-wrap .action-popup:hover {
     display: block;
-}
-
-.content .content-header .shorten-btn {
-    flex: 1;
-    background-color: var(--primary);
-    color: #fff;
 }
 
 .modal .utm-wrap {

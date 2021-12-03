@@ -456,6 +456,8 @@ body {
     max-width: 90px;
     width: 90px;
     min-width: 30px;
+    max-height: 40px;
+    object-fit: contain;
 }
 
 .content section.section-7 .method i {
