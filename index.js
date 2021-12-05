@@ -1,3 +1,6 @@
+document.addEventListener("touchstart", function () { }, false);
+
+
 var myNav = document.getElementById('navbar');
 window.onscroll = () => {
     "use strict";
