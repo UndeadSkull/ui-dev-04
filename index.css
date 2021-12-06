@@ -653,7 +653,7 @@ body {
         display: flex;
     }
 
-    #navbar .btn-wrap .user-icon:focus-visible~.popover-wrap,
+    #navbar .btn-wrap .user-icon:focus~.popover-wrap,
     #navbar .btn-wrap .popover-wrap:hover {
         display: flex !important;
     }
