@@ -1,4 +1,4 @@
-document.addEventListener("touchstart", function () { }, false)
+// document.addEventListener("touchstart", function () { }, false)
 
 
 var myNav = document.getElementById('navbar');
