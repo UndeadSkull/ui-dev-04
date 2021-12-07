@@ -260,7 +260,7 @@ body {
     background-color: #fff;
 }
 
-.container .header .workspace-wrap .workspace-btn:focus~.workspace-popup, .container .header .workspace-wrap .workspace-popup:hover {
+.container .header .workspace-wrap .workspace-popup.appear{
     display: flex;
 }
 
@@ -339,7 +339,7 @@ body {
     background-color: #fff;
 }
 
-.container .header .right .noti-btn:focus~.noti-popup, .container .header .right .noti-popup:hover {
+.container .header .right .noti-popup.appear {
     display: block;
 }
 
@@ -387,7 +387,7 @@ body {
     background-color: #fff;
 }
 
-.container .header .right .account-btn:focus~.account-popup, .container .header .right .account-popup:hover {
+.container .header .right .account-popup.appear{
     display: flex;
 }
 

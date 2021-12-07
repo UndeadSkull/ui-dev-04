@@ -69,6 +69,7 @@ body {
 #navbar.scrolled {
     border-color: #F3FCF266;
     background-color: #F3FCF299;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -652,18 +653,14 @@ body {
         display: flex;
     }
 
-    /* #navbar .btn-wrap .user-icon:focus~.popover-wrap,
-    #navbar .btn-wrap .popover-wrap:hover {
-        display: flex !important;
-    } */
     #navbar .btn-wrap .popover-wrap.appear {
-        display: flex !important;
+        display: grid !important;
     }
 
     #navbar .btn-wrap .popover-wrap {
         position: absolute;
         display: none;
-        flex-direction: column;
+        grid-auto-flow: row;
         right: -2vw;
         top: calc(100% + 2vw);
         background-color: #fff;
