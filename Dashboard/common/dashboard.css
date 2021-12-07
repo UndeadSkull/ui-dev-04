@@ -1006,6 +1006,7 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     transition: backdrop-filter 0.5s;
     display: none;
