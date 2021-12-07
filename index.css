@@ -88,7 +88,6 @@ body {
 }
 
 #navbar .btn {
-    box-shadow: 0 0 0 1px var(--primary-light);
     min-width: max-content;
     width: 140px;
 }
@@ -653,8 +652,11 @@ body {
         display: flex;
     }
 
-    #navbar .btn-wrap .user-icon:focus~.popover-wrap,
+    /* #navbar .btn-wrap .user-icon:focus~.popover-wrap,
     #navbar .btn-wrap .popover-wrap:hover {
+        display: flex !important;
+    } */
+    #navbar .btn-wrap .popover-wrap.appear {
         display: flex !important;
     }
 

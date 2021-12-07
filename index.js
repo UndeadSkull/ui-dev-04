@@ -1,5 +1,22 @@
-// document.addEventListener("touchstart", function () { }, false)
-//
+const popoverToggle = (ele) => {
+    let popoverwrap = ele.nextElementSibling;
+    if (popoverwrap.classList.contains("appear")) {
+        document.removeEventListener('click', popoverEvent, true)
+        popoverwrap.classList.remove("appear")
+    } else {
+        document.addEventListener('click', popoverEvent, true)
+        popoverwrap.classList.add("appear")
+    }
+}
+
+const popoverEvent = (e) => {
+    var appear = document.getElementsByClassName('appear')
+    if (e.target !== appear[0]) {
+        document.removeEventListener('click', popoverEvent, true)
+        appear[0].classList.remove("appear")
+        e.stopPropagation();
+    }
+}
 
 var myNav = document.getElementById('navbar');
 window.onscroll = () => {
