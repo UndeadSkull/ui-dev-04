@@ -126,7 +126,8 @@ body {
 }
 
 .content-wrap .login-wrap .social-login {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: center;
     gap: 20px;
 }

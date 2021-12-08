@@ -1039,16 +1039,19 @@ body {
 }
 
 .modal .modal-body {
-    padding: 20px 20px 0 20px;
+    padding: 1vw 20px 0 20px;
     font-weight: 400;
 }
 
 .modal .modal-row {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-wrap: wrap;
     margin: 20px 0;
     align-items: flex-end;
-    gap: 5px 15px;
+}
+
+.modal .modal-row>* {
+    margin: 5px;
 }
 
 .modal .modal-body .modal-btn {
@@ -1130,6 +1133,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 15px;
+    flex: 1;
 }
 
 .modal .modal-section:not(:first-child) .modal-row {
@@ -1291,6 +1295,10 @@ body {
 
     .container .header .center i {
         font-size: 18px;
+    }
+
+    .container .header .right {
+        min-width: 100%;
     }
 
     .container .header .right .btn {
