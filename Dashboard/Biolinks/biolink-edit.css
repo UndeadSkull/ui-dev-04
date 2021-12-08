@@ -16,46 +16,42 @@
     color: #000;
 }
 
-.biolink-options input#appearance:checked~.tabs .slider {
-    transform: translateX(100%);
+.biolink-options input#content:checked~.tabs .slider {
+    transform: translateX(-100%);
 }
 
 .biolink-options input#settings:checked~.tabs .slider {
-    transform: translateX(200%);
+    transform: translateX(100%);
 }
 
 .biolink-options .tabs {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
     position: relative;
     margin: 0 10px;
-    gap: min(20px, 2vw);
 }
 
 .biolink-options .tabs .slider {
     position: absolute;
     height: 65px;
-    /* width: 220px; */
-    width: clamp(105px, 35%, 220px);
+    width: 33.3%;
     background-color: var(--primary-light);
-    top: -8px;
-    left: -10px;
     border-radius: 15px 15px 0 0;
     transition: transform 0.3s;
 }
 
 .biolink-options .tabs>label {
+    margin: 0 8px;
     font-size: 16px;
     font-weight: 500;
     z-index: 10;
     background-color: #fff;
-    width: clamp(103px, 40%, 200px);
+    flex: 1;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     border-radius: 15px;
     border: 1px solid var(--primary-light);
     cursor: pointer;
@@ -69,6 +65,7 @@
     background-color: var(--primary);
     color: #fff;
     padding: 5px;
+    margin-left: 10px;
     border-radius: 50%;
 }
 
@@ -80,10 +77,6 @@
     border: 2px solid var(--primary-light);
     border-radius: 20px;
     background-color: #fff;
-}
-
-.biolink-options section .options-1 {
-    border-top-left-radius: 0;
 }
 
 input#content:checked~section .options-1, input#appearance:checked~section .options-2, input#settings:checked~section .options-3 {
@@ -455,7 +448,6 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
 }
 
 .options-3 {
-    /* padding: 20px 20px 0 20px; */
     font-weight: 400;
     max-height: 540px;
     overflow-y: auto;
@@ -853,12 +845,16 @@ input#content:checked~section .options-1, input#appearance:checked~section .opti
 }
 
 @media only screen and (max-width: 500px) {
-    .biolink-options .tabs label i {
-        display: none;
+    .biolink-options .tabs>label {
+        margin: 0 4px;
     }
 
-    .biolink-options section .options-3 {
-        border-top-right-radius: 0;
+    .biolink-options .tabs .slider {
+        height: 60px;
+    }
+
+    .biolink-options .tabs label i {
+        display: none;
     }
 
     .biolink-options .options .item-wrap .item-body {
