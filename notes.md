@@ -4,4 +4,4 @@ Home page navbar buttons - done
 support queries (gap,input)
 logo link -- done
 pricing noti --done
-i button popover
+i button popover -- done

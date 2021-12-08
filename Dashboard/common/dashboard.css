@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-input, textarea {
+input, textarea, select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -173,10 +173,15 @@ body {
 }
 
 .container .header .title {
+    position: relative;
     flex: 1;
     font-size: 38px;
     font-weight: 700;
     line-height: 1;
+}
+
+.container .header .title .popover-wrap {
+    position: static;
 }
 
 .container .header .center {
@@ -260,7 +265,7 @@ body {
     background-color: #fff;
 }
 
-.container .header .workspace-wrap .workspace-popup.appear{
+.container .header .workspace-wrap .workspace-popup.appear {
     display: flex;
 }
 
@@ -387,7 +392,7 @@ body {
     background-color: #fff;
 }
 
-.container .header .right .account-popup.appear{
+.container .header .right .account-popup.appear {
     display: flex;
 }
 
@@ -848,6 +853,7 @@ body {
 .table-container table tfoot .page-nav {
     display: flex;
     height: 60px;
+    min-width: max-content;
     justify-content: center;
     align-items: center;
 }
@@ -917,7 +923,6 @@ body {
     font-size: 15px;
     font-family: inherit;
     line-height: 1.5;
-    appearance: none;
     color: #333;
     background-color: #fff;
 }
