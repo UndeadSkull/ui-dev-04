@@ -1,3 +1,4 @@
+// Header Appearance
 var myNav = document.getElementById('navbar');
 window.onscroll = () => {
     "use strict";

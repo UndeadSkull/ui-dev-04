@@ -1,3 +1,4 @@
+// Modal Toggle
 modalcontainer = document.getElementById('modal-container')
 modal1 = document.getElementById('modal-1')
 modal2 = document.getElementById('modal-2')
@@ -19,15 +20,21 @@ const toggleModal = (flag, num) => {
         }
     }
 }
+
+// Upload Sample Image
 const upload = (flag) => {
     document.getElementById('upload-btn').style.display = flag ? 'none' : 'block';
     document.getElementById('upload-wrap').style.display = flag ? 'flex' : 'none';
 }
+
+// Toggle Widget Modal
 const widgetModal = (widget) => {
     document.getElementById('modal-container').style.display = 'grid'
     document.getElementById('modal-2').style.display = 'none'
     document.getElementById(widget).style.display = 'block'
 }
+
+// Widget Image Upload
 imageWrap = document.getElementById('upload-image-wrap');
 uploadBtn = document.getElementById('upload-image-btn')
 deleteBtn = document.getElementById('delete-image-btn')

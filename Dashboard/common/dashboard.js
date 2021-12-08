@@ -1,3 +1,12 @@
+// Browser Height fix
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
+window.addEventListener('resize', appHeight)
+appHeight()
+
+// Popover
 const popoverToggle = (ele) => {
     let popoverwrap = ele.nextElementSibling;
     if (popoverwrap.classList.contains("appear")) {
@@ -8,7 +17,6 @@ const popoverToggle = (ele) => {
         popoverwrap.classList.add("appear")
     }
 }
-
 const popoverEvent = (e) => {
     var appear = document.getElementsByClassName('appear')
     if (e.target === appear[0])
@@ -24,6 +32,7 @@ const popoverEvent = (e) => {
     }
 }
 
+// Menubar toggle
 var rot = 360;
 const menuToggle = () => {
     var menu = document.getElementById("menu-bar");
@@ -39,16 +48,22 @@ const menuToggle = () => {
     icon.style = 'transform: rotate(' + rot + 'deg)';
     rot += 360;
 }
+
+// Filter Toggle
 const filterToggle = () => {
     var filterwrap = document.getElementById('filter-wrap')
     filterwrap.style.display == '' || filterwrap.style.display == 'none'
         ? filterwrap.style.display = 'flex'
         : filterwrap.style.display = 'none'
 }
+
+// Delete Confirmation Modal
 const toggleDeleteModal = (flag) => {
     document.getElementById('modal-container').style.display = flag ? 'grid' : 'none'
     document.getElementById('delete-modal').style.display = flag ? 'flex' : 'none'
 }
+
+// Modal Hide Listener
 document.getElementById('modal-container').addEventListener('click', (e) => {
     if (e.target.id == 'modal-container')
         document.getElementById('delete-modal').style.display == 'flex'

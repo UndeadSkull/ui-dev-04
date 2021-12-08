@@ -1,7 +1,8 @@
+// Table Functions
 var checkboxes = document.querySelectorAll('input[name="select-row"]');
 var selectAll = document.getElementById('select-all');
 var deleteBtn = document.getElementById('delete-btn');
-function toggleDelete(flag){
+function toggleDelete(flag) {
     if (flag) {
         deleteBtn.style.opacity = '0';
         deleteBtn.style.marginLeft = '-85px';
@@ -20,8 +21,8 @@ checkboxes.forEach(item => {
         if (item.checked == false) selectAll.checked = false;
         var flag = false;
         for (var i = 0; i < checkboxes.length; i++) {
-            if(checkboxes[i].checked){
-                flag=true;
+            if (checkboxes[i].checked) {
+                flag = true;
             }
         }
         toggleDelete(!flag)

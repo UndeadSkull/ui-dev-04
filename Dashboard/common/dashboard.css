@@ -3,6 +3,7 @@
     --primary: #00B22D;
     --primary-light: #B8EAC4;
     --secondary: #707070;
+    --app-height: 100%;
 }
 
 *, *::before, *::after {
@@ -29,6 +30,7 @@ input, textarea, select {
 body {
     display: flex;
     height: 100vh;
+    height: var(--app-height);
     overflow: hidden;
     color: var(--secondary);
     font-family: 'Poppins', sans-serif;

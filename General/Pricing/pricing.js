@@ -1,3 +1,4 @@
+// Switch Pricing Sections
 var bars = document.querySelectorAll('.section-bar')
 var section = document.querySelectorAll('section')
 const sectionSwitch = (next) => {

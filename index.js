@@ -1,3 +1,4 @@
+// Toggle Popover display
 const popoverToggle = (ele) => {
     let popoverwrap = ele.nextElementSibling;
     if (popoverwrap.classList.contains("appear")) {
@@ -8,7 +9,6 @@ const popoverToggle = (ele) => {
         popoverwrap.classList.add("appear")
     }
 }
-
 const popoverEvent = (e) => {
     var appear = document.getElementsByClassName('appear')
     if (e.target !== appear[0]) {
@@ -18,6 +18,7 @@ const popoverEvent = (e) => {
     }
 }
 
+// Header Appearance
 var myNav = document.getElementById('navbar');
 window.onscroll = () => {
     "use strict";
@@ -27,7 +28,7 @@ window.onscroll = () => {
         myNav.classList.remove("scrolled")
 };
 
-
+// Function First Section Display
 var biolink = document.getElementById('biolink');
 var urlshort = document.getElementById('url-short');
 const sectionSwitch = (section) => {
@@ -45,6 +46,7 @@ const sectionSwitch = (section) => {
     }
 }
 
+// Automated Section Switch
 let sectionflag = true;
 setInterval(() => {
     if (sectionflag) {
@@ -56,8 +58,8 @@ setInterval(() => {
     }
 }, 4000);
 
-//================ Slide Animations====================//
 
+//================ Slide Animations====================//
 
 const slideUp = document.querySelectorAll(".slideup");
 const slideIn = document.querySelectorAll(".slidein");

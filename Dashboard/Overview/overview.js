@@ -1,3 +1,4 @@
+// Sample Charts Generator
 const charts = (xValues, yValues) => {
 
     //Total Clicks
